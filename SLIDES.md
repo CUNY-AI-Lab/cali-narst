@@ -6,288 +6,245 @@
 
 ---
 
-## Slide 1 -- Title (`layout-full-dark title-slide`)
+## Slide 1 -- Title
+
+Brooklyn College, March 25, 2026
 
 **Critical AI Literacy Institute**
 Teaching and Learning Center, CUNY Graduate Center
-Brooklyn College -- March 25, 2026
 
 Luke Waltzer / Laurie Hurson / Zach Muhlbauer
 
----
+Outline: About CALI / CALI Curriculum and Research / CALI T(h)inkering / Discussion
 
-## Slide 2 -- Origins of CALI (`layout-split`)
-
-- Inevitability Discourse
-- CUNY's History of Openness and Innovation
-- Necessity of Criticality
-- Slowing things down
-
-**Stage:** **image placeholder (image1.png)**
+**Stage:** boids iframe
 
 ---
 
-## Slide 3 -- CALI as an Intervention (`layout-split`)
+## Slide 2 -- Origins of CALI
 
-**CALI operates across four interconnected areas:**
+**Label:** About CALI
 
-- **Faculty Development** -- **Supporting faculty in teaching with, about, and against genAI**
-- **Research** -- **Studying how faculty and students navigate genAI in their classroom and labor**
-- **Research and Development** -- **Building and testing LLM-based tools in collaboration with faculty**
-- **Advocacy** -- **Centering teacher and student agency in policy and strategy discussions**
-
-**Stage:** **image placeholder (image2.png)**
-
----
-
-## Slide 4 -- First CALI Cohort, 2025: Campuses (`layout-split`)
-
-**22 faculty across 12 CUNY campuses.**
-
-| College | Faculty |
-|---|---|
-| Brooklyn College | 4 |
-| LaGuardia Community College | 3 |
-| Baruch College | 2 |
-| College of Staten Island | 2 |
-| Lehman College | 2 |
-| Queensborough Community College | 2 |
-| The City College of New York | 2 |
-| BMCC | 1 |
-| Hostos Community College | 1 |
-| Kingsborough Community College | 1 |
-| Queens College | 1 |
-| York College | 1 |
-
-**Stage:** **image placeholder (image3.png -- campus map or chart)**
+**Stage (step-grid):**
+1. Inevitability Discourse
+2. CUNY's History of **Openness and Innovation**
+3. Necessity of **Criticality**
+4. Slowing things down
 
 ---
 
-## Slide 5 -- First CALI Cohort, 2025: Disciplines (`layout-split`)
+## Slide 3 -- CALI as an Intervention
 
-| Disciplinary Cluster | Count |
-|---|---|
-| Humanities | 8 |
-| Social Science | 9 |
-| STEM | 5 |
+**Label:** About CALI
+Four interconnected areas
 
-**Stage:** **image placeholder (image4.png -- discipline chart)**
-
----
-
-## Slide 6 -- First CALI Cohort, 2025: Faculty Rank (`layout-split`)
-
-**Stage:** image5.jpg (faculty rank visualization)
+**Stage (step-grid):**
+1. **Faculty Development** -- supporting faculty in teaching with, about, and against genAI
+2. **Research** -- studying how faculty and students navigate genAI in their classroom and labor
+3. **Research and Development** -- building and testing LLM-based tools in collaboration with faculty
+4. **Advocacy** -- centering teacher and student agency in policy and strategy discussions
 
 ---
 
-## Slide 7 -- Second CALI Cohort, 2026 (`layout-split`)
+## Slide 4 -- Campuses
 
-Launching March 27, 2026 -- Three Tracks:
+**Label:** Cohort 1, 2025
+22 faculty across 12 CUNY campuses
 
-- **Critical Foundations** -- **Introduction to genAI starting for core disciplinary concerns**
-- **Ecological Implications** -- **Examining environmental and labor costs of AI**
-- **T(h)inkering** -- **Hands-on experimentation with AI tools in course contexts**
-
-**Stage:** **image placeholder (image6.jpg)**
+**Stage (table)**
 
 ---
 
-## Slide 8 -- Second CALI Cohort, 2026: Campuses (`layout-split`)
+## Slide 5 -- Disciplines
 
-**22 faculty across 12 CUNY campuses.**
+**Label:** Cohort 1, 2025
 
-| College | Faculty |
-|---|---|
-| Hunter College | 5 |
-| The City College of New York | 5 |
-| BMCC | 2 |
-| York College | 2 |
-| Baruch College | 1 |
-| Bronx Community College | 1 |
-| College of Staten Island | 1 |
-| **John Jay College** | 1 |
-| Lehman College | 1 |
-| **NYC College of Technology** | 1 |
-| Queens College | 1 |
-| Queensborough Community College | 1 |
-
-**Stage:** **image placeholder (image7.png -- campus map or chart)**
+**Stage (table)**
 
 ---
 
-## Slide 9 -- Second CALI Cohort, 2026: Disciplines (`layout-split`)
+## Slide 6 -- Faculty Rank
 
-| Cluster | Faculty |
-|---|---|
-| Humanities | 9 |
-| Social Science | 9 |
-| STEM | 4 |
+**Label:** Cohort 1, 2025
 
-**Stage:** **image placeholder (image8.png -- discipline chart)**
+**Stage:** `slide6.png`
 
 ---
 
-## Slide 10 -- Second CALI Cohort, 2026: Faculty Rank (`layout-split`)
+## Slide 7 -- Second CALI Cohort
 
-**Stage:** image9.png (faculty rank visualization)
+**Label:** Cohort 2, 2026
+Launching March 27, 2026
 
----
-
-## Slide 11 -- Faculty Development Curriculum (`layout-split`)
-
-**The CALI faculty development program runs across three phases:**
-
-**Spring Meetings**
-Reading, writing, **and** framing approaches -- establishing community of practice -- critical pedagogical foundations and technical interlude
-
-**Summer Institute**
-Intensive exploration and discussion -- module development and collaboration
-
-**Fall Implementation**
-Teaching courses and modules -- research and documentation
-
-**Stage:** **image placeholder (image11.png)**
+**Stage (step-grid):**
+1. **Critical Foundations** -- introduction to genAI starting from core disciplinary concerns
+2. **Ecological Implications**
+3. **T(h)inkering**
 
 ---
 
-## Slide 12 -- Developing a Community of Practice (`layout-split`)
+## Slide 8 -- Campuses
 
-- Teaching with, about, and against AI
-- Mapping, disciplinary working groups, affinity discussions
-- Exploration and Tinkering **as shared methodology**
+**Label:** Cohort 2, 2026
+22 faculty across 12 CUNY campuses
 
-**Stage:** **image placeholder (image12.png)**
-
----
-
-## Slide 13 -- Research and Mixed Methods Approach (`layout-split`)
-
-**Three interlocking data streams:**
-
-- **Faculty Development Data and Program Evaluation** -- **Tracking engagement, module development, and outcomes across the cohort**
-- **Critical AI Literacy Modules and Teaching Implementation** -- **Documenting how faculty translate CALI frameworks into course practice**
-- **Undergraduate Student Surveys and Interviews** -- "Describe a recent situation where you had to decide whether or not to use AI." / "How do AI tools affect your learning process when you use them for school?"
-
-**Stage:** **image placeholder (image13.png)**
+**Stage (table)**
 
 ---
 
-## Slide 14 -- Preliminary Observations: Student Surveys (`layout-split`)
+## Slide 9 -- Disciplines
 
-**Early findings from** over 400 survey responses **and** 2 interviews**:**
+**Label:** Cohort 2, 2026
 
-- Variable usage and understanding **across disciplines and campus contexts**
-- **Approximately** ~44% **of** students use AI never or rarely
-- Data analysis**: in progress --** cleaning, exploratory **statistics, and** coding qualitative data
-
-**Stage:** **image placeholder (image14.png)**
+**Stage (table)**
 
 ---
 
-## Slide 15 -- Preliminary Observations: Faculty Interventions (`layout-split`)
+## Slide 10 -- Faculty Rank
 
-**Three early examples from Cohort 1 pilots:**
+**Label:** Cohort 2, 2026
 
-- **LIB 10000** -- Readings across scale, examining outputs**, comparing models**
-- **ENG 100** -- Reflective writing on creative labor and AI use
-- **SOC 101** -- Applying **c**ore **s**ociological **c**oncepts **t**o **AI as a social phenomenon**
-
-**Stage:** **image placeholder (image15.jpg)**
+**Stage:** `slide10.png`
 
 ---
 
-## Slide 16 -- Teaching Critical AI Literacy (`layout-split`)
+## Slide 11 -- BREAK: CALI Curriculum and Research
 
-Teaching Critical AI Literacy...
-- Frame AI as sociotechnical system; cultural, labor-driven, non-neutral tech
-- Allow for refusal and/or adoption of GenAI tools
-- Pedagogy leverages community and collaboration to engage in critical inquiry
-- Explore how knowledge is produced, for whom, and with what consequences
-
-...As collective world-building:
-- Resist inevitability narratives
-- Think across scale and contexts
-- Interrogate systems of power, knowledge
-- Center social, environmental, and epistemological justice issues
-- Classroom as a "radical space of possibility" to foster agency, collective approaches
-
-**Stage:** **image placeholder (image16.png)**
+**Laurie Hurson**
 
 ---
 
-## Slide 17 -- Technical Infrastructure and Instructional Design (`layout-split`)
+## Slide 12 -- Faculty Development
 
-Developing technical infrastructure while providing instructional design support:
+**Label:** Curriculum
+Three-phase arc
 
-- Helping faculty identify pedagogical challenges to address in their classes
-- Mapping disciplinary methods onto ways of exercising control over AI tools
-- Prototyping discipline-specific AI tools to address those challenges in situ
+- **Spring Meetings** -- Reading, writing, and framing approaches -- establishing community of practice -- critical pedagogical foundations and technical interlude
+- **Summer Institute** -- Intensive exploration and discussion -- module development and collaboration
+- **Fall Implementation** -- Teaching courses and modules -- research and documentation
 
-Running pilots across three CUNY campuses:
-
-- Spanish at Hunter **College** and Baruch **College**
-- English, History, and First-Year Writing at CCNY
-
-**Stage:** **image placeholder**
+**Stage:** `slide12.png`
 
 ---
 
-## Slide 18 -- CALI Year 1: In Search of Shared Access (`layout-split`)
+## Slide 13 -- Community of Practice
 
-**June 2025 -- Two-Day** **Critical AI Literacy Institute:** Hugging Face Chat **(since sunsetted)**
-- Part of Hugging Face ecosystem (e.g. datasets, models, demos)
-- Chat interface for customizing and testing AI models
-- **Sunsetted weeks after summer institute concluded**
+**Label:** Curriculum
 
-**July-August 2025 -- Individual** Summer Consultations:
-- Hugging Face Spaces **for web-hosting AI model demos**
-- ChatUI-Helper **--** custom-built configuration tool to support faculty pilots
-  - **Built** for Hugging Face Spaces with teaching in mind
-  - Turns faculty configurations **into web-hosted AI demos**
-
-**Stage:** **image placeholder**
+**Stage:** `slide13.jpg`
 
 ---
 
-## Slide 19 -- Piloting CALI Tools on Hugging Face (`layout-split`)
+## Slide 14 -- Mixed Methods
 
-- Piloted in heritage-speaking Spanish section at Hunter College **in Fall 2025**
-- Built-in changelog records edits to system prompt**;** retraceable data points **for best practices**
+**Label:** Research
 
-**Stage:** **image placeholder**
+- **Faculty Development Data & Program Evaluation** -- tracking engagement, module development, and outcomes across the cohort
+- **Critical AI Literacy Modules & Teaching Implementation** -- documenting how faculty translate CALI frameworks into course practice
+- **Undergraduate Student Surveys & Interviews** -- "Describe a recent situation where you had to decide whether or not to use AI."
 
----
-
-## Slide 20 -- Then and Now: CALI Cohort 1, 2025 (`layout-split`)
-
-**Faculty pilots hosted as standalone Hugging Face Spaces:**
-
-- Hard to track**; even harder to evaluate and manage at scale**
-- **No shared infrastructure connecting faculty work**
-
-**Stage:** **image placeholder**
+**Stage:** `slide14.jpg`
 
 ---
 
-## Slide 21 -- Then and Now: CALI Cohort 2, 2026 (`layout-split`)
+## Slide 15 -- Student Surveys
 
-**Adoption of** Open WebUI**:**
-- Free and open-source community chat platform
-- Dedicated sandbox for teaching and research with AI tools
-- Self-hosted and administered by CUNY AI Lab (https://ailab.lab.gc.cuny.edu)
+**Label:** Research
+Over 400 responses, 2 interviews
 
-CUNY AI Lab Sandbox (chat.ailab.gc.cuny.edu):
-- Home to special projects, pilot courses, working groups, **workshop attendees**
-- AmigAI **--** low-stakes conversational practice for heritage and non-native Spanish classes
-
-**Stage:** **image placeholder**
+**Stage:** gallery: `slide15-a.png` + `slide15-b.png`
 
 ---
 
-## Slide 22 -- CALI 2 Cohort: T(h)inkering to Come (`layout-split`)
+## Slide 16 -- Faculty Interventions
 
-**Five projects in development for Cohort 2:**
+**Label:** Research
+Three early Cohort 1 pilots
+
+**Stage:** `slide16.png`
+
+---
+
+## Slide 17 -- Teaching Critical AI Literacy
+
+**Label:** Research
+As collective world-building
+
+**Stage:** `slide17.jpg`
+
+---
+
+## Slide 18 -- BREAK: CALI T(h)inkering
+
+**Zach Muhlbauer**
+
+---
+
+## Slide 19 -- Technical Lead
+
+**Label:** T(h)inkering
+Infrastructure and instructional design
+
+**Stage (step-grid):**
+1. Identifying **pedagogical challenges** faculty face in their classes
+2. Mapping disciplinary methods onto **control over AI tools**
+3. Prototyping **discipline-specific AI tools** in situ
+4. Pilots: **Spanish** (Hunter, Baruch) / **English, History, FYW** (CCNY)
+
+---
+
+## Slide 20 -- Year 1
+
+**Label:** T(h)inkering
+In Search of Shared Access
+
+**Stage (step-grid):**
+1. **June 2025** -- Hugging Face Chat (since sunsetted)
+2. **Summer 2025** -- Hugging Face Spaces for hosting AI demos
+3. **ChatUI-Helper** -- turning faculty configs into hosted demos
+
+---
+
+## Slide 21 -- Piloting on Hugging Face
+
+**Label:** T(h)inkering
+Heritage Spanish at Hunter College, Fall 2025
+
+- Heritage-speaking Spanish section, Hunter College
+- Built-in changelog for retraceable system prompt edits
+
+**Stage:** gallery: `slide20-a.png` + `slide20-b.png`
+
+---
+
+## Slide 22 -- Then and Now: CALI Cohort 1, 2025
+
+**Label:** T(h)inkering
+
+- Faculty pilots as standalone Hugging Face Spaces
+- Hard to track, evaluate, or manage at scale
+
+**Stage:** `slide21.png`
+
+---
+
+## Slide 23 -- Then and Now: CALI Cohort 2, 2026
+
+**Label:** T(h)inkering
+Open WebUI
+
+- Open-source chat platform, self-hosted by CUNY AI Lab
+- Dedicated sandbox for teaching and research
+- AmigAI -- conversational Spanish practice
+
+**Stage:** gallery: `slide22-a.png` + `slide22-b.png` + `slide22-c.png`
+
+---
+
+## Slide 24 -- T(h)inkering to Come
+
+**Label:** T(h)inkering
+Five projects in development for Cohort 2
 
 - **Concept mapping** (Interdisciplinary)
 - **Laboratory workflows** (Physics)
@@ -295,41 +252,44 @@ CUNY AI Lab Sandbox (chat.ailab.gc.cuny.edu):
 - **Interdisciplinary Math Connections** (Precalculus)
 - **Research Writing Scaffold** (Sociology)
 
-**Stage:** **image placeholder**
+**Stage:** `slide23.png`
 
 ---
 
-## Slide 23 -- Lessons Learned by Doing (`layout-split`)
+## Slide 25 -- Lessons Learned
 
-- Experimentation as source of critical and methodological knowing
-- Treating process as a scaffolded progression and a means of quality assurance
-- Start small and leverage **methods of** A/B testing to name differences that matter
-- Accrued gains of open educational practices and community-driven infrastructure
+**Label:** T(h)inkering
 
-**Stage:** **image placeholder**
-
----
-
-## Slide 24 -- Policy and Strategy Outcomes (`layout-split`)
-
-**CALI's work seeks to inform decision making across three domains:**
-
-- **Curricula** -- **how do we help faculty attend to impacts of genAI on student capacity to grow in their disciplines?**
-- **Policy Advocacy** -- **how do we preserve and protect the agency of teachers and students?**
-- **Labor** -- **how do we attend to the labor impacts of genAI for teachers, students, and staff?**
-- **Strategy** -- **how do we help various constituencies to develop coherent, values-driven frameworks to reckon with genAI?**
-
-**Stage:** **image placeholder (image10.png)**
+**Stage (step-grid):**
+1. **Experimentation** as critical and methodological knowing
+2. Process as **scaffolded progression** and quality assurance
+3. Start small, leverage **A/B testing** to name what matters
+4. Accrued gains of **open practices** and community infrastructure
 
 ---
 
-## Slide 25 -- Discussion (`layout-full-dark closing-slide`)
+## Slide 26 -- Policy and Strategy
 
-**How might CALI's frameworks, tools, and methods translate to your context?**
+**Label:** Looking Ahead
+Informing decision making across four domains
+
+**Stage (step-grid):**
+1. **Curricula** -- how do we help faculty attend to impacts of genAI on student capacity to grow in their disciplines?
+2. **Policy Advocacy** -- how do we preserve and protect the agency of teachers and students?
+3. **Labor** -- how do we attend to the labor impacts of genAI for teachers, students, and staff?
+4. **Strategy** -- how do we help constituencies develop coherent, values-driven frameworks to reckon with genAI?
+
+---
+
+## Slide 27 -- Questions
+
+How might CALI's frameworks, tools, and methods translate to your context?
 
 - **Critical AI Literacy Institute** -- cuny.is/cali
 - **CUNY AI Lab** -- ailab.gc.cuny.edu
-  
+
+**Stage:** ailab.gc.cuny.edu
+
 ---
 
-_Draft: 2026-03-24. Brooklyn College visit, March 25, 2026. 25 slides._
+_Draft: 2026-03-24. Brooklyn College visit, March 25, 2026. 27 slides._
