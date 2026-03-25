@@ -26,10 +26,10 @@ Outline: About CALI / CALI Curriculum and Research / CALI T(h)inkering / Discuss
 **Label:** About CALI
 
 **Stage (step-grid):**
-1. Inevitability Discourse
-2. CUNY's History of **Openness and Innovation**
-3. Necessity of **Criticality**
-4. Slowing things down
+1. **Inevitability** discourse
+2. CUNY's History of **openness and innovation**
+3. Necessity of **criticality**
+4. Need to **slow** things down
 
 ---
 
@@ -39,17 +39,18 @@ Outline: About CALI / CALI Curriculum and Research / CALI T(h)inkering / Discuss
 Four interconnected areas
 
 **Stage (step-grid):**
-1. **Faculty Development** -- supporting faculty in teaching with, about, and against genAI
-2. **Research** -- studying how faculty and students navigate genAI in their classroom and labor
-3. **Research and Development** -- building and testing LLM-based tools in collaboration with faculty
-4. **Advocacy** -- centering teacher and student agency in policy and strategy discussions
+1. **Faculty Development**
+2. **Research** 
+3. **Research and Development**
+4. **Advocacy**
 
 ---
 
 ## Slide 4 -- Campuses
 
 **Label:** Cohort 1, 2025
-22 faculty across 12 CUNY campuses
+22 faculty 
+12 CUNY campuses
 
 **Stage (table)**
 
@@ -77,7 +78,7 @@ Four interconnected areas
 Launching March 27, 2026
 
 **Stage (step-grid):**
-1. **Critical Foundations** -- introduction to genAI starting from core disciplinary concerns
+1. **Critical Foundations** 
 2. **Ecological Implications**
 3. **T(h)inkering**
 
@@ -86,7 +87,8 @@ Launching March 27, 2026
 ## Slide 8 -- Campuses
 
 **Label:** Cohort 2, 2026
-22 faculty across 12 CUNY campuses
+22 faculty
+12 CUNY campuses
 
 **Stage (table)**
 
@@ -303,14 +305,14 @@ Informing decision making across four domains
 
 ---
 
-## Slide 27 -- Questions
+## Slide 27 -- Discussion and Questions
 
 How might CALI's frameworks, tools, and methods translate to your context?
 
-- **Critical AI Literacy Institute** -- cuny.is/cali
-- **CUNY AI Lab** -- ailab.gc.cuny.edu
+**Stage:**
 
-**Stage:** ailab.gc.cuny.edu
+- **Critical AI Literacy Institute** -- http://cuny.is/cali
+- **CUNY AI Lab** -- http://ailab.gc.cuny.edu
 
 ---
 
