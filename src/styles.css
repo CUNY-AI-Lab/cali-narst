@@ -336,13 +336,13 @@ section.slide.active { display: flex; }
   margin-bottom: 6px;
 }
 .content .card h4 {
-  font-size: clamp(13px,1.3vw,16px);
+  font-size: clamp(15px,1.5vw,19px);
   color: var(--accent); margin-bottom: 3px; font-weight: 600;
 }
 .content .card p,
 .content .card li {
-  font-size: clamp(12px,1.2vw,14px);
-  color: var(--muted); line-height: 1.4;
+  font-size: clamp(14px,1.4vw,17px);
+  color: var(--muted); line-height: 1.45;
 }
 .content .card ul { padding-left: 1.1em; margin-top: 2px; }
 .content .card li { margin-bottom: 1px; }
