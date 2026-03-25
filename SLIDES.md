@@ -53,8 +53,7 @@ Four interconnected areas
 ## Slide 4 -- Campuses
 
 **Label:** Cohort 1, 2025
-22 faculty
-12 CUNY campuses
+22 faculty across 12 CUNY campuses
 
 **Stage (table)**
 
@@ -91,8 +90,7 @@ Launching March 27, 2026
 ## Slide 8 -- Campuses
 
 **Label:** Cohort 2, 2026
-22 faculty
-12 CUNY campuses
+22 faculty across 12 CUNY campuses
 
 **Stage (table)**
 
@@ -188,7 +186,7 @@ Three early Cohort 1 pilots
 
 ---
 
-## Slide 17 -- Teaching Critical AI Literacy
+## Slide 17 -- Teaching Critical AI Literacy...
 
 **Label:** Research
 
@@ -254,9 +252,10 @@ Spanish at Hunter College, Fall 2025
 
 ---
 
-## Slide 22 -- <u>Then</u> and Now: CALI Cohort 1, 2025
+## Slide 22 -- <u>Then</u> and Now
 
 **Label:** T(h)inkering
+CALI Cohort 1, 2025
 
 - Faculty pilots as standalone Hugging Face Spaces
 - Each demo configured and deployed individually with direct support
@@ -266,9 +265,10 @@ Spanish at Hunter College, Fall 2025
 
 ---
 
-## Slide 23 -- Then and <u>Now</u>: CALI Cohort 2, 2026
+## Slide 23 -- Then and <u>Now</u>
 
 **Label:** T(h)inkering
+CALI Cohort 2, 2026
 
 - Open-source chat platform, self-hosted by CUNY AI Lab
 - Dedicated sandbox for teaching and research
@@ -318,7 +318,7 @@ Informing decision making across four domains
 
 ---
 
-## Slide 27 -- Discussion and Questions
+## Slide 27 -- Questions
 
 How might CALI's frameworks, tools, and methods translate to your context?
 
