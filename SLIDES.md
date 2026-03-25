@@ -15,7 +15,11 @@ Teaching and Learning Center, CUNY Graduate Center
 
 Luke Waltzer / Laurie Hurson / Zach Muhlbauer
 
-Outline: About CALI / CALI Curriculum and Research / CALI T(h)inkering / Discussion
+Agenda:
+1. About CALI
+2. Curriculum and Research
+3. T(h)inkering
+4. Discussion
 
 **Stage:** boids iframe
 
@@ -121,9 +125,16 @@ Launching March 27, 2026
 **Label:** Curriculum
 Three-phase arc
 
-- **Spring Meetings** -- Reading, writing, and framing approaches -- establishing community of practice -- critical pedagogical foundations and technical interlude
-- **Summer Institute** -- Intensive exploration and discussion -- module development and collaboration
-- **Fall Implementation** -- Teaching courses and modules -- research and documentation
+- **Spring Meetings**
+  - Reading, writing, and framing approaches
+  - Establishing community of practice
+  - [Critical pedagogical foundations](https://criticalai.commons.gc.cuny.edu/2025/08/23/critical-pedagogical-foundations/) and technical interlude
+- **Summer Institute**
+  - Intensive exploration and discussion
+  - Module development and collaboration
+- **Fall Implementation**
+  - Teaching courses and modules
+  - Research and documentation
 
 **Stage:** `slide12.png`
 
@@ -211,21 +222,22 @@ Infrastructure and instructional design
 
 **Stage (step-grid):**
 1. Identifying **pedagogical challenges** faculty face in their classes
-2. Mapping disciplinary methods onto **control over AI tools**
+2. Translating disciplinary methods into **hands-on control over AI tools**
 3. Prototyping **discipline-specific AI tools** in situ
 4. Pilots: **Spanish** (Hunter, Baruch) / **English, History, FYW** (CCNY)
 
 ---
 
-## Slide 20 -- Year 1
+## Slide 20 -- Year 1 Infrastructure
 
 **Label:** T(h)inkering
 In Search of Shared Access
 
-**Stage (step-grid):**
-1. **June 2025** -- Hugging Face Chat (since sunsetted)
-2. **Summer 2025** -- Hugging Face Spaces for hosting AI demos
-3. **ChatUI-Helper** -- turning faculty configs into hosted demos
+- **June 2025** -- Hugging Face Chat (since sunsetted)
+- **Summer 2025** -- Hugging Face Spaces for hosting AI demos
+- **ChatUI-Helper** -- turning faculty configs into hosted demos ([huggingface.co/spaces/milwright/chatui-helper](https://huggingface.co/spaces/milwright/chatui-helper))
+
+**Stage:** gallery (frag-synced on bullet 3): `slide20a.jpg` + `slide20b.jpg` + `slide20c.jpg`
 
 ---
 
@@ -234,14 +246,15 @@ In Search of Shared Access
 **Label:** T(h)inkering
 Heritage Spanish at Hunter College, Fall 2025
 
+- AmigAI -- conversational Spanish practice *(synced → image 1)*
 - Heritage-speaking Spanish section, Hunter College
-- Built-in changelog for retraceable system prompt edits
+- Built-in changelog for retraceable system prompt edits *(synced → image 2)*
 
-**Stage:** gallery: `slide20-a.png` + `slide20-b.png`
+**Stage:** gallery (frag-synced): `slide20-a.png` + `slide20-b.png`
 
 ---
 
-## Slide 22 -- Then and Now: CALI Cohort 1, 2025
+## Slide 22 -- **Then** and Now: CALI Cohort 1, 2025
 
 **Label:** T(h)inkering
 
@@ -252,14 +265,12 @@ Heritage Spanish at Hunter College, Fall 2025
 
 ---
 
-## Slide 23 -- Then and Now: CALI Cohort 2, 2026
+## Slide 23 -- Then and **Now**: CALI Cohort 2, 2026
 
 **Label:** T(h)inkering
 Open WebUI
 
-- Open-source chat platform, self-hosted by CUNY AI Lab
-- Dedicated sandbox for teaching and research
-- AmigAI -- conversational Spanish practice
+- Open-source chat platform, self-hosted by CUNY AI Lab -- dedicated sandbox for teaching and research
 
 **Stage:** gallery: `slide22-a.png` + `slide22-b.png` + `slide22-c.png`
 
@@ -298,10 +309,10 @@ Five projects in development for Cohort 2
 Informing decision making across four domains
 
 **Stage (step-grid):**
-1. **Curricula** -- how do we help faculty attend to impacts of genAI on student capacity to grow in their disciplines?
-2. **Policy Advocacy** -- how do we preserve and protect the agency of teachers and students?
+1. **Policy Advocacy** -- how do we preserve and protect the agency of teachers and students?
+2. **Instructional** -- how do we help faculty attend to impacts of genAI on student capacity to grow in their disciplines?
 3. **Labor** -- how do we attend to the labor impacts of genAI for teachers, students, and staff?
-4. **Strategy** -- how do we help constituencies develop coherent, values-driven frameworks to reckon with genAI?
+4. **Institutional Strategy** -- how do we help constituencies develop coherent, values-driven frameworks to reckon with genAI?
 
 ---
 
