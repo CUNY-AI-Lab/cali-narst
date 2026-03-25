@@ -128,7 +128,7 @@ function initGalleries(slide) {
       dot.addEventListener('click', function() { showGalleryItem(gallery, i); });
       dots.appendChild(dot);
     });
-    if (gallery.dataset.fragSync) return;
+    if ('fragSync' in gallery.dataset) return;
     var interval = parseInt(gallery.dataset.interval || '6000', 10);
     gallery._timer = setInterval(function() {
       var cur = gallery.querySelector('.gallery-item.active');

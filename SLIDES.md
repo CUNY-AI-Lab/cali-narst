@@ -245,8 +245,8 @@ In Search of Shared Access
 Spanish at Hunter College, Fall 2025
 
 - **AmigAI** -- conversational Spanish practice *(synced -> image 1)*
-- Non-native and heritage speaking Spanish classes, Hunter College
-- Built-in changelog for retraceable system prompt edits *(synced -> image 2)*
+- **Non-native and heritage speaking** Spanish classes, Hunter College
+- **Built-in changelog** for retraceable system prompt edits *(synced -> image 2)*
 
 **Stage:** gallery (frag-synced): `slide20-a.png` + `slide20-b.png`
 
@@ -270,11 +270,11 @@ CALI Cohort 1, 2025
 **Label:** T(h)inkering
 CALI Cohort 2, 2026
 
-- Open-source chat platform, self-hosted by CUNY AI Lab
-- Dedicated sandbox for teaching and research
-- Supports customization of model cards, comparison of multiple models at once
+- **Open WebUI** -- open-source chat platform, self-hosted by CUNY AI Lab
+- **Dedicated sandbox** environment for teaching and learning
+- Supports customization of **model cards**, comparison of **multiple models** at once
 
-**Stage:** gallery: `slide22-a.png` + `slide22-b.png` + `slide22-c.png`
+**Stage:** "CUNY AI Lab Sandbox" heading + gallery: `slide22-a.png` + `slide22-b.png` + `slide22-c.png`
 
 ---
 
@@ -293,7 +293,7 @@ Five Projects for Cohort 2
 
 ---
 
-## Slide 25 -- Lessons Learned
+## Slide 25 -- Lessons Learned By Doing
 
 **Label:** T(h)inkering
 
@@ -301,7 +301,7 @@ Five Projects for Cohort 2
 1. **Tinkering** as critical and methodological knowing
 2. Start small, leverage **A/B testing** to name what matters
 3. Process as **scaffolded progression** and **quality assurance**
-4. Accrued gains of **open practices** and community infrastructure
+4. Accrued gains of **open practices** and **community infrastructure**
 
 ---
 
