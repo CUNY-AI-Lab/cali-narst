@@ -202,8 +202,8 @@ Teaching Critical AI Literacy...
 - Resist inevitability narratives
 - Think across scale and contexts
 - Interrogate systems of power, knowledge
-- Center social, environmental, and epistemological justice issues
-- Classroom as a "radical space of possibility" to foster agency, collective approaches
+- Center social, environmental, epistemic justice issues
+- Classroom as "radical space of possibility" for agency and collective action
 
 **Stage:** `slide17.jpg`
 
@@ -222,9 +222,9 @@ Infrastructure and instructional design
 
 **Stage (step-grid):**
 1. Identifying **pedagogical challenges** faculty face in their classes
-2. Translating disciplinary methods into **hands-on control over AI tools**
-3. Prototyping **discipline-specific AI tools** in situ
-4. Pilots: **Spanish** (Hunter, Baruch) / **English, History, FYW** (CCNY)
+2. Translating domain-specific methods into **technical control over AI tools**
+3. Prototyping **domain-specific AI tools** for classroom application
+4. Pilots: **Spanish** (Hunter, Baruch) / **English, History, First-Year Writing** (CCNY)
 
 ---
 
@@ -235,9 +235,9 @@ In Search of Shared Access
 
 - **June 2025** -- Hugging Face Chat (since sunsetted)
 - **Summer 2025** -- Hugging Face Spaces for hosting AI demos
-- **ChatUI-Helper** -- turning faculty configs into hosted [demos](https://huggingface.co/spaces/milwright/chatui-helper)
+- **ChatUI-Helper** -- turning faculty configs into [web-hosted applications](https://huggingface.co/spaces/milwright/chatui-helper)
 
-**Stage:** gallery (frag-synced on bullet 3): `slide20a.png` + `slide20b.png`
+**Stage:** gallery (frag-synced): `slide20a.png` + `slide20b.png`
 
 ---
 
@@ -269,25 +269,16 @@ Spanish at Hunter College, Fall 2025
 ## Slide 23 -- Then and <u>Now</u>: CALI Cohort 2, 2026
 
 **Label:** T(h)inkering
-Open WebUI
 
 - Open-source chat platform, self-hosted by CUNY AI Lab
-- Support customization of model cards, comparison of multiple models at once
+- Dedicated sandbox for teaching and research
+- Supports customization of model cards, comparison of multiple models at once
 
-**Stage:** `slide22-a.png`
-
----
-
-## Slide 24 -- Dedicated Sandbox
-
-**Label:** T(h)inkering
-For teaching and research
-
-**Stage:** gallery: `slide22-b.png` + `slide22-c.png`
+**Stage:** gallery: `slide22-a.png` + `slide22-b.png` + `slide22-c.png`
 
 ---
 
-## Slide 25 -- T(h)inkering to Come
+## Slide 24 -- T(h)inkering to Come
 
 **Label:** T(h)inkering
 Five Projects for Cohort 2
@@ -298,23 +289,23 @@ Five Projects for Cohort 2
 - **Interdisciplinary Math Connections** (Precalculus)
 - **Research Writing Scaffold** (Sociology)
 
-**Stage:** `slide23.png` (caption: Model card: 1) name the card, 2) choose a base model, 3) write a system prompt)
+**Stage:** `slide23.png` (caption: Model card: 1) name card, 2) choose base model, 3) write system prompt)
 
 ---
 
-## Slide 26 -- Lessons Learned
+## Slide 25 -- Lessons Learned
 
 **Label:** T(h)inkering
 
 **Stage (step-grid):**
 1. **Tinkering** as critical and methodological knowing
-2. Process as **scaffolded progression** and quality assurance
-3. Start small, leverage **A/B testing** to name what matters
+2. Start small, leverage **A/B testing** to name what matters
+3. Process as **scaffolded progression** and **quality assurance**
 4. Accrued gains of **open practices** and community infrastructure
 
 ---
 
-## Slide 27 -- Policy and Strategy
+## Slide 26 -- Policy and Strategy
 
 **Label:** Looking Ahead
 Informing decision making across four domains
@@ -327,7 +318,7 @@ Informing decision making across four domains
 
 ---
 
-## Slide 28 -- Discussion and Questions
+## Slide 27 -- Discussion and Questions
 
 How might CALI's frameworks, tools, and methods translate to your context?
 
@@ -338,4 +329,4 @@ How might CALI's frameworks, tools, and methods translate to your context?
 
 ---
 
-_Draft: 2026-03-24. Brooklyn College visit, March 25, 2026. 28 slides._
+_Draft: 2026-03-24. Brooklyn College visit, March 25, 2026. 27 slides._
