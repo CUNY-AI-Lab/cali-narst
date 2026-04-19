@@ -6,908 +6,1064 @@
   <meta name="theme-color" content="#0f1319" />
   <title>NARST CALI Presentation, April 21, 2026</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
   <link rel="stylesheet" href="src/styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/frappe-charts@1.6.4/dist/frappe-charts.min.iife.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
+<div id="image-lightbox" class="lightbox" aria-hidden="true">
+  <button id="lightbox-close" class="lightbox-close" aria-label="Close zoomed image">×</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-image" src="" alt="">
+    <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+  </figure>
+</div>
 <a href="#slide-content" class="skip-link">Skip to slide content</a>
 <header role="banner">
   <div class="bar"><div class="kbd" id="kbdSwipe">Swipe</div></div>
   <a href="https://github.com/milwrite/cali-narst" target="_blank" rel="noopener" class="header-deck-link">github.com/milwrite/cali-narst</a>
 </header>
 <main id="slide-content" role="main" aria-label="Presentation slides">
-  <section class="slide" data-slide="title" aria-label="Title slide">
+  <section class="slide slide-title" data-slide="title" aria-label="Title slide">
+    <figure class="title-map-wrap stage">
+      <div id="title-map" class="map-mount" aria-label="Map of participating CUNY campuses across the greater New York City area."></div>
+      <div class="title-overlay">
+        <div class="title-card">
+          <div class="eyebrow">NARST 2026 • April 21</div>
+          <h1>Community, Transparency, and Tinkering for Just Futures</h1>
+          <h2>Lessons Learned from the Critical AI Literacy Institute</h2>
+          <p class="panelists">Luke Waltzer · Laurie Hurson · Zach Muhlbauer · Sule Aksoy</p>
+          <p class="institution">The Graduate Center of the City University of New York (CUNY)</p>
+        </div>
+      </div>
+    </figure>
+  </section>
+  <section class="slide slide-map" data-slide="campus-map" aria-label="CALI cohort campuses map">
     <div class="content">
-      <div>
-        <div class="label">NARST 2026 · Related Paper Set</div>
-        <h1>Community, Transparency, and Tinkering for Just Futures</h1>
-        <h2>Lessons Learned from the Critical AI Literacy Institute</h2>
-        <p class="date">16:15 - 17:45, Tuesday, April 21, 2026 · Jefferson B (L4)</p>
-      </div>
-      <div class="title-credit">
-        <span class="credit-names">Luke Waltzer · Laurie Hurson · Zach Muhlbauer · Sule Aksoy</span>
-      </div>
-      <div class="title-divider"></div>
-      <div class="title-agenda-label">Presentation sequence</div>
-      <ol class="title-agenda">
-        <li>Title and framing</li>
-        <li>Luke Waltzer</li>
-        <li>Laurie Hurson</li>
-        <li>Zach Muhlbauer</li>
-        <li>Sule Aksoy</li>
-      </ol>
+      <div class="label">CALI 1–2</div>
+      <h1>Participating CUNY Campuses</h1>
+      <h2>Across the greater New York City area</h2>
+      <ul class="parallel-points" style="margin-top: 1em;">
+        <li class="frag">Markers show campuses represented across CALI cohorts 1 and 2.</li>
+        <li class="frag">Popup labels name the campus and count combined entries.</li>
+        <li class="frag">Repeated institutions surface cluster density across cohorts.</li>
+        <li class="frag">The viewport stays scoped to the greater NYC area.</li>
+      </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stage-fill sketch-shell"><div id="title-sketch" class="p5-mount"></div></div>
-      <span class="stage-credit">p5.js backdrop</span>
-    </div>
+    <figure class="stage figure-stage map-stage">
+      <div id="campus-map" class="map-mount" aria-label="Leaflet map plotting CALI cohort campuses in the greater New York City area."></div>
+      <figcaption class="media-caption">CALI 1–2 campuses across the greater New York City area.</figcaption>
+    </figure>
   </section>
   <section class="slide slide-break" data-slide="break-luke" aria-label="Luke Waltzer section">
     <div class="content">
       <div class="break-tag">Luke Waltzer</div>
       <h1>Community</h1>
+      <p class="break-note">Ten talk slides, then one references slide.</p>
     </div>
   </section>
-  <section class="slide" data-slide="luke-talk-1" aria-label="Luke Waltzer slide 1">
+  <section class="slide placeholder-slide odd-layout" data-slide="luke-talk-1" aria-label="Luke Waltzer slide 1">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>The Critical AI Literacy Institute</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-rings" data-diagram="rings" aria-label="Minimal contextual diagram for The Critical AI Literacy Institute.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">The Critical AI Literacy Institute</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for the critical ai literacy institute.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-2" aria-label="Luke Waltzer slide 2">
+  <section class="slide placeholder-slide even-layout" data-slide="luke-talk-2" aria-label="Luke Waltzer slide 2">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Asserting and Preserving Scholarly Agency in the Age of AI</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 1</div>
-        <div id="chart-1" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-columns" data-diagram="columns" aria-label="Minimal contextual diagram for Asserting and Preserving Scholarly Agency in the Age of AI.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Asserting and Preserving Scholarly Agency in the Age of AI</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for asserting and preserving scholarly agency in the age of ai.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-3" aria-label="Luke Waltzer slide 3">
+  <section class="slide placeholder-slide odd-layout" data-slide="luke-talk-3" aria-label="Luke Waltzer slide 3">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Institutional context</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-nodes" data-diagram="nodes" aria-label="Minimal contextual diagram for Institutional context.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Institutional context</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for institutional context.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-4" aria-label="Luke Waltzer slide 4">
+  <section class="slide placeholder-slide even-layout" data-slide="luke-talk-4" aria-label="Luke Waltzer slide 4">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Project scope</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-steps" data-diagram="steps" aria-label="Minimal contextual diagram for Project scope.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Project scope</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for project scope.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-5" aria-label="Luke Waltzer slide 5">
+  <section class="slide placeholder-slide odd-layout" data-slide="luke-talk-5" aria-label="Luke Waltzer slide 5">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Faculty, student, and staff agency</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 2</div>
-        <div id="chart-2" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-planes" data-diagram="planes" aria-label="Minimal contextual diagram for Faculty, student, and staff agency.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Faculty, student, and staff agency</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for faculty, student, and staff agency.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-6" aria-label="Luke Waltzer slide 6">
+  <section class="slide placeholder-slide even-layout" data-slide="luke-talk-6" aria-label="Luke Waltzer slide 6">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Critical AI studies framing</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-signal" data-diagram="signal" aria-label="Minimal contextual diagram for Critical AI studies framing.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Critical AI studies framing</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for critical ai studies framing.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-7" aria-label="Luke Waltzer slide 7">
+  <section class="slide placeholder-slide odd-layout" data-slide="luke-talk-7" aria-label="Luke Waltzer slide 7">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Critical university studies framing</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-grid" data-diagram="grid" aria-label="Minimal contextual diagram for Critical university studies framing.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Critical university studies framing</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for critical university studies framing.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-8" aria-label="Luke Waltzer slide 8">
+  <section class="slide placeholder-slide even-layout" data-slide="luke-talk-8" aria-label="Luke Waltzer slide 8">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Scholarship of teaching and learning</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 3</div>
-        <div id="chart-3" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-spiral" data-diagram="spiral" aria-label="Minimal contextual diagram for Scholarship of teaching and learning.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Scholarship of teaching and learning</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for scholarship of teaching and learning.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-9" aria-label="Luke Waltzer slide 9">
+  <section class="slide placeholder-slide odd-layout" data-slide="luke-talk-9" aria-label="Luke Waltzer slide 9">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Preliminary findings</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-brackets" data-diagram="brackets" aria-label="Minimal contextual diagram for Preliminary findings.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Preliminary findings</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for preliminary findings.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-talk-10" aria-label="Luke Waltzer slide 10">
+  <section class="slide placeholder-slide even-layout" data-slide="luke-talk-10" aria-label="Luke Waltzer slide 10">
     <div class="content">
       <div class="label">Luke Waltzer</div>
       <h1>Institutional implications</h1>
       <h2>Community</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stage-fill sketch-shell"><div id="sketch-luke" class="p5-mount"></div></div>
-      <span class="stage-credit">feature space</span>
-    </div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-paths" data-diagram="paths" aria-label="Minimal contextual diagram for Institutional implications.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Institutional implications</div>
+        </div>
+      </div>
+      <figcaption class="media-caption">Minimal placeholder visual for institutional implications.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="luke-references" aria-label="Luke Waltzer references">
+  <section class="slide placeholder-slide odd-layout" data-slide="luke-references" aria-label="Luke Waltzer references">
     <div class="content">
       <div class="label">References</div>
       <h1>Luke Waltzer references</h1>
       <h2>Luke Waltzer</h2>
-      <div class="card"><h4>Reference placeholders</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Add approved citations here.</p></div>
-      <div class="card frag"><h4>Notes</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This slide is reserved for presenter-specific bibliography.</p></div>
+      <ul class="parallel-points" style="margin-top: 1em;">
+        <li class="frag">Reference placeholder one.</li>
+        <li class="frag">Reference placeholder two.</li>
+        <li class="frag">Reference placeholder three.</li>
+        <li class="frag">Reference placeholder four.</li>
+      </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Reference staging area.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-biblio" data-diagram="biblio" aria-label="Minimal bibliography placeholder diagram for Luke Waltzer references.">
+          <div class="diagram-badge">Reference staging</div>
+          <div class="diagram-title">Source clusters</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal reference placeholder visual for presenter-specific citations.</figcaption>
+    </figure>
   </section>
   <section class="slide slide-break" data-slide="break-laurie" aria-label="Laurie Hurson section">
     <div class="content">
       <div class="break-tag">Laurie Hurson</div>
       <h1>Transparency</h1>
+      <p class="break-note">Ten talk slides, then one references slide.</p>
     </div>
   </section>
-  <section class="slide" data-slide="laurie-talk-1" aria-label="Laurie Hurson slide 1">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-talk-1" aria-label="Laurie Hurson slide 1">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Fostering Critical AI Literacy as Collective World-Building</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-rings" data-diagram="rings" aria-label="Minimal contextual diagram for Fostering Critical AI Literacy as Collective World-Building.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Fostering Critical AI Literacy as Collective World-Building</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for fostering critical ai literacy as collective world-building.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-2" aria-label="Laurie Hurson slide 2">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-talk-2" aria-label="Laurie Hurson slide 2">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Curricular models for teaching with and about generative AI</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 4</div>
-        <div id="chart-4" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-columns" data-diagram="columns" aria-label="Minimal contextual diagram for Curricular models for teaching with and about generative AI.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Curricular models for teaching with and about generative AI</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for curricular models for teaching with and about generative ai.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-3" aria-label="Laurie Hurson slide 3">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-talk-3" aria-label="Laurie Hurson slide 3">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Limits of mainstream AI literacy definitions</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-nodes" data-diagram="nodes" aria-label="Minimal contextual diagram for Limits of mainstream AI literacy definitions.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Limits of mainstream AI literacy definitions</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for limits of mainstream ai literacy definitions.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-4" aria-label="Laurie Hurson slide 4">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-talk-4" aria-label="Laurie Hurson slide 4">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Refusal and critique</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-steps" data-diagram="steps" aria-label="Minimal contextual diagram for Refusal and critique.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Refusal and critique</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for refusal and critique.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-5" aria-label="Laurie Hurson slide 5">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-talk-5" aria-label="Laurie Hurson slide 5">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Reflective inquiry</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 5</div>
-        <div id="chart-5" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-planes" data-diagram="planes" aria-label="Minimal contextual diagram for Reflective inquiry.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Reflective inquiry</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for reflective inquiry.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-6" aria-label="Laurie Hurson slide 6">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-talk-6" aria-label="Laurie Hurson slide 6">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Intervention 1 placeholder</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-signal" data-diagram="signal" aria-label="Minimal contextual diagram for Intervention 1 placeholder.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Intervention 1 placeholder</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for intervention 1 placeholder.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-7" aria-label="Laurie Hurson slide 7">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-talk-7" aria-label="Laurie Hurson slide 7">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Intervention 2 placeholder</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-grid" data-diagram="grid" aria-label="Minimal contextual diagram for Intervention 2 placeholder.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Intervention 2 placeholder</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for intervention 2 placeholder.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-8" aria-label="Laurie Hurson slide 8">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-talk-8" aria-label="Laurie Hurson slide 8">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Intervention 3 placeholder</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 6</div>
-        <div id="chart-6" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-spiral" data-diagram="spiral" aria-label="Minimal contextual diagram for Intervention 3 placeholder.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Intervention 3 placeholder</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for intervention 3 placeholder.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-9" aria-label="Laurie Hurson slide 9">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-talk-9" aria-label="Laurie Hurson slide 9">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>Collaboration and community</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-brackets" data-diagram="brackets" aria-label="Minimal contextual diagram for Collaboration and community.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Collaboration and community</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for collaboration and community.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-talk-10" aria-label="Laurie Hurson slide 10">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-talk-10" aria-label="Laurie Hurson slide 10">
     <div class="content">
       <div class="label">Laurie Hurson</div>
       <h1>World-building and just futures</h1>
       <h2>Transparency</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stage-fill sketch-shell"><div id="sketch-laurie" class="p5-mount"></div></div>
-      <span class="stage-credit">feature space</span>
-    </div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-paths" data-diagram="paths" aria-label="Minimal contextual diagram for World-building and just futures.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">World-building and just futures</div>
+        </div>
+      </div>
+      <figcaption class="media-caption">Minimal placeholder visual for world-building and just futures.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="laurie-references" aria-label="Laurie Hurson references">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-references" aria-label="Laurie Hurson references">
     <div class="content">
       <div class="label">References</div>
       <h1>Laurie Hurson references</h1>
       <h2>Laurie Hurson</h2>
-      <div class="card"><h4>Reference placeholders</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Add approved citations here.</p></div>
-      <div class="card frag"><h4>Notes</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This slide is reserved for presenter-specific bibliography.</p></div>
+      <ul class="parallel-points" style="margin-top: 1em;">
+        <li class="frag">Reference placeholder one.</li>
+        <li class="frag">Reference placeholder two.</li>
+        <li class="frag">Reference placeholder three.</li>
+        <li class="frag">Reference placeholder four.</li>
+      </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Reference staging area.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-biblio" data-diagram="biblio" aria-label="Minimal bibliography placeholder diagram for Laurie Hurson references.">
+          <div class="diagram-badge">Reference staging</div>
+          <div class="diagram-title">Source clusters</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal reference placeholder visual for presenter-specific citations.</figcaption>
+    </figure>
   </section>
   <section class="slide slide-break" data-slide="break-zach" aria-label="Zach Muhlbauer section">
     <div class="content">
       <div class="break-tag">Zach Muhlbauer</div>
       <h1>Tinkering</h1>
+      <p class="break-note">Ten talk slides, then one references slide.</p>
     </div>
   </section>
-  <section class="slide" data-slide="zach-talk-1" aria-label="Zach Muhlbauer slide 1">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-1" aria-label="Zach Muhlbauer slide 1">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Tinkering as Critical AI Literacy</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-rings" data-diagram="rings" aria-label="Minimal contextual diagram for Tinkering as Critical AI Literacy.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Tinkering as Critical AI Literacy</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for tinkering as critical ai literacy.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-2" aria-label="Zach Muhlbauer slide 2">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-2" aria-label="Zach Muhlbauer slide 2">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Teaching Infrastructure through Breakdown and Reconfiguration</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 7</div>
-        <div id="chart-7" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-columns" data-diagram="columns" aria-label="Minimal contextual diagram for Teaching Infrastructure through Breakdown and Reconfiguration.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Teaching Infrastructure through Breakdown and Reconfiguration</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for teaching infrastructure through breakdown and reconfiguration.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-3" aria-label="Zach Muhlbauer slide 3">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-3" aria-label="Zach Muhlbauer slide 3">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Pedagogical tension</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-nodes" data-diagram="nodes" aria-label="Minimal contextual diagram for Pedagogical tension.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Pedagogical tension</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for pedagogical tension.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-4" aria-label="Zach Muhlbauer slide 4">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-4" aria-label="Zach Muhlbauer slide 4">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Configurability and instability</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-steps" data-diagram="steps" aria-label="Minimal contextual diagram for Configurability and instability.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Configurability and instability</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for configurability and instability.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-5" aria-label="Zach Muhlbauer slide 5">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-5" aria-label="Zach Muhlbauer slide 5">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Temperature manipulation example</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 8</div>
-        <div id="chart-8" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-planes" data-diagram="planes" aria-label="Minimal contextual diagram for Temperature manipulation example.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Temperature manipulation example</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for temperature manipulation example.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-6" aria-label="Zach Muhlbauer slide 6">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-6" aria-label="Zach Muhlbauer slide 6">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Historical OCR prototype</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-signal" data-diagram="signal" aria-label="Minimal contextual diagram for Historical OCR prototype.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Historical OCR prototype</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for historical ocr prototype.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-7" aria-label="Zach Muhlbauer slide 7">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-7" aria-label="Zach Muhlbauer slide 7">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Breakdown as collective sense-making</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-grid" data-diagram="grid" aria-label="Minimal contextual diagram for Breakdown as collective sense-making.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Breakdown as collective sense-making</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for breakdown as collective sense-making.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-8" aria-label="Zach Muhlbauer slide 8">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-8" aria-label="Zach Muhlbauer slide 8">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>ChatUI Helper</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 9</div>
-        <div id="chart-9" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-spiral" data-diagram="spiral" aria-label="Minimal contextual diagram for ChatUI Helper.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">ChatUI Helper</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for chatui helper.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-9" aria-label="Zach Muhlbauer slide 9">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-9" aria-label="Zach Muhlbauer slide 9">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>Infrastructure visibility</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-brackets" data-diagram="brackets" aria-label="Minimal contextual diagram for Infrastructure visibility.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Infrastructure visibility</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for infrastructure visibility.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-talk-10" aria-label="Zach Muhlbauer slide 10">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-10" aria-label="Zach Muhlbauer slide 10">
     <div class="content">
       <div class="label">Zach Muhlbauer</div>
       <h1>No system is inevitable</h1>
       <h2>Tinkering</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stage-fill sketch-shell"><div id="sketch-zach" class="p5-mount"></div></div>
-      <span class="stage-credit">feature space</span>
-    </div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-paths" data-diagram="paths" aria-label="Minimal contextual diagram for No system is inevitable.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">No system is inevitable</div>
+        </div>
+      </div>
+      <figcaption class="media-caption">Minimal placeholder visual for no system is inevitable.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="zach-references" aria-label="Zach Muhlbauer references">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-references" aria-label="Zach Muhlbauer references">
     <div class="content">
       <div class="label">References</div>
       <h1>Zach Muhlbauer references</h1>
       <h2>Zach Muhlbauer</h2>
-      <div class="card"><h4>Reference placeholders</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Add approved citations here.</p></div>
-      <div class="card frag"><h4>Notes</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This slide is reserved for presenter-specific bibliography.</p></div>
+      <ul class="parallel-points" style="margin-top: 1em;">
+        <li class="frag">Reference placeholder one.</li>
+        <li class="frag">Reference placeholder two.</li>
+        <li class="frag">Reference placeholder three.</li>
+        <li class="frag">Reference placeholder four.</li>
+      </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Reference staging area.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-biblio" data-diagram="biblio" aria-label="Minimal bibliography placeholder diagram for Zach Muhlbauer references.">
+          <div class="diagram-badge">Reference staging</div>
+          <div class="diagram-title">Source clusters</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal reference placeholder visual for presenter-specific citations.</figcaption>
+    </figure>
   </section>
   <section class="slide slide-break" data-slide="break-sule" aria-label="Sule Aksoy section">
     <div class="content">
       <div class="break-tag">Sule Aksoy</div>
       <h1>Science Education and Resistance</h1>
+      <p class="break-note">Ten talk slides, then one references slide.</p>
     </div>
   </section>
-  <section class="slide" data-slide="sule-talk-1" aria-label="Sule Aksoy slide 1">
+  <section class="slide placeholder-slide odd-layout" data-slide="sule-talk-1" aria-label="Sule Aksoy slide 1">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Beyond the Black Box</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-rings" data-diagram="rings" aria-label="Minimal contextual diagram for Beyond the Black Box.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Beyond the Black Box</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for beyond the black box.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-2" aria-label="Sule Aksoy slide 2">
+  <section class="slide placeholder-slide even-layout" data-slide="sule-talk-2" aria-label="Sule Aksoy slide 2">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Resisting AI Inevitability Rhetoric and Implications for Science Education</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 10</div>
-        <div id="chart-10" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-columns" data-diagram="columns" aria-label="Minimal contextual diagram for Resisting AI Inevitability Rhetoric and Implications for Science Education.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Resisting AI Inevitability Rhetoric and Implications for Science Education</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for resisting ai inevitability rhetoric and implications for science education.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-3" aria-label="Sule Aksoy slide 3">
+  <section class="slide placeholder-slide odd-layout" data-slide="sule-talk-3" aria-label="Sule Aksoy slide 3">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Need for criticality in science education studies</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-nodes" data-diagram="nodes" aria-label="Minimal contextual diagram for Need for criticality in science education studies.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Need for criticality in science education studies</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for need for criticality in science education studies.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-4" aria-label="Sule Aksoy slide 4">
+  <section class="slide placeholder-slide even-layout" data-slide="sule-talk-4" aria-label="Sule Aksoy slide 4">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Interdisciplinary communities of practice</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-steps" data-diagram="steps" aria-label="Minimal contextual diagram for Interdisciplinary communities of practice.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Interdisciplinary communities of practice</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for interdisciplinary communities of practice.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-5" aria-label="Sule Aksoy slide 5">
+  <section class="slide placeholder-slide odd-layout" data-slide="sule-talk-5" aria-label="Sule Aksoy slide 5">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Faculty reflections and discourse</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 11</div>
-        <div id="chart-11" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-planes" data-diagram="planes" aria-label="Minimal contextual diagram for Faculty reflections and discourse.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Faculty reflections and discourse</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for faculty reflections and discourse.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-6" aria-label="Sule Aksoy slide 6">
+  <section class="slide placeholder-slide even-layout" data-slide="sule-talk-6" aria-label="Sule Aksoy slide 6">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Questioning claims and evidence</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-signal" data-diagram="signal" aria-label="Minimal contextual diagram for Questioning claims and evidence.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Questioning claims and evidence</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for questioning claims and evidence.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-7" aria-label="Sule Aksoy slide 7">
+  <section class="slide placeholder-slide odd-layout" data-slide="sule-talk-7" aria-label="Sule Aksoy slide 7">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Social implications and justice</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-grid" data-diagram="grid" aria-label="Minimal contextual diagram for Social implications and justice.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Social implications and justice</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for social implications and justice.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-8" aria-label="Sule Aksoy slide 8">
+  <section class="slide placeholder-slide even-layout" data-slide="sule-talk-8" aria-label="Sule Aksoy slide 8">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Tensions around adoption pressure</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="figure-shell">
-        <div class="figure-title">Placeholder figure 12</div>
-        <div id="chart-12" class="chart-mount"></div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-spiral" data-diagram="spiral" aria-label="Minimal contextual diagram for Tensions around adoption pressure.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Tensions around adoption pressure</div>
+        </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for tensions around adoption pressure.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-9" aria-label="Sule Aksoy slide 9">
+  <section class="slide placeholder-slide odd-layout" data-slide="sule-talk-9" aria-label="Sule Aksoy slide 9">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Resistance as critical scientific literacy</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Placeholder slide body.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-brackets" data-diagram="brackets" aria-label="Minimal contextual diagram for Resistance as critical scientific literacy.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Resistance as critical scientific literacy</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal placeholder visual for resistance as critical scientific literacy.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-talk-10" aria-label="Sule Aksoy slide 10">
+  <section class="slide placeholder-slide even-layout" data-slide="sule-talk-10" aria-label="Sule Aksoy slide 10">
     <div class="content">
       <div class="label">Sule Aksoy</div>
       <h1>Implications for science education</h1>
       <h2>Science Education and Resistance</h2>
-      <ul style="margin-top: 1em;">
+      <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
         <li class="frag">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
         <li class="frag">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+        <li class="frag">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
       </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stage-fill sketch-shell"><div id="sketch-sule" class="p5-mount"></div></div>
-      <span class="stage-credit">feature space</span>
-    </div>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-paths" data-diagram="paths" aria-label="Minimal contextual diagram for Implications for science education.">
+          <div class="diagram-badge">Placeholder visual</div>
+          <div class="diagram-title">Implications for science education</div>
+        </div>
+      </div>
+      <figcaption class="media-caption">Minimal placeholder visual for implications for science education.</figcaption>
+    </figure>
   </section>
-  <section class="slide" data-slide="sule-references" aria-label="Sule Aksoy references">
+  <section class="slide placeholder-slide odd-layout" data-slide="sule-references" aria-label="Sule Aksoy references">
     <div class="content">
       <div class="label">References</div>
       <h1>Sule Aksoy references</h1>
       <h2>Sule Aksoy</h2>
-      <div class="card"><h4>Reference placeholders</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Add approved citations here.</p></div>
-      <div class="card frag"><h4>Notes</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This slide is reserved for presenter-specific bibliography.</p></div>
+      <ul class="parallel-points" style="margin-top: 1em;">
+        <li class="frag">Reference placeholder one.</li>
+        <li class="frag">Reference placeholder two.</li>
+        <li class="frag">Reference placeholder three.</li>
+        <li class="frag">Reference placeholder four.</li>
+      </ul>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="stageCenter">
-        <div class="stageInner big-note">
-          <p><strong>Reference staging area.</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <figure class="stage figure-stage diagram-stage">
+      <div class="diagram-wrap">
+        <div class="diagram-card diagram-biblio" data-diagram="biblio" aria-label="Minimal bibliography placeholder diagram for Sule Aksoy references.">
+          <div class="diagram-badge">Reference staging</div>
+          <div class="diagram-title">Source clusters</div>
         </div>
       </div>
-    </div>
+      <figcaption class="media-caption">Minimal reference placeholder visual for presenter-specific citations.</figcaption>
+    </figure>
   </section>
 </main>
 <div class="sticky-footer">
   <div class="footer-slider">
-    <img src="images/TLC-Logo-v4-No-GC-white.png" alt="Teaching and Learning Center" class="footer-logo">
+    <img src="images/TLC-Logo-v4-No-GC-white.png" alt="Teaching and Learning Center logo" class="footer-logo">
     <button class="footer-arrow" id="btn-prev" aria-label="Previous slide">&#8592;</button>
     <div class="slider-track">
-      <input type="range" id="slide-scrubber" min="1" max="49" value="1" aria-label="Navigate to slide">
+      <input type="range" id="slide-scrubber" min="1" max="50" value="1" aria-label="Navigate to slide">
       <div class="slider-progress"></div>
       <div class="slider-thumb"></div>
     </div>
     <button class="footer-arrow" id="btn-next" aria-label="Next slide">&#8594;</button>
     <div class="footer-meta">
-      <span id="slider-counter">1 / 49</span>
+      <span id="slider-counter">1 / 50</span>
       <span class="kbd">Space</span>
       <a href="https://github.com/milwrite/cali-narst" target="_blank" rel="noopener" class="footer-deck-link">milwrite/cali-narst</a>
     </div>
@@ -916,72 +1072,27 @@
 <script src="src/slides.js"></script>
 <script>
 (function () {
-  function makeChart(selector, data) {
-    var el = document.querySelector(selector);
-    if (!el || !window.frappe || !window.frappe.Chart || el.dataset.init) return;
+  var campuses = [{name:'York College',lat:40.7029,lng:-73.7957,count:1},{name:'LaGuardia Community College',lat:40.7448,lng:-73.9357,count:2},{name:'Hostos Community College',lat:40.8173,lng:-73.9263,count:1},{name:'Brooklyn College',lat:40.6319,lng:-73.9521,count:4},{name:'Baruch College',lat:40.7408,lng:-73.9832,count:2},{name:'Lehman College',lat:40.8736,lng:-73.8945,count:2},{name:'Queens College',lat:40.7363,lng:-73.821,count:1},{name:'The City College of New York',lat:40.82,lng:-73.9493,count:2},{name:'College of Staten Island',lat:40.601,lng:-74.1485,count:3},{name:'Queensborough Community College',lat:40.7553,lng:-73.757,count:2},{name:'BMCC',lat:40.7181,lng:-74.0127,count:1},{name:'Kingsborough Community College',lat:40.5784,lng:-73.9348,count:1},{name:'Medgar Evers College',lat:40.6665,lng:-73.9576,count:1},{name:'Borough of Manhattan Community College',lat:40.7181,lng:-74.0127,count:1}];
+  function createMap(targetId, opts) {
+    var el = document.getElementById(targetId);
+    if (!el || el.dataset.init || !window.L) return;
     el.dataset.init = '1';
-    new frappe.Chart(el, {
-      title: data.title,
-      data: { labels: data.labels, datasets: [{ values: data.values }] },
-      type: data.type || 'bar',
-      height: 320,
-      colors: ['#8aa8c7']
+    var map = L.map(el, { zoomControl: !!opts.zoomControl, attributionControl: false, scrollWheelZoom: false });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, opacity: opts.dim ? 0.45 : 0.82 }).addTo(map);
+    map.fitBounds([[40.53, -74.28], [40.93, -73.68]], { padding: [18, 18] });
+    campuses.forEach(function(c) {
+      var marker = L.circleMarker([c.lat, c.lng], { radius: 5 + c.count, weight: 1.5, color: opts.dim ? 'rgba(218,225,232,0.65)' : '#d9e4f2', fillColor: opts.dim ? '#738ba8' : '#8aa8c7', fillOpacity: opts.dim ? 0.45 : 0.86 }).addTo(map);
+      marker.bindPopup('<strong>' + c.name + '</strong><br>CALI 1-2 entries: ' + c.count + '<br>Scope: greater NYC area');
+      marker.bindTooltip(c.name, { direction: 'top', offset: [0, -8], opacity: 0.92, className: 'campus-tooltip' });
     });
-  }
-  function mountSketch(nodeId, density) {
-    var node = document.getElementById(nodeId);
-    if (!node || node.dataset.init || !window.p5) return;
-    node.dataset.init = '1';
-    new p5(function (p) {
-      var points = [];
-      p.setup = function () {
-        var w = node.clientWidth || 800;
-        var h = node.clientHeight || 600;
-        p.createCanvas(w, h).parent(node);
-        for (var i = 0; i < density; i++) points.push({ x: p.random(w), y: p.random(h), vx: p.random(-0.7,0.7), vy: p.random(-0.7,0.7) });
-      };
-      p.windowResized = function () { p.resizeCanvas(node.clientWidth || 800, node.clientHeight || 600); };
-      p.draw = function () {
-        p.background('#080b10');
-        p.stroke(138,168,199,65);
-        p.strokeWeight(1.1);
-        p.noFill();
-        for (var i = 0; i < points.length; i++) {
-          var a = points[i];
-          a.x += a.vx; a.y += a.vy;
-          if (a.x < 0 || a.x > p.width) a.vx *= -1;
-          if (a.y < 0 || a.y > p.height) a.vy *= -1;
-          p.circle(a.x, a.y, 4);
-          for (var j = i + 1; j < points.length; j++) {
-            var b = points[j];
-            var d = p.dist(a.x, a.y, b.x, b.y);
-            if (d < 130) p.line(a.x, a.y, b.x, b.y);
-          }
-        }
-      };
-    });
+    if (opts.dim) {
+      L.rectangle([[40.53, -74.28], [40.93, -73.68]], { color: 'rgba(199,215,234,0.18)', weight: 1, fill: false, interactive: false }).addTo(map);
+      map.dragging.disable(); map.doubleClickZoom.disable(); map.boxZoom.disable(); map.keyboard.disable(); if (map.tap) map.tap.disable();
+    }
   }
   window.addEventListener('load', function () {
-    var chartData = [
-      ['#chart-1','Community metrics (placeholder)',['Agency','Policy','Pedagogy','Research'],[4,6,5,3],'bar'],
-      ['#chart-2','Community metrics (placeholder)',['Faculty','Students','Staff','Institution'],[5,4,3,6],'line'],
-      ['#chart-3','Community metrics (placeholder)',['Refusal','Adoption','Governance','Inquiry'],[3,4,5,6],'percentage'],
-      ['#chart-4','Transparency metrics (placeholder)',['Models','Methods','Modules','Reflection'],[5,4,6,3],'bar'],
-      ['#chart-5','Transparency metrics (placeholder)',['Critique','Collaboration','Embodiment','Justice'],[4,5,3,6],'line'],
-      ['#chart-6','Transparency metrics (placeholder)',['Scale','Context','Refusal','World-building'],[3,6,4,5],'percentage'],
-      ['#chart-7','Tinkering metrics (placeholder)',['Breakdown','Config','Prototypes','Agency'],[6,5,4,3],'bar'],
-      ['#chart-8','Tinkering metrics (placeholder)',['OCR','ChatUI','Sandbox','Teaching'],[3,5,4,6],'line'],
-      ['#chart-9','Tinkering metrics (placeholder)',['Instability','Discovery','Control','Openness'],[4,6,3,5],'percentage'],
-      ['#chart-10','Resistance metrics (placeholder)',['Claims','Evidence','Justice','Agency'],[6,5,4,3],'bar'],
-      ['#chart-11','Resistance metrics (placeholder)',['Pressure','Refusal','Criticality','Practice'],[3,4,6,5],'line'],
-      ['#chart-12','Resistance metrics (placeholder)',['Science','Rhetoric','Community','Policy'],[4,5,3,6],'percentage']
-    ];
-    chartData.forEach(function (c) { makeChart(c[0], { title: c[1], labels: c[2], values: c[3], type: c[4] }); });
-    mountSketch('title-sketch', 24);
-    mountSketch('sketch-luke', 16);
-    mountSketch('sketch-laurie', 16);
-    mountSketch('sketch-zach', 16);
-    mountSketch('sketch-sule', 16);
+    createMap('title-map', { zoomControl: false, dim: true });
+    createMap('campus-map', { zoomControl: true, dim: false });
   });
 })();
 </script>

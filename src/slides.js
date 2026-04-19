@@ -6,6 +6,10 @@ const scrubber = document.getElementById('slide-scrubber');
 const sliderCounter = document.getElementById('slider-counter');
 const sliderProgress = document.querySelector('.slider-progress');
 const sliderThumb = document.querySelector('.slider-thumb');
+const lightbox = document.getElementById('image-lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxClose = document.getElementById('lightbox-close');
 
 function clamp(n, lo, hi) {
   return Math.max(lo, Math.min(hi, n));
@@ -104,6 +108,27 @@ function syncGalleryBackward(frag, slide) {
   }
 }
 
+function closeLightbox() {
+  if (!lightbox || !lightbox.classList.contains('open')) return;
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('lightbox-open');
+  lightboxImage.src = '';
+  lightboxImage.alt = '';
+  lightboxCaption.textContent = '';
+}
+
+function openLightbox(img) {
+  if (!lightbox || !img) return;
+  var captionEl = img.closest('figure') ? img.closest('figure').querySelector('figcaption') : null;
+  lightboxImage.src = img.currentSrc || img.src;
+  lightboxImage.alt = img.alt || '';
+  lightboxCaption.textContent = captionEl ? captionEl.textContent : (img.alt || '');
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('lightbox-open');
+}
+
 function toggleOverview() {
   var on = document.body.classList.toggle('overview');
   if (on) {
@@ -157,7 +182,13 @@ slides.forEach(function(s, i) {
 
 document.addEventListener('keydown', function(e) {
   if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
-  if (e.key === 'Escape') { e.preventDefault(); toggleOverview(); return; }
+  if (e.key === 'Escape') {
+    e.preventDefault();
+    if (lightbox && lightbox.classList.contains('open')) { closeLightbox(); return; }
+    toggleOverview();
+    return;
+  }
+  if (lightbox && lightbox.classList.contains('open')) return;
   if (document.body.classList.contains('overview')) return;
   if (['ArrowRight','PageDown',' '].includes(e.key)) { e.preventDefault(); advance(); }
   if (['ArrowLeft','PageUp'].includes(e.key)) { e.preventDefault(); retreat(); }
@@ -212,10 +243,23 @@ document.addEventListener('wheel', function(e) {
   setTimeout(function() { wheelLock = false; }, 400);
 }, { passive: true });
 
+document.addEventListener('click', function(e) {
+  var img = e.target.closest('.stage img');
+  if (img && !document.body.classList.contains('overview')) {
+    e.preventDefault();
+    e.stopPropagation();
+    openLightbox(img);
+    return;
+  }
+  if (lightbox && e.target === lightbox) closeLightbox();
+});
+
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
 window.addEventListener('hashchange', function() {
   var m = location.hash.match(/^#(\d+)$/);
   if (m) show(parseInt(m[1], 10) - 1, true);
 });
 
 var m = location.hash.match(/^#(\d+)$/);
-show(m ? clamp(parseInt(m[1], 10) - 1, 0, slides.length - 1) : 0, true);
+show(m ? clamp(parseInt(m[1], 10) - 1, 0, slides.length - 1) : 0, false);
