@@ -180,6 +180,11 @@ function showGalleryItem(gallery, i) {
 /* ── Event listeners ── */
 slides.forEach(function(s, i) {
   s.setAttribute('data-slide-num', i + 1);
+  var title = s.querySelector('.content h1');
+  if (s.classList.contains('placeholder-slide') && title) {
+    var len = (title.textContent || '').trim().length;
+    if (len > 52) s.classList.add('crowded');
+  }
   s.addEventListener('click', function() {
     if (!document.body.classList.contains('overview')) return;
     document.body.classList.remove('overview');
