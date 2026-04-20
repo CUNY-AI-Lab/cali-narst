@@ -2,161 +2,112 @@
 
 ## Deck structure
 
-Current structure for the NARST CALI deck:
+NARST 2026 CALI deck — ported from the authoritative NARST Slides source on 2026-04-20.
 
-- 1 title slide
-- 1 dedicated CALI 1–2 campus map slide
-- 4 section-divider slides, one per presenter
-- 10 content slides per presenter
-- 1 references slide per presenter
+Per-presenter reset numbering:
 
-Total: **50 slides**
+- **LW** — Luke Waltzer · 8 content slides (LW1–LW8)
+- **LH** — Laurie Hurson · 13 content slides (LH1–LH13)
+- **ZM** — Zach Muhlbauer · 10 content slides (ZM1–ZM10, unchanged from prior deck)
+- **SA** — Şule Aksoy · 11 content slides (SA1–SA11)
 
----
+Every presenter also gets: 1 paper-title section divider + 1 references placeholder.
 
-## Global slides
+**Total: 51 slides**
 
-1. **Title**
-   - Community, Transparency, and Tinkering for Just Futures
-   - Lessons Learned from the Critical AI Literacy Institute
-   - NARST 2026 • April 21
-   - Panelists and CUNY Graduate Center attribution over muted Leaflet campus map
-
-2. **CALI 1–2 campus map**
-   - Participating CUNY Campuses
-   - Greater NYC area Leaflet view
-   - Popup labels include campus name and CALI 1–2 entry count
+| Deck # | Slide ID | Title |
+|---|---|---|
+| 1 | Title | Community, Transparency & Tinkering for Just Futures |
 
 ---
 
 ## Luke Waltzer
 
-3. **Section divider**
-   - Community
-   - Luke Waltzer
-
-4. **Talk 1.1**
-   - The Critical AI Literacy Institute
-5. **Talk 1.2**
-   - Asserting and Preserving Scholarly Agency in the Age of AI
-6. **Talk 1.3**
-   - Institutional context
-7. **Talk 1.4**
-   - Project scope
-8. **Talk 1.5**
-   - Faculty, student, and staff agency
-9. **Talk 1.6**
-   - Critical AI studies framing
-10. **Talk 1.7**
-    - Critical university studies framing
-11. **Talk 1.8**
-    - Scholarship of teaching and learning
-12. **Talk 1.9**
-    - Preliminary findings
-13. **Talk 1.10**
-    - Institutional implications
-14. **References**
-    - Luke Waltzer references
+| Deck # | Slide ID | Title |
+|---|---|---|
+| 2 | Luke · Paper Title | The Critical AI Literacy Institute: Asserting and Preserving Scholarly Agency in the Age of AI |
+| 3 | LW1 | About the Teaching and Learning Center |
+| 4 | LW2 | About the Critical AI Literacy Institute (CALI) |
+| 5 | LW3 | Grounding Scholarship |
+| 6 | LW4 | Defining Critical AI Literacy |
+| 7 | LW5 | The CUNY Context · CUNY-system map with borough reveal |
+| 8 | LW6 | Our Goals |
+| 9 | LW7 | The Google Question |
+| 10 | LW8 | CALI's Strategy |
+| 11 | References | To be filled in |
 
 ---
 
 ## Laurie Hurson
 
-15. **Section divider**
-    - Transparency
-    - Laurie Hurson
-
-16. **Talk 2.1**
-    - Fostering Critical AI Literacy as Collective World-Building
-17. **Talk 2.2**
-    - Curricular models for teaching with/about generative AI
-18. **Talk 2.3**
-    - Limits of mainstream AI literacy definitions
-19. **Talk 2.4**
-    - Refusal and critique
-20. **Talk 2.5**
-    - Reflective inquiry
-21. **Talk 2.6**
-    - Intervention 1 placeholder
-22. **Talk 2.7**
-    - Intervention 2 placeholder
-23. **Talk 2.8**
-    - Intervention 3 placeholder
-24. **Talk 2.9**
-    - Collaboration and community
-25. **Talk 2.10**
-    - World-building and just futures
-26. **References**
-    - Laurie Hurson references
+| Deck # | Slide ID | Title |
+|---|---|---|
+| 12 | Laurie · Paper Title | Fostering Critical AI Literacy as Collective World-Building: Curricular Models for Teaching With/About Generative AI |
+| 13 | LH1 | Overview |
+| 14 | LH2 | Defining AI Literacy |
+| 15 | LH3 | The Critical AI Literacy Institute |
+| 16 | LH4 | Faculty Development \| Spring Meetings |
+| 17 | LH5 | Faculty Development \| Summer Institute |
+| 18 | LH6 | Faculty Interventions |
+| 19 | LH7 | Research and Information in the Digital Age |
+| 20 | LH8 | Integrated Reading and Composition |
+| 21 | LH9 | Introduction to History and Literature |
+| 22 | LH10 | Statistical Methods in Earth and Atmospheric Sciences |
+| 23 | LH11 | Pedagogical Approaches for Teaching Critical AI Literacy |
+| 24 | LH12 | Critical AI Literacy and Student Agency |
+| 25 | LH13 | Critical AI Literacy … as collective world-building |
+| 26 | References | To be filled in |
 
 ---
 
 ## Zach Muhlbauer
 
-27. **Section divider**
-    - Tinkering
-    - Zach Muhlbauer
+(Preserved verbatim from prior deck; NARST source contained empty placeholders.)
 
-28. **Talk 3.1**
-    - Tinkering as Critical AI Literacy
-29. **Talk 3.2**
-    - Teaching Infrastructure through Breakdown and Reconfiguration
-30. **Talk 3.3**
-    - Pedagogical tension
-31. **Talk 3.4**
-    - Configurability and instability
-32. **Talk 3.5**
-    - Temperature manipulation example
-33. **Talk 3.6**
-    - Historical OCR prototype
-34. **Talk 3.7**
-    - Breakdown as collective sense-making
-35. **Talk 3.8**
-    - ChatUI Helper
-36. **Talk 3.9**
-    - Infrastructure visibility
-37. **Talk 3.10**
-    - No system is inevitable
-38. **References**
-    - Zach Muhlbauer references
+| Deck # | Slide ID | Title |
+|---|---|---|
+| 27 | Zach · Section | Tinkering (section divider) |
+| 28 | ZM1 | Tinkering as Critical AI Literacy |
+| 29 | ZM2 | Teaching Infrastructure through Breakdown and Reconfiguration |
+| 30 | ZM3 | Pedagogical tension |
+| 31 | ZM4 | Configurability and instability |
+| 32 | ZM5 | Temperature manipulation example |
+| 33 | ZM6 | Historical OCR prototype |
+| 34 | ZM7 | Breakdown as collective sense-making |
+| 35 | ZM8 | ChatUI Helper |
+| 36 | ZM9 | Infrastructure visibility |
+| 37 | ZM10 | No system is inevitable |
+| 38 | References | To be filled in |
 
 ---
 
-## Sule Aksoy
+## Şule Aksoy
 
-39. **Section divider**
-    - Science education and resistance
-    - Sule Aksoy
-
-40. **Talk 4.1**
-    - Beyond the Black Box
-41. **Talk 4.2**
-    - Resisting AI Inevitability Rhetoric and Implications for Science Education
-42. **Talk 4.3**
-    - Need for criticality in science education studies
-43. **Talk 4.4**
-    - Interdisciplinary communities of practice
-44. **Talk 4.5**
-    - Faculty reflections and discourse
-45. **Talk 4.6**
-    - Questioning claims and evidence
-46. **Talk 4.7**
-    - Social implications and justice
-47. **Talk 4.8**
-    - Tensions around adoption pressure
-48. **Talk 4.9**
-    - Resistance as critical scientific literacy
-49. **Talk 4.10**
-    - Implications for science education
-50. **References**
-    - Sule Aksoy references
+| Deck # | Slide ID | Title |
+|---|---|---|
+| 39 | Şule · Paper Title | Beyond the Black Box: Resisting AI Inevitability Rhetoric and Implications for Science Education |
+| 40 | SA1 | AI inevitability rhetoric as a knowledge claim deserving scientific scrutiny |
+| 41 | SA2 | Conceptual Background |
+| 42 | SA3 | CALI as evidence |
+| 43 | SA4 | Data analysis |
+| 44 | SA5 | Themes (transition) |
+| 45 | SA6 | Theme #1 — Critique of Techno-determinism |
+| 46 | SA7 | Theme #2 — Threat to Agency |
+| 47 | SA8 | Theme #3 — Material Implications |
+| 48 | SA9 | Lessons Learned from CALI |
+| 49 | SA10 | Implications for Science Education |
+| 50 | SA11 | Conclusion |
+| 51 | References | To be filled in |
 
 ---
 
-## Current content status
+## Notes on this port
 
-- Event title, session metadata, and presenter names are mapped from the provided PDF.
-- The title slide now uses a muted background campus map with translucent overlay card.
-- Slide 2 is a dedicated Leaflet campus map for CALI cohorts 1 and 2.
-- Main slide visuals now use restrained one-off diagrams rather than recycled deck screenshots.
-- References slides remain placeholders pending bibliography entry.
+- **Standalone CALI 1–2 campus map slide (prior deck slide 2) dropped.** Map now lives only on LW5 (The CUNY Context) with full-CUNY coverage, participating-vs-other color coding, and borough step-reveals (Staten Island → Manhattan → Bronx → Queens → Brooklyn).
+- **Presenter paper-title slides** replace prior section-divider slides for Luke, Laurie, and Şule. They carry the full paper title, presenter role, and affiliation. Zach retains the original "Tinkering" section-divider format per explicit direction.
+- **Testimonial quotes** from the source render as block quotes inside `.slide-testimonial` layouts (LH2, LH10, SA6, SA7, SA8, SA11).
+- **References slides** for all four presenters remain placeholders; citations are to be added tomorrow.
+- **Sule's duplicate "SLIDE 3" numbering in the source** was resolved by making "Data analysis" SA4 and bumping the remaining slides down by one.
+- **Zach's 10 slides** are preserved exactly as they were in the prior deck; the NARST source contained only empty placeholders for his section.
+
+See `CHANGELOG.md` for a detailed record of every move and `CLAUDE.md` for outstanding uncertainties to resolve tomorrow.

@@ -98,19 +98,37 @@ section.slide.active { display: flex; }
 .stage { flex: 0 0 auto; position: relative; width: 100%; min-height: var(--stage-min); border-radius: 16px; border: 1px solid rgba(180,200,220,0.05); background: #080b10; overflow: hidden; }
 .figure-stage { display: flex; flex-direction: column; }
 .figure-stage > :not(.media-caption) { flex: 1 1 auto; min-height: 0; }
+.figure-stage > img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
 
-.content h1 { font-family: var(--font-display); font-weight: 500; font-variation-settings: "opsz" 48; font-size: clamp(32px, 3.2vw, 50px); letter-spacing: -0.015em; line-height: 1.08; margin-bottom: 8px; text-align: left; text-wrap: balance; }
-.content h2 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(18px, 1.7vw, 26px); color: var(--muted); line-height: 1.24; margin-bottom: 14px; text-align: left; text-wrap: balance; letter-spacing: 0; }
-.content .label { font-family: var(--font-mono); font-size: clamp(11px, 0.9vw, 14px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--part); font-weight: 500; margin-bottom: 14px; text-align: left; display: inline-flex; align-items: center; gap: 10px; }
+.content h1 { font-family: var(--font-display); font-weight: 500; font-variation-settings: "opsz" 48; font-size: clamp(34px, 3.6vw, 58px); letter-spacing: -0.015em; line-height: 1.08; margin-bottom: 10px; text-align: left; text-wrap: balance; }
+.content h2 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(19px, 1.8vw, 28px); color: var(--muted); line-height: 1.24; margin-bottom: 14px; text-align: left; text-wrap: balance; letter-spacing: 0; }
+.content .label { font-family: var(--font-mono); font-size: clamp(12px, 0.95vw, 15px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--part); font-weight: 500; margin-bottom: 14px; text-align: left; display: inline-flex; align-items: center; gap: 10px; }
 .content .label::before { content: ''; display: inline-block; width: 22px; height: 1px; background: currentColor; opacity: 0.55; }
 .content ul { padding-left: 1.2em; }
-.content li { font-size: clamp(15px, 1.1vw, 19px); color: rgba(218,225,232,0.82); line-height: 1.45; margin-bottom: 7px; }
+.content li { font-size: clamp(16px, 1.2vw, 21px); color: rgba(218,225,232,0.82); line-height: 1.38; margin-bottom: 7px; }
+
+/* Dense slides (5+ bullets OR wrappy bullet text) — shrink further so overflow can't occur */
+.placeholder-slide.dense .content h1 { font-size: clamp(28px, 3.0vw, 48px); margin-bottom: 6px; }
+.placeholder-slide.dense .content h2 { font-size: clamp(16px, 1.5vw, 22px); margin-bottom: 10px; }
+.placeholder-slide.dense .content li { font-size: clamp(14px, 1.05vw, 18px); line-height: 1.32; margin-bottom: 5px; }
 .parallel-points li { margin-bottom: 7px; }
+.arrow-bullets { list-style: none; padding-left: 0; }
+.arrow-bullets li { position: relative; padding-left: 1.6em; list-style: none; }
+.arrow-bullets li::before { content: '\2192'; position: absolute; left: 0; top: 0; color: var(--accent, rgba(138,168,199,0.85)); font-family: var(--font-mono); font-weight: 500; line-height: inherit; }
 .content .card { padding: 12px 16px; background: rgba(180,200,220,0.04); border: 1px solid rgba(180,200,220,0.06); border-radius: 10px; margin-bottom: 8px; }
 .content .card h4 { font-size: 18px; color: var(--accent); margin-bottom: 4px; }
 .content .card p { font-size: clamp(15px, 1.1vw, 19px); color: var(--muted); line-height: 1.5; }
 .placeholder-slide .content { overflow: hidden; }
 .placeholder-slide .content ul { overflow: hidden; }
+
+/* When a figure.stage is aria-hidden (no real visual), drop it and let .content fill the row. */
+section.slide > figure.stage[aria-hidden="true"]:empty { display: none; }
+@media (min-width: 900px) {
+  section.slide:has(> figure.stage[aria-hidden="true"]:empty) .content { flex: 1 1 100%; max-width: 100%; }
+  section.slide.placeholder-slide:has(> figure.stage[aria-hidden="true"]:empty) .content h1 { max-width: 28ch; }
+  section.slide.placeholder-slide:has(> figure.stage[aria-hidden="true"]:empty) .content h2,
+  section.slide.placeholder-slide:has(> figure.stage[aria-hidden="true"]:empty) .content ul { max-width: 52ch; }
+}
 
 .frag { opacity: 0; transform: translateY(5px); transition: opacity 0.35s ease, transform 0.35s ease; pointer-events: none; }
 .frag.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
@@ -657,3 +675,201 @@ body.overview section.slide[data-slide^="zach-"],
 body.overview section.slide[data-slide="break-zach"]   { border-top: 2px solid var(--accent-zach) !important; }
 body.overview section.slide[data-slide^="sule-"],
 body.overview section.slide[data-slide="break-sule"]   { border-top: 2px solid var(--accent-sule) !important; }
+
+/* ── NARST port additions ── */
+
+/* Single-column testimonial slide: full-width content + stacked block quotes revealed by .frag */
+.slide-testimonial .content { flex-basis: 100%; max-width: none; }
+.slide-testimonial .stage { display: none; }
+@media (min-width: 720px) {
+  .slide-testimonial .content { flex: 1 1 100%; max-width: none; }
+  .slide-testimonial .stage { display: none; }
+}
+.quote-stack { display: flex; flex-direction: column; gap: 0.9em; margin-top: 1.1em; }
+.quote-stack blockquote {
+  margin: 0;
+  padding: 0.75em 1.05em;
+  border-left: 3px solid var(--break-accent, rgba(138,168,199,0.5));
+  background: rgba(180,200,220,0.04);
+  color: rgba(236,242,248,0.92);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(19px, 1.8vw, 28px);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+.quote-stack blockquote p + p { margin-top: 0.55em; }
+.quote-stack cite {
+  display: block;
+  margin-top: 0.55em;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: clamp(10px, 0.85vw, 13px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(199,215,234,0.62);
+}
+.slide-testimonial.tall .quote-stack blockquote { font-size: clamp(17px, 1.55vw, 23px); line-height: 1.4; }
+
+/* Two-column content slide (no stage): left + right columns of content */
+.slide-two-col-text .content { flex-basis: 100%; max-width: none; }
+.slide-two-col-text .stage { display: none; }
+.two-col-inner { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 2.4vw, 36px); margin-top: 1em; }
+.two-col-inner .col h3 {
+  font-family: var(--font-mono);
+  font-size: clamp(12px, 1.0vw, 16px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--break-accent, var(--accent));
+  margin-bottom: 12px;
+}
+.two-col-inner .col ol, .two-col-inner .col ul { padding-left: 1.2em; }
+.two-col-inner .col ol li, .two-col-inner .col ul li { margin-bottom: 0.5em; font-size: clamp(17px, 1.4vw, 24px); }
+.two-col-inner .col blockquote { margin: 0; }
+@media (max-width: 720px) {
+  .two-col-inner { grid-template-columns: 1fr; gap: 16px; }
+  .slide-testimonial .quote-stack blockquote { font-size: 16px; line-height: 1.4; }
+}
+
+/* Presenter paper-title slide (replaces section divider; uses .slide-break scaffold + paper-title variant) */
+.slide-break[data-variant="paper-title"] .content { grid-template-rows: auto auto 1fr auto; }
+.slide-break[data-variant="paper-title"] .content h1 {
+  font-size: clamp(30px, 3.6vw, 58px);
+  line-height: 1.08;
+  max-width: 24ch;
+}
+.slide-break[data-variant="paper-title"] .presenter-role {
+  grid-column: 2;
+  grid-row: 3;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(16px, 1.5vw, 24px);
+  color: rgba(236,242,248,0.82);
+  max-width: 38ch;
+  align-self: start;
+  margin-top: 12px;
+}
+.slide-break[data-variant="paper-title"] .affiliation {
+  grid-column: 2;
+  grid-row: 4;
+  font-family: var(--font-mono);
+  font-size: clamp(11px, 0.95vw, 14px);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(218,225,232,0.55);
+  align-self: end;
+}
+.slide-break[data-variant="paper-title"] .break-tag { grid-row: 1; }
+.slide-break[data-variant="paper-title"] .content h1 { grid-row: 2; align-self: start; margin-top: 4px; }
+
+/* Two-col text split inside a presenter-titled slide (used for LH1 overview, LH7 syllabus) */
+.content .outline-list { padding-left: 1.1em; }
+.content .outline-list li { margin-bottom: 0.45em; font-size: clamp(17px, 1.35vw, 22px); color: rgba(232,238,245,0.9); }
+.content .outline-list li.frag { line-height: 1.35; }
+
+/* Borough-step strip for LW5 map slide — small pill list of 5 boroughs below/beside the map */
+.borough-steps {
+  list-style: none;
+  padding: 0;
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.borough-steps li {
+  font-family: var(--font-mono);
+  font-size: clamp(10px, 0.9vw, 13px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid rgba(199,215,234,0.18);
+  border-radius: 999px;
+  color: rgba(199,215,234,0.52);
+  background: rgba(15,19,25,0.55);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+.borough-steps li.visible {
+  color: var(--accent-warm);
+  border-color: rgba(217,180,140,0.55);
+  background: rgba(217,180,140,0.08);
+}
+
+/* Compact legend variant used on LW5 */
+.campus-legend.compact {
+  min-width: 150px;
+  padding: 9px 11px 9px;
+}
+.campus-legend.compact .campus-legend-title {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  margin-bottom: 7px;
+}
+.campus-legend.compact .campus-legend-stats { gap: 12px; padding-bottom: 7px; margin-bottom: 7px; }
+.campus-legend.compact .campus-legend-stats .num { font-size: 17px; }
+.campus-legend.compact .campus-legend-stats .lbl { font-size: 8px; letter-spacing: 0.14em; }
+.campus-legend.compact .campus-legend-key { display: flex; flex-direction: column; gap: 5px; }
+.campus-legend.compact .campus-legend-key .row { display: flex; align-items: center; gap: 7px; }
+.campus-legend.compact .campus-legend-key .swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(8,10,14,0.9);
+  box-shadow: 0 0 0 1px rgba(232,238,245,0.35);
+}
+.campus-legend.compact .campus-legend-key .swatch.participating { background: #e5b36a; }
+.campus-legend.compact .campus-legend-key .swatch.non-participating { background: #6b7480; box-shadow: 0 0 0 1px rgba(232,238,245,0.22); }
+.campus-legend.compact .campus-legend-key .lbl {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(199,215,234,0.7);
+}
+
+/* Non-participating campus label appearance, hidden by default; borough reveal toggles per-borough */
+.campus-label-permanent.non-participating { color: rgba(199,215,234,0.78); font-weight: 500; }
+.campus-label-permanent.hidden-until-reveal { opacity: 0; transition: opacity 0.35s ease; }
+.campus-label-permanent.hidden-until-reveal.revealed { opacity: 1; }
+
+/* LW5 map layout: map fills stage, borough pills sit in content column */
+[data-slide="luke-5"] .content { gap: 0.6em; }
+[data-slide="luke-5"] .map-mount { min-height: clamp(340px, 55vh, 560px); min-height: clamp(340px, 55dvh, 560px); }
+
+/* Slim visual header above numbered syllabus lists (LH7 right column) */
+.syllabus-list { list-style: none; padding: 0; counter-reset: syllabus; }
+.syllabus-list li {
+  counter-increment: syllabus;
+  padding-left: 2em;
+  position: relative;
+  margin-bottom: 0.55em;
+  font-size: clamp(17px, 1.4vw, 24px);
+}
+.syllabus-list li::before {
+  content: counter(syllabus, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--break-accent, var(--accent));
+  letter-spacing: 0.05em;
+}
+
+/* Presenter paper-title slide gets the panelist's accent thread on the heading rule */
+.slide-break[data-variant="paper-title"] .content h1::after {
+  background: var(--break-accent, var(--accent));
+  opacity: 0.8;
+}
+
+/* .content cite fallback (inline cite after a bullet testimonial) */
+.content cite {
+  display: block;
+  margin-top: 0.3em;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: clamp(10px, 0.8vw, 12px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(199,215,234,0.55);
+}

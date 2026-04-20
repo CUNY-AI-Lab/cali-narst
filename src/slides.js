@@ -33,6 +33,7 @@ function show(i, revealAll) {
   idx = next;
   slides[idx].classList.add('active');
   fragsOf(slides[idx]).forEach(function(f) { f.classList.toggle('visible', !!revealAll); });
+  syncAllBoroughsOnShow();
 
   if (sliderCounter) sliderCounter.textContent = (idx + 1) + ' / ' + slides.length;
   if (scrubber) scrubber.value = String(idx + 1);
@@ -80,6 +81,7 @@ function advance() {
     var frag = hidden[0];
     frag.classList.add('visible');
     syncGalleryForward(frag, slides[idx]);
+    syncBoroughForward(frag);
   } else if (idx < slides.length - 1) {
     show(idx + 1);
   }
@@ -92,9 +94,36 @@ function retreat() {
     var frag = shown[shown.length - 1];
     frag.classList.remove('visible');
     syncGalleryBackward(frag, slides[idx]);
+    syncBoroughBackward(frag);
   } else if (idx > 0) {
     show(idx - 1, true);
   }
+}
+
+/* ── Borough-label reveal sync (LW5 CUNY map) ── */
+function syncBoroughForward(frag) {
+  if (!frag || !frag.dataset || !frag.dataset.borough) return;
+  if (typeof window.__cunyBoroughReveal === 'function') {
+    window.__cunyBoroughReveal(frag.dataset.borough, true);
+  }
+}
+function syncBoroughBackward(frag) {
+  if (!frag || !frag.dataset || !frag.dataset.borough) return;
+  if (typeof window.__cunyBoroughReveal === 'function') {
+    window.__cunyBoroughReveal(frag.dataset.borough, false);
+  }
+}
+function syncAllBoroughsOnShow() {
+  if (typeof window.__cunyBoroughReveal !== 'function') return;
+  var known = ['staten-island', 'manhattan', 'bronx', 'queens', 'brooklyn'];
+  var activeFrags = Array.from(document.querySelectorAll('[data-borough].frag'));
+  // Default: hide everything; then re-apply based on current visibility.
+  known.forEach(function(b) { window.__cunyBoroughReveal(b, false); });
+  activeFrags.forEach(function(frag) {
+    if (frag.classList.contains('visible')) {
+      window.__cunyBoroughReveal(frag.dataset.borough, true);
+    }
+  });
 }
 
 /* ── Gallery ↔ fragment sync ── */
@@ -192,6 +221,16 @@ slides.forEach(function(s, i) {
   if (s.classList.contains('placeholder-slide') && title) {
     var len = (title.textContent || '').trim().length;
     if (len > 52) s.classList.add('crowded');
+    // Dense detection: 4+ bullets, OR any bullet body >80 chars, OR total bullet chars >260
+    var bullets = s.querySelectorAll('.content > ul > li, .content > ul > li > ul > li');
+    var totalChars = 0;
+    var longBullet = false;
+    bullets.forEach(function(li) {
+      var t = (li.textContent || '').trim();
+      totalChars += t.length;
+      if (t.length > 80) longBullet = true;
+    });
+    if (bullets.length >= 4 || longBullet || totalChars > 260) s.classList.add('dense');
   }
   s.addEventListener('click', function() {
     if (!document.body.classList.contains('overview')) return;
