@@ -6,12 +6,10 @@
   <meta name="theme-color" content="#0f1319" />
   <title>NARST CALI Presentation, April 21, 2026</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="vendor/fonts/fonts.css" />
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
   <link rel="stylesheet" href="src/styles.css?v=20260420a" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="vendor/leaflet/leaflet.js"></script>
 </head>
 <body>
 <div id="image-lightbox" class="lightbox" aria-hidden="true">
@@ -24,6 +22,7 @@
 <a href="#slide-content" class="skip-link">Skip to slide content</a>
 <div id="slide-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 <header role="banner">
+  <img src="images/narst-logo.png" alt="NARST 2026" class="header-logo" width="889" height="252">
   <div class="bar"><div class="kbd" id="kbdSwipe">Swipe</div></div>
   <a href="https://cuny.is/cali-narst" target="_blank" rel="noopener" class="header-deck-link">cuny.is/cali-narst</a>
 </header>
@@ -55,9 +54,10 @@
     <div class="content">
       <div class="label">Luke Waltzer · LW1</div>
       <h1>About the Teaching and Learning Center</h1>
-      <h2>Graduate Center, City University of New York</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Teaching and Learning Center, Graduate Center, City University of New York</li>
+        <li class="frag">Educational development for graduate students</li>
+        <li class="frag">Research and advocacy</li>
+        <li class="frag">Open education and educational technology</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -88,21 +88,30 @@
       <h1>Grounding Scholarship</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Critical University Studies</li>
-        <li class="frag">Critical Ed Tech</li>
+        <li class="frag">Critical Ed Tech and Infrastructure Studies</li>
         <li class="frag">DH, Science Education, Educational Development</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="luke-4" aria-label="Luke Waltzer: Defining Critical AI Literacy">
+  <section class="slide slide-testimonial" data-slide="luke-4" aria-label="Luke Waltzer: Defining Critical AI Literacy">
     <div class="content">
       <div class="label">Luke Waltzer · LW4</div>
       <h1>Defining Critical AI Literacy</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Literacies</li>
-        <li class="frag">Critical / Comprehensive AI Literacies</li>
-        <li class="frag">Why the need?</li>
+      <ul class="parallel-points" style="margin-top: 0.6em;">
+        <li class="frag"><strong>Critical AI Literacies</strong></li>
+        <li class="frag"><strong>Comprehensive AI Literacies</strong></li>
       </ul>
+      <div class="quote-stack">
+        <blockquote class="frag">
+          <p>&ldquo;Critical Artificial Intelligence Literacies (CAILs) is the collection of ways of thinking about and relating to so-called artificial intelligence (AI) that rejects dominant frames presented by the technology industry, by naive computationalism, and by dehumanising ideologies. Instead, CAILs centre human cognition and uphold the integrity of academic research and education.&rdquo;</p>
+          <cite>Guest, Suarez &amp; van Rooij, &ldquo;Towards Critical Artificial Intelligence Literacies&rdquo;</cite>
+        </blockquote>
+        <blockquote class="frag">
+          <p>&ldquo;&hellip; it is the student&rsquo;s agency to question, create with, or consciously decide not to use AI based on the task; it is the teacher&rsquo;s agency to design learning experiences that align with instructional values, rather than ceding pedagogical control to a tool. True literacy involves teaching about agency itself, framing technology not as an inevitability to be adopted, but as a choice to be made.&rdquo;</p>
+          <cite>Tadimalla, Cary, Hull et al., &ldquo;Comprehensive AI Literacy: The Case for Centering Human Agency&rdquo;</cite>
+        </blockquote>
+      </div>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
@@ -118,7 +127,7 @@
       </ul>
     </div>
     <figure class="stage figure-stage map-stage">
-      <div id="cuny-map" class="map-mount" aria-label="Leaflet map plotting the CUNY system with CALI 1–2 participating campuses highlighted."></div>
+      <div id="cuny-map" class="map-mount" aria-label="Map plotting the CUNY system with CALI 1–2 participating campuses highlighted."></div>
     </figure>
   </section>
   <section class="slide placeholder-slide even-layout" data-slide="luke-6" aria-label="Luke Waltzer: Our Goals">
@@ -152,6 +161,7 @@
         <li class="frag">Emphasize agency</li>
         <li class="frag">Identify small teaching moments</li>
         <li class="frag">Ground interventions in critical inquiry</li>
+        <li class="frag">Joy</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -180,9 +190,8 @@
       <ul class="parallel-points outline-list" style="margin-top: 1em;">
         <li class="frag">AI Literacy</li>
         <li class="frag">CALI Curriculum</li>
-        <li class="frag">Institute as Method</li>
         <li class="frag">Faculty Interventions</li>
-        <li class="frag">Fostering Critical AI Literacy as Collective World-Building</li>
+        <li class="frag">Fostering Critical AI Literacy &amp; Collective World-Building</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -206,54 +215,42 @@
         <li class="frag">Context-dependent, disciplinary definitions</li>
       </ul>
     </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
+    <figure class="stage figure-stage">
+      <img src="images/cali-website-home.png" alt="CALI website home page screenshot">
+    </figure>
   </section>
   <section class="slide placeholder-slide odd-layout" data-slide="laurie-3" aria-label="Laurie Hurson: The Critical AI Literacy Institute">
     <div class="content">
       <div class="label">Laurie Hurson · LH3</div>
       <h1>The Critical AI Literacy Institute</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
+        <li class="frag">Faculty Development Program</li>
         <li class="frag">Disciplinary Questions</li>
         <li class="frag">Critical Stance</li>
         <li class="frag">Reflective, collaborative, critical inquiry</li>
-        <li class="frag">Mixed methods and longitudinal iteration</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
-      <img src="images/cali-website-home.png" alt="Critical AI Literacy Institute website home page">
+      <img src="images/faculty-questions.png" alt="Faculty questions from CALI spring meetings">
     </figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-4" aria-label="Laurie Hurson: Faculty Development — Spring Meetings">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-4" aria-label="Laurie Hurson: Summer Institute">
     <div class="content">
       <div class="label">Laurie Hurson · LH4</div>
-      <h1>Faculty Development | Spring Meetings</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Reflective Writing</li>
-        <li class="frag">Framing disciplinary approaches</li>
-        <li class="frag">Interdisciplinary Collaboration</li>
-      </ul>
-    </div>
-    <figure class="stage figure-stage">
-      <img src="images/faculty-questions.png" alt="Faculty questions from spring meetings">
-    </figure>
-  </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-5" aria-label="Laurie Hurson: Faculty Development — Summer Institute">
-    <div class="content">
-      <div class="label">Laurie Hurson · LH5</div>
-      <h1>Faculty Development | Summer Institute</h1>
+      <h1>Summer Institute</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag"><strong>Focus:</strong> Teaching with, about, against AI</li>
-        <li class="frag"><strong>Methods:</strong> Mapping, disciplinary working groups, affinity discussions, tinkering</li>
-        <li class="frag"><strong>Goals:</strong> Develop interventions; foster a community of practice (Lave &amp; Wenger, 1991; Haraway, 1988)</li>
+        <li class="frag"><strong>Methods:</strong> Drawing/mapping, disciplinary working groups, affinity discussions, tinkering</li>
+        <li class="frag"><strong>Goals:</strong> Develop interventions; foster a community of practice; model critical inquiry (Lave &amp; Wenger, 1991; Haraway, 1988; Harding, 1993)</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
       <img src="images/community-of-practice.jpg" alt="Community of Practice gathering">
     </figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-6" aria-label="Laurie Hurson: Faculty Interventions">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-5" aria-label="Laurie Hurson: Faculty Interventions">
     <div class="content">
-      <div class="label">Laurie Hurson · LH6</div>
+      <div class="label">Laurie Hurson · LH5</div>
       <h1>Faculty Interventions</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Research and Information in the Digital Age &mdash; Sarah Cohn, City College</li>
@@ -266,9 +263,9 @@
       <img src="images/faculty-interventions.png" alt="Faculty interventions overview">
     </figure>
   </section>
-  <section class="slide slide-two-col-text" data-slide="laurie-7" aria-label="Laurie Hurson: Research and Information in the Digital Age">
+  <section class="slide slide-two-col-text" data-slide="laurie-6" aria-label="Laurie Hurson: Research and Information in the Digital Age">
     <div class="content">
-      <div class="label">Laurie Hurson · LH7</div>
+      <div class="label">Laurie Hurson · LH6</div>
       <h1>Research and Information in the Digital Age</h1>
       <div class="two-col-inner">
         <div class="col">
@@ -296,9 +293,9 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-8" aria-label="Laurie Hurson: Integrated Reading and Composition">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-7" aria-label="Laurie Hurson: Integrated Reading and Composition">
     <div class="content">
-      <div class="label">Laurie Hurson · LH8</div>
+      <div class="label">Laurie Hurson · LH7</div>
       <h1>Integrated Reading and Composition</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Creativity and labor</li>
@@ -314,9 +311,9 @@
       </div>
     </figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-9" aria-label="Laurie Hurson: Introduction to History and Literature">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-8" aria-label="Laurie Hurson: Introduction to History and Literature">
     <div class="content">
-      <div class="label">Laurie Hurson · LH9</div>
+      <div class="label">Laurie Hurson · LH8</div>
       <h1>Introduction to History and Literature</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Readings on genAI and how it works</li>
@@ -328,9 +325,9 @@
       <img src="images/md-brainstormer.png" alt="Martha Nadell's brainstormer custom bot interface">
     </figure>
   </section>
-  <section class="slide slide-testimonial tall" data-slide="laurie-10" aria-label="Laurie Hurson: Statistical Methods in Earth and Atmospheric Sciences">
+  <section class="slide slide-testimonial tall" data-slide="laurie-9" aria-label="Laurie Hurson: Statistical Methods in Earth and Atmospheric Sciences">
     <div class="content">
-      <div class="label">Laurie Hurson · LH10</div>
+      <div class="label">Laurie Hurson · LH9</div>
       <h1>Statistical Methods in Earth and Atmospheric Sciences</h1>
       <ul class="parallel-points" style="margin-top: 0.7em;">
         <li class="frag">&ldquo;What are all the ways that genAI influences my learning?&rdquo;</li>
@@ -346,45 +343,58 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-11" aria-label="Laurie Hurson: Pedagogical Approaches for Teaching Critical AI Literacy">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-10" aria-label="Laurie Hurson: Interventions for Teaching Critical AI Literacy">
+    <div class="content">
+      <div class="label">Laurie Hurson · LH10</div>
+      <h1>Interventions for Teaching Critical AI Literacy</h1>
+      <ul class="parallel-points" style="margin-top: 1em;">
+        <li class="frag">Frame AI as sociotechnical system (tech, social, cultural, political, economic, ecological)</li>
+        <li class="frag">In addition to skills, consider values, power, futures</li>
+        <li class="frag">Allow for refusal and/or adoption of GenAI tools</li>
+        <li class="frag">Leverage community and collaboration</li>
+        <li class="frag">Explore knowledge production practices</li>
+      </ul>
+    </div>
+    <figure class="stage figure-stage">
+      <img src="images/mixed-methods-2.jpg" alt="Mixed methods diagram">
+    </figure>
+  </section>
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-11" aria-label="Laurie Hurson: Critical AI Literacy includes Fostering Student Agency">
     <div class="content">
       <div class="label">Laurie Hurson · LH11</div>
-      <h1>Pedagogical Approaches for Teaching Critical AI Literacy</h1>
+      <h1>Critical AI Literacy includes Fostering Student Agency</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Framing AI sociotechnical system</li>
-        <li class="frag">Beyond skill development, question values, power, and futures</li>
-        <li class="frag">Allowing for refusal and/or adoption GenAI tools</li>
-        <li class="frag">Leverage community and collaboration to engage in critical inquiry</li>
-        <li class="frag">Explore how knowledge is produced, for whom, and with what consequences</li>
+        <li class="frag">Reflect on value of labor, friction in learning process</li>
+        <li class="frag">Widen lens of analysis, future is not determined (Cottom)</li>
+        <li class="frag">Students can refuse, ask questions, decide if/how tools are used</li>
+        <li class="frag">Give students control over the tools that they use</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-12" aria-label="Laurie Hurson: Critical AI Literacy and Student Agency">
+  <section class="slide slide-testimonial" data-slide="laurie-12" aria-label="Laurie Hurson: Critical AI Literacy, Agency, and Collective World-building">
     <div class="content">
       <div class="label">Laurie Hurson · LH12</div>
-      <h1>Critical AI Literacy and Student Agency</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Widen lens of analysis, future is not determined (Cottom)</li>
-        <li class="frag">Allow refusal, asking questions, slowing down</li>
-        <li class="frag">Reflect on value of labor, friction in learning process</li>
-        <li class="frag">Involved in decision making process about how genAI used in class</li>
-        <li class="frag">Better understanding, more control over the tools that they use</li>
-      </ul>
-    </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
-  </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-13" aria-label="Laurie Hurson: Critical AI Literacy as collective world-building">
-    <div class="content">
-      <div class="label">Laurie Hurson · LH13</div>
-      <h1>Critical AI Literacy&hellip; as collective world-building</h1>
+      <h1>Critical AI Literacy, Agency, &amp; Collective World-building</h1>
+      <div class="quote-stack">
+        <blockquote class="frag">
+          <p><em>&ldquo;The classroom remains the most radical space of possibility in the academy.&rdquo;</em></p>
+          <cite>hooks, 1994</cite>
+        </blockquote>
+        <blockquote class="frag">
+          <p><em>Onto-epistemology &mdash; &ldquo;knowing is a material practice of engagement as part of the world in its differential becoming.&rdquo;</em></p>
+          <cite>Barad, 2007</cite>
+        </blockquote>
+        <blockquote class="frag">
+          <p><em>&ldquo;There is good reason to believe vision is better from below the brilliant space platforms of the powerful&hellip; &lsquo;subjugated&rsquo; standpoints are preferred because they seem to promise more adequate, sustained, objective transforming accounts of the world.&rdquo;</em></p>
+          <cite>Haraway, 1988</cite>
+        </blockquote>
+      </div>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Resist inevitability narratives</li>
         <li class="frag">Think across scale and contexts</li>
         <li class="frag">Interrogate systems of power</li>
-        <li class="frag">Recognize knowledge as situated (Haraway, Lave &amp; Wenger)</li>
-        <li class="frag">Center social, environmental, and epistemological justice issues</li>
-        <li class="frag">Classroom as a &ldquo;radical space of possibility&rdquo; to foster agency, collective approaches (hooks)</li>
+        <li class="frag">Build solidarity, resistance to respond to these tools</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -577,6 +587,8 @@
     <div class="content" data-numeral="04">
       <div class="break-tag" data-panelist-num="04">&Scedil;ule Aksoy</div>
       <h1>Beyond the Black Box: Resisting AI Inevitability Rhetoric and Implications for Science Education</h1>
+      <p class="presenter-role">Assistant Professor of Science Education, SUNY Brockport</p>
+      <p class="affiliation">CALI Research &amp; Evaluation, CUNY Graduate Center</p>
     </div>
   </section>
   <section class="slide placeholder-slide odd-layout" data-slide="sule-1" aria-label="Sule Aksoy: AI inevitability rhetoric">
@@ -597,9 +609,9 @@
       <div class="label">&Scedil;ule Aksoy · SA2</div>
       <h1>Conceptual Background</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag"><strong>Freire</strong> &mdash; critical pedagogy and liberation</li>
-        <li class="frag"><strong>Morales-Doyle</strong> &mdash; justice-centered science education</li>
-        <li class="frag"><strong>Bang</strong> &mdash; Indigenous, place-based science learning</li>
+        <li class="frag">Limited critique and interdisciplinary approaches in science education (Avraamidou, 2024; Heeg &amp; Avraamidou, 2023; Li et al., 2023)</li>
+        <li class="frag">Call for critical transdisciplinary, transnational, and ecological (TTE) approach to science and science education (Phillip et al., 2025; Morales-Doyle, 2023)</li>
+        <li class="frag">Critical consciousness and social justice in science education (Freire, 2000; Morales-Doyle, 2019; Bang et al., 2012)</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -643,11 +655,11 @@
       <div class="quote-stack">
         <blockquote class="frag">
           <p>&ldquo;&hellip; presenting it as inevitable leads to pressure of a sort, to use it, to not critically interrogate it, to accept it as neutral or unbiased and not reflective of those who create it and the society it reflects.&rdquo;</p>
-          <cite>CALI faculty reflection</cite>
+          <cite>CALI faculty reflection &middot; English</cite>
         </blockquote>
         <blockquote class="frag">
           <p>&ldquo;Not incorporating AI into my courses, &hellip; feels to me irresponsible, even while recognizing other legitimate concerns one may have about the whole generative AI enterprise. How to do this effectively given the many binding constraints &hellip; seems to me the billion-dollar questions. What are the incremental things one can do?&hellip;&rdquo;</p>
-          <cite>CALI faculty reflection</cite>
+          <cite>CALI faculty reflection &middot; Earth Science</cite>
         </blockquote>
       </div>
     </div>
@@ -660,11 +672,11 @@
       <div class="quote-stack">
         <blockquote class="frag">
           <p>&ldquo;&hellip; I agree that the interests behind genAI are clearly sending us the message that if it&rsquo;s not unavoidable now, it will be soon. Get on board or get left behind.&rdquo;</p>
-          <cite>CALI faculty reflection</cite>
+          <cite>CALI faculty reflection &middot; Library Sciences</cite>
         </blockquote>
         <blockquote class="frag">
           <p>&ldquo;I&rsquo;m interested in pushing back on the narrative of AI inevitability &ndash; that there is only one outcome for this technology&hellip; I&rsquo;m not sure what institutional support in counteracting this narrative might look like, but it feels disheartening that the broad institutional response has been inevitable.&rdquo;</p>
-          <cite>CALI faculty reflection</cite>
+          <cite>CALI faculty reflection &middot; Library Sciences</cite>
         </blockquote>
       </div>
     </div>
@@ -677,11 +689,11 @@
       <div class="quote-stack">
         <blockquote class="frag">
           <p>&ldquo;I do not want to lose sight of the damage that LLMs and big tech is doing at the human and planetary levels. So, while I want to teach students how to be thoughtful, ethical critics, I don&rsquo;t know where I stand in terms of encouraging them to be &lsquo;users&rsquo;.&rdquo;</p>
-          <cite>CALI faculty reflection</cite>
+          <cite>CALI faculty reflection &middot; English</cite>
         </blockquote>
         <blockquote class="frag">
           <p>&ldquo;It&rsquo;s important for students to reflect on the black box problem of AI and generative/predictive writing: what datasets were used to train these models? How do they reflect implicit and explicit biases, problems, discrimination, etc? If we can&rsquo;t know these answers, how might we detect them from the texts these tools produce?&rdquo;</p>
-          <cite>CALI faculty reflection</cite>
+          <cite>CALI faculty reflection &middot; Composition</cite>
         </blockquote>
       </div>
     </div>
@@ -692,10 +704,26 @@
       <div class="label">&Scedil;ule Aksoy · SA9</div>
       <h1>Lessons Learned from CALI</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag"><strong>Luke</strong></li>
-        <li class="frag"><strong>Laurie</strong></li>
-        <li class="frag"><strong>Zach</strong></li>
-        <li class="frag"><strong>&Scedil;ule</strong></li>
+        <li class="frag"><strong>Luke</strong> &mdash; building PD from ground up to support scholarly agency and interdisciplinary collaboration
+          <ul>
+            <li>Institutional change and policy recommendations in edtech decisions</li>
+          </ul>
+        </li>
+        <li class="frag"><strong>Laurie</strong> &mdash; designing curricular interventions as collective world-building, community of practice
+          <ul>
+            <li>Methodological implications, cross-intervention analysis</li>
+          </ul>
+        </li>
+        <li class="frag"><strong>Zach</strong> &mdash; t(h)inkering as a pedagogical tool for critical inquiry and agency development
+          <ul>
+            <li>Making sense of tools through hands-on inquiry</li>
+          </ul>
+        </li>
+        <li class="frag"><strong>&Scedil;ule</strong> &mdash; repositioning faculty critique as a pedagogical resource (tension but productive)
+          <ul>
+            <li>Empirical grounding; epistemic practices not discipline-specific</li>
+          </ul>
+        </li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -713,20 +741,35 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide slide-testimonial" data-slide="sule-11" aria-label="Sule Aksoy: Conclusion">
+  <section class="slide slide-testimonial" data-slide="sule-11" aria-label="Sule Aksoy: Conclusion — Frame #4">
     <div class="content">
       <div class="label">&Scedil;ule Aksoy · SA11</div>
       <h1>Conclusion</h1>
       <div class="quote-stack">
         <blockquote class="frag">
           <p>&ldquo;The danger I see with gen AI right now is just how far we are abstracted away from understanding the scale of planetary computation. Someone writing or coding or communicating in the so-called &lsquo;cloud&rsquo; &mdash; as we are literally doing right now &mdash; does not need to envision the massive network of industrial processes, labor and power relationships, mineral extractions, deals between massive companies, etc. that continually weave the web that is the Internet. Gen AI only further scales this development, especially if students (or any of us) continue to lean on the tools. I worry that we are learning not to look at this massive infrastructure, at the materiality of the cloud.&rdquo;</p>
-          <cite>CALI 2.0 Adjunct faculty, CS</cite>
-        </blockquote>
-        <blockquote class="frag">
-          <p>&ldquo;this shift does make me feel that I can be more assertive by questioning my colleagues, professors, and future students when I see frivolous use of AI. Honest discussion about use of AI is especially important since my entire program and career path centers around reducing harm to marginalized communities. It is very difficult to be excited about new technology when I know my own students in an underserved urban area will be impacted most by its negative impacts.&rdquo;</p>
-          <cite>Preservice Elementary Teacher</cite>
+          <cite>CALI faculty reflection &middot; Computer Science</cite>
         </blockquote>
       </div>
+      <ul class="parallel-points" style="margin-top: 0.8em;">
+        <li class="frag"><strong>Frame #4</strong> &mdash; Learning &amp; Using STEM to Promote Justice (NASEM <em>Equity in K-12 STEM Education</em>, 2025)</li>
+      </ul>
+    </div>
+    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
+  </section>
+  <section class="slide slide-testimonial" data-slide="sule-12" aria-label="Sule Aksoy: Conclusion — Frame #5">
+    <div class="content">
+      <div class="label">&Scedil;ule Aksoy · SA12</div>
+      <h1>Conclusion</h1>
+      <div class="quote-stack">
+        <blockquote class="frag">
+          <p>&ldquo;this shift does make me feel that I can be more assertive by questioning my colleagues, professors, and future students when I see frivolous use of AI. Honest discussion about use of AI is especially important since my entire program and career path centers around reducing harm to marginalized communities. It is very difficult to be excited about new technology when I know my own students in an underserved urban area will be impacted most by its negative impacts.&rdquo;</p>
+          <cite>CALI faculty reflection &middot; Preservice Teacher</cite>
+        </blockquote>
+      </div>
+      <ul class="parallel-points" style="margin-top: 0.8em;">
+        <li class="frag"><strong>Frame #5</strong> &mdash; Envisioning Sustainable Futures Through STEM (NASEM <em>Equity in K-12 STEM Education</em>, 2025)</li>
+      </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
@@ -740,24 +783,24 @@
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
 </main>
-<div class="sticky-footer">
+<footer class="sticky-footer">
   <div class="footer-slider">
     <img src="images/TLC-Logo-v4-No-GC-white.png" alt="Teaching and Learning Center logo" class="footer-logo">
     <button class="footer-arrow" id="btn-prev" aria-label="Previous slide">&#8592;</button>
     <div class="slider-track">
-      <input type="range" id="slide-scrubber" min="1" max="51" value="1" aria-label="Navigate to slide">
+      <input type="range" id="slide-scrubber" min="1" max="52" value="1" aria-label="Navigate to slide">
       <div class="slider-progress"></div>
       <div class="slider-thumb"></div>
     </div>
     <button class="footer-arrow" id="btn-next" aria-label="Next slide">&#8594;</button>
     <button class="footer-arrow" id="btn-fullscreen" aria-label="Toggle fullscreen" title="Toggle fullscreen (F)">&#9974;</button>
     <div class="footer-meta">
-      <span id="slider-counter">1 / 51</span>
+      <span id="slider-counter">1 / 52</span>
       <span class="kbd">Space</span>
       <a href="https://cuny.is/cali-narst" target="_blank" rel="noopener" class="footer-deck-link">cuny.is/cali-narst</a>
     </div>
   </div>
-</div>
+</footer>
 <script src="src/slides.js"></script>
 <script>
 (function () {
@@ -854,15 +897,15 @@
       scrollWheelZoom: false
     });
     (window.__deckLeafletMaps || (window.__deckLeafletMaps = [])).push(map);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-      maxZoom: 19,
-      subdomains: 'abcd',
+    L.tileLayer('vendor/tiles/dark_nolabels/{z}/{x}/{y}.png', {
+      minZoom: 9,
+      maxZoom: 13,
       opacity: opts.dim ? 0.55 : 0.92,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }).addTo(map);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
-      maxZoom: 19,
-      subdomains: 'abcd',
+    L.tileLayer('vendor/tiles/dark_only_labels/{z}/{x}/{y}.png', {
+      minZoom: 9,
+      maxZoom: 13,
       opacity: opts.dim ? 0.18 : 0.28,
       pane: 'tilePane'
     }).addTo(map);
@@ -876,8 +919,34 @@
       map.fitBounds(deckBounds, { padding: [6, 6], animate: false });
     };
     map.whenReady(function () { map.__deckRefit(); });
-    [60, 220, 600, 1400].forEach(function (ms) { setTimeout(map.__deckRefit, ms); });
     map.on('load', map.__deckRefit);
+    map.on('tileerror', function () { elNode.classList.add('tiles-unavailable'); });
+
+    // Deterministic refit: respond to slide visibility and container resize
+    // instead of blind timeouts. Fallback setTimeout kept for UAs lacking observers.
+    var parentSlide = elNode.closest('section.slide');
+    if (parentSlide && 'IntersectionObserver' in window) {
+      var slideIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.4) map.__deckRefit();
+        });
+      }, { threshold: [0.4, 0.9] });
+      slideIO.observe(parentSlide);
+    } else {
+      setTimeout(map.__deckRefit, 220);
+    }
+    if ('ResizeObserver' in window) {
+      var resizeRaf = 0;
+      var sizeRO = new ResizeObserver(function () {
+        if (resizeRaf) return;
+        resizeRaf = requestAnimationFrame(function () {
+          resizeRaf = 0;
+          map.invalidateSize(false);
+          map.__deckRefit();
+        });
+      });
+      sizeRO.observe(elNode);
+    }
 
     var participatingList = campuses.filter(function(c) { return c.participating; });
     var totalEntries = participatingList.reduce(function(s, c) { return s + c.count; }, 0);
@@ -949,7 +1018,6 @@
       legend.addTo(map);
     }
 
-    setTimeout(function() { map.invalidateSize(false); map.__deckRefit(); }, 120);
     return map;
   }
 
@@ -1016,8 +1084,15 @@
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       requestAnimationFrame(frame);
     }
+    var reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    function paintOnce() {
+      gl.uniform1f(uTime, accumElapsed);
+      gl.uniform2f(uRes, canvas.width, canvas.height);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
     function startLoop() {
       if (running || document.hidden || !onScreen) return;
+      if (reduceMotion) { paintOnce(); return; }
       running = true;
       lastTs = null;
       requestAnimationFrame(frame);
