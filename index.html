@@ -857,6 +857,7 @@
     }).addTo(map);
     var deckBounds = [[40.545, -74.18], [40.89, -73.78]];
     map.__deckBounds = deckBounds;
+    map.setView([40.71, -73.98], 11, { animate: false });
     map.__deckRefit = function () {
       var sz = map.getSize();
       if (sz.x < 50 || sz.y < 50) return;
