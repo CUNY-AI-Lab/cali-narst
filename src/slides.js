@@ -10,7 +10,9 @@ const lightbox = document.getElementById('image-lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 const lightboxCaption = document.getElementById('lightbox-caption');
 const lightboxClose = document.getElementById('lightbox-close');
+const announcer = document.getElementById('slide-announcer');
 const leafletMaps = window.__deckLeafletMaps || (window.__deckLeafletMaps = []);
+let announceTimer = null;
 
 function clamp(n, lo, hi) {
   return Math.max(lo, Math.min(hi, n));
@@ -51,9 +53,24 @@ function show(i, revealAll) {
 
   setTimeout(function() {
     leafletMaps.forEach(function(map) {
-      try { map.invalidateSize(false); } catch (e) {}
+      try {
+        map.invalidateSize(false);
+        if (typeof map.__deckRefit === 'function') map.__deckRefit();
+      } catch (e) {}
     });
+    var canv = slides[idx].querySelector('canvas');
+    if (canv && typeof canv.__deckResize === 'function') {
+      try { canv.__deckResize(); } catch (e) {}
+    }
   }, 60);
+
+  if (announcer) {
+    if (announceTimer) clearTimeout(announceTimer);
+    announceTimer = setTimeout(function() {
+      var label = slides[idx].getAttribute('aria-label') || ('Slide ' + (idx + 1));
+      announcer.textContent = 'Slide ' + (idx + 1) + ' of ' + slides.length + ': ' + label;
+    }, 140);
+  }
 }
 
 function advance() {
@@ -84,14 +101,8 @@ function retreat() {
 function syncGalleryForward(frag, slide) {
   var gallery = slide.querySelector('.stage-gallery');
   if (!gallery) return;
-  if (frag.dataset.startGallery !== undefined && !gallery._timer) {
-    var items = gallery.querySelectorAll('.gallery-item');
-    var interval = parseInt(gallery.dataset.interval || '6000', 10);
-    gallery._timer = setInterval(function() {
-      var cur = gallery.querySelector('.gallery-item.active');
-      var curIdx = Array.from(items).indexOf(cur);
-      showGalleryItem(gallery, (curIdx + 1) % items.length);
-    }, interval);
+  if (frag.dataset.startGallery !== undefined) {
+    startGalleryTimer(gallery);
   }
   if (frag.dataset.galleryIdx !== undefined) {
     showGalleryItem(gallery, parseInt(frag.dataset.galleryIdx, 10));
@@ -128,12 +139,14 @@ function closeLightbox() {
 function openLightbox(img) {
   if (!lightbox || !img) return;
   var captionEl = img.closest('figure') ? img.closest('figure').querySelector('figcaption') : null;
+  var captionText = captionEl ? (captionEl.textContent || '').trim() : '';
   lightboxImage.src = img.currentSrc || img.src;
-  lightboxImage.alt = img.alt || '';
-  lightboxCaption.textContent = captionEl ? captionEl.textContent : (img.alt || '');
+  lightboxImage.alt = img.alt || captionText || 'Zoomed slide image';
+  lightboxCaption.textContent = captionText || img.alt || '';
   lightbox.classList.add('open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.classList.add('lightbox-open');
+  if (lightboxClose) lightboxClose.focus({ preventScroll: true });
 }
 
 function toggleOverview() {
@@ -161,12 +174,7 @@ function initGalleries(slide) {
       dots.appendChild(dot);
     });
     if ('fragSync' in gallery.dataset) return;
-    var interval = parseInt(gallery.dataset.interval || '6000', 10);
-    gallery._timer = setInterval(function() {
-      var cur = gallery.querySelector('.gallery-item.active');
-      var curIdx = Array.from(items).indexOf(cur);
-      showGalleryItem(gallery, (curIdx + 1) % items.length);
-    }, interval);
+    startGalleryTimer(gallery);
   });
 }
 
@@ -192,12 +200,31 @@ slides.forEach(function(s, i) {
   });
 });
 
+function toggleFullscreen() {
+  try {
+    if (document.fullscreenElement) {
+      if (document.exitFullscreen) document.exitFullscreen();
+    } else if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen().catch(function() {});
+    }
+  } catch (err) {}
+}
+
 document.addEventListener('keydown', function(e) {
   if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
   if (e.key === 'Escape') {
     e.preventDefault();
+    if (document.body.classList.contains('blanked')) { document.body.classList.remove('blanked'); return; }
     if (lightbox && lightbox.classList.contains('open')) { closeLightbox(); return; }
     toggleOverview();
+    return;
+  }
+  if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFullscreen(); return; }
+  if (e.key === 'b' || e.key === 'B' || e.key === '.') {
+    e.preventDefault();
+    document.body.classList.toggle('blanked');
+    if (announcer) announcer.textContent = document.body.classList.contains('blanked') ? 'Screen blanked' : 'Screen restored';
     return;
   }
   if (lightbox && lightbox.classList.contains('open')) return;
@@ -210,8 +237,10 @@ document.addEventListener('keydown', function(e) {
 
 var btnPrev = document.getElementById('btn-prev');
 var btnNext = document.getElementById('btn-next');
+var btnFullscreen = document.getElementById('btn-fullscreen');
 if (btnPrev) btnPrev.addEventListener('click', retreat);
 if (btnNext) btnNext.addEventListener('click', advance);
+if (btnFullscreen) btnFullscreen.addEventListener('click', toggleFullscreen);
 
 if (scrubber) {
   scrubber.min = 1;
@@ -267,6 +296,30 @@ document.addEventListener('click', function(e) {
 });
 
 if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
+function startGalleryTimer(gallery) {
+  if (gallery._timer || document.hidden) return;
+  var items = gallery.querySelectorAll('.gallery-item');
+  var interval = parseInt(gallery.dataset.interval || '6000', 10);
+  gallery._timer = setInterval(function() {
+    var cur = gallery.querySelector('.gallery-item.active');
+    var curIdx = Array.from(items).indexOf(cur);
+    showGalleryItem(gallery, (curIdx + 1) % items.length);
+  }, interval);
+}
+
+document.addEventListener('visibilitychange', function() {
+  var activeSlide = slides[idx];
+  if (!activeSlide) return;
+  activeSlide.querySelectorAll('.stage-gallery').forEach(function(g) {
+    if (document.hidden) {
+      if (g._timer) { clearInterval(g._timer); g._timer = null; g._wasRunning = true; }
+    } else if (g._wasRunning && !('fragSync' in g.dataset)) {
+      g._wasRunning = false;
+      startGalleryTimer(g);
+    }
+  });
+});
 
 window.addEventListener('hashchange', function() {
   var m = location.hash.match(/^#(\d+)$/);
