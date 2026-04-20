@@ -84,6 +84,14 @@ section.slide.active { display: flex; }
 .leaflet-control-zoom a { background: rgba(15,19,25,0.92); color: rgba(218,225,232,0.94); border-bottom-color: rgba(199,215,234,0.14); }
 .title-map-wrap .leaflet-pane, .title-map-wrap .leaflet-control-container { filter: saturate(0.45) brightness(0.6) contrast(0.9); }
 .title-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: clamp(24px, 5vw, 80px); background: linear-gradient(rgba(12,16,22,0.34), rgba(12,16,22,0.5)); }
+.title-art-shell {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05070b;
+}
 .title-art-shell::after {
   content: '';
   position: absolute;
@@ -99,9 +107,11 @@ section.slide.active { display: flex; }
 .panelists, .institution { font-size: clamp(20px, 2vw, 26px); color: rgba(236,242,248,0.9); }
 .panelists { margin-bottom: 10px; }
 .title-domainwarp {
+  position: absolute;
+  inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
 }
 .title-art-shell iframe {
   width: 100%; height: 100%; border: none; display: block; filter: saturate(0.92) brightness(0.7) contrast(1.06);
