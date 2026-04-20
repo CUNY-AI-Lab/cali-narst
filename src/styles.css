@@ -636,13 +636,19 @@ body.overview section.slide.slide-break { background: var(--card) !important; pa
 body.overview section.slide.slide-title { padding: 14px !important; background: var(--card) !important; }
 body.overview section.slide.slide-title .title-overlay { position: static !important; display: block !important; padding: 0 !important; background: transparent !important; inset: auto !important; }
 
-/* ── Overview-mode cleanup: kill the inset accent stripe + label leader rule, use a clean top accent instead ── */
-body.overview section.slide .content { box-shadow: none !important; }
+/* ── Overview-mode cleanup: strip all per-slide accent strokes + leader rules; keep only a top-edge presenter color ── */
+body.overview section.slide .content,
+body.overview section.slide .content * { box-shadow: none !important; outline: none !important; }
+body.overview section.slide .content { border-radius: 0 !important; border: none !important; }
 body.overview section.slide .content .label { display: block !important; }
 body.overview section.slide .content .label::before,
+body.overview section.slide .content .label::after,
+body.overview section.slide .content h1::before,
 body.overview section.slide .content h1::after,
 body.overview section.slide .break-tag::before,
-body.overview section.slide .break-tag::after { display: none !important; }
+body.overview section.slide .break-tag::after,
+body.overview section.slide .eyebrow::before,
+body.overview section.slide .eyebrow::after { display: none !important; content: none !important; }
 body.overview section.slide[data-slide^="luke-"],
 body.overview section.slide[data-slide="break-luke"]   { border-top: 2px solid var(--accent-luke) !important; }
 body.overview section.slide[data-slide^="laurie-"],
