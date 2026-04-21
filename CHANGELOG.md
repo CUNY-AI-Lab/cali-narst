@@ -1,5 +1,49 @@
 # CHANGELOG
 
+## 2026-04-20 · deck refinements (post-port)
+
+Same-day follow-up to the initial port. Reconciles the deck with the SLIDES.md source after a second read, removes dead infrastructure, and tightens a few layouts.
+
+### Structure
+
+- **LH2 "Defining AI Literacy" cut.** Defining-literacy content absorbed into LH1 Overview + LH3 The Critical AI Literacy Institute. Remaining Laurie slides renumbered. Laurie now runs 11 content slides (LH1–LH11), not 13.
+- **ZM4 "Historical OCR prototype" cut.** Remaining Zach slides renumbered. Zach now runs 10 content slides (ZM1–ZM10).
+- **SA Conclusion split.** The single Conclusion slide was split into SA11 (Frame #4 — Learning & Using STEM to Promote Justice) and SA12 (Frame #5 — Envisioning Sustainable Futures) so each NASEM equity frame gets its own beat.
+- **References slides removed** for all four presenters. Citations live in the paper, not on the deck.
+- **Total: 51 → 46 slides.** Scrubber `max` and counter text updated to 46. Slide-navigation deep-link anchors (`#slide-N`) still resolve in order.
+
+### LW5 infrastructure
+
+- **Leaflet map removed.** LW5 "The CUNY Context" now uses a static `images/cuny.png` per the SLIDES.md visual spec. Removed the vendored Leaflet `<link>`/`<script>` imports, the inline `createMap()` block, the `__cunyBoroughReveal` hook, and the borough step-reveal sync calls in `src/slides.js`.
+- `vendor/leaflet/` and `vendor/tiles/` retained on disk but no longer referenced — reclaimable ~7 MB if unused.
+- Map-related CSS hooks (`.tiles-unavailable`, `.map-mount`, `.campus-*`) remain in `src/styles.css` but have no DOM target.
+
+### Header + footer
+
+- **NARST logo (header) now a link** to https://narst.org/conferences/2026-annual-conference (opens new tab, `rel="noopener"`). Wrapped in `.header-logo-link`.
+- **TLC logo (footer) now a link** to https://tlc.commons.gc.cuny.edu/ (opens new tab). Wrapped in `.footer-logo-link`.
+- **NARST logo enlarged** from `clamp(20px, 2.4vw, 30px)` height to `clamp(34px, 4.5vw, 52px)` — matches the TLC logo exactly so the two read as paired institutional badges. Tagline "A global organization for improving science education through research" is now legible at presentation distance.
+- `--header-h` bumped `48px → 76px` to accommodate the enlarged NARST logo with breathing room.
+- **Logos vertically aligned.** Both sit at x=18px from the viewport's left edge. Achieved by moving the TLC logo out of `.footer-slider` into a sibling link, absolutely-positioned at `left: 18px`. `.sticky-footer` gains a `clamp(90px, 9vw, 130px)` padding-left reservation so slider controls clear the logo on narrow viewports.
+
+### LW6 "Our Goals" ladder layout
+
+- Removed the `max-width: 26ch` constraint that was forcing "Reasoned Adoption ↔ Informed Refusal" (36 chars) to wrap to 2 lines, which in turn pushed the third goal off the frame.
+- Font-size ceiling reduced `clamp(30px, 4.6vw, 68px) → clamp(28px, 3.8vw, 58px)`; `white-space: nowrap` above 720px guarantees each goal sits on a single line.
+- Added a faint sage diagonal guide-rule behind the list (`::before` on `.ladder-list`, Luke's `--accent-luke` at ~35% opacity, 116°) reinforcing the SLIDES.md direction *"one frame — arrayed across diagonally."*
+- Indent stops tightened proportionally: `clamp(1.5rem, 10vw, 8rem)` and `clamp(3rem, 20vw, 16rem)` (down from 12rem/22rem caps).
+- Mobile media-query cleaned up to comply with the typography token contract: no font-size override (base clamp's 28px floor handles it); mobile rule is now layout-only (restores wrapping, trims indents).
+
+### Files touched
+
+- `index.html` — header logo wrapped in link; TLC logo moved out of `.footer-slider` into a sibling link; footer-slider no longer contains the logo `<img>`.
+- `src/styles.css` — `--header-h` bumped; `.header-logo`/`.footer-logo` sizing and link wrappers; `.sticky-footer` padding-left reservation; LW6 ladder rule rewritten.
+- `OUTLINE.md` — renumbered for 46 slides; per-presenter counts and per-slide IDs reflect LH2/ZM4 cuts and SA split.
+- `README.md` — slide counts corrected (Luke 8, Laurie 11, Zach 10, Şule 12); session title re-typeset with ampersand; Şule spelled with diacritic.
+- `CLAUDE.md` — porting-uncertainties list pruned of LH12/LH13 references; logo-link + LW6 contracts added.
+
+---
+
 ## 2026-04-20 · NARST Slides port
 
 Ported the authoritative "NARST Slides" source (Luke, Laurie, Şule content; Zach left as-is) into `index.html`, replacing the Lorem Ipsum scaffolding. Every change is listed below.

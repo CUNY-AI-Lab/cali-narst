@@ -92,6 +92,46 @@ Type sizes live as `--fs-*` custom properties at `:root` in
 `@media (max-width: …)` blocks — clamp() floors handle small viewports.
 See `AUDIT-cali-hardening.md` for the full token list and rationale.
 
+## Header + footer logo contract (added 2026-04-20)
+
+The NARST (top-left) and TLC (bottom-left) logos are a matched pair:
+
+- Same size via the same clamp: `height: clamp(34px, 4.5vw, 52px)`.
+- Same x-offset (18px from the viewport edge). NARST sits there naturally
+  as the header's first flex child; TLC is absolutely-positioned
+  (`.footer-logo-link { position: absolute; left: 18px; top: 50% }`)
+  because `.footer-slider` is `max-width: 1280px` centered and would
+  otherwise drift right at wide viewports.
+- Both logos are wrapped in `<a target="_blank" rel="noopener">` links:
+  - NARST → `https://narst.org/conferences/2026-annual-conference`
+  - TLC   → `https://tlc.commons.gc.cuny.edu/`
+- `.sticky-footer` carries `padding-left: clamp(90px, 9vw, 130px)` to
+  reserve space for the absolute TLC logo so slider controls never
+  collide with it on narrow viewports. Do not reduce this padding
+  without also re-homing the TLC logo.
+- `--header-h: 76px` is sized for the enlarged NARST logo with breathing
+  room. Reducing `--header-h` will clip the header badge.
+
+## LW6 "Our Goals" ladder contract (added 2026-04-20)
+
+LW6 is the deck's lone ladder layout — three goals cascade from
+top-left to bottom-right as one diagonal array. The source note reads
+*"One frame — arrayed across diagonally."*
+
+- `.ladder-list li` uses `white-space: nowrap` above 720px. The longest
+  bullet ("Reasoned Adoption ↔ Informed Refusal", 36 chars) only fits on
+  one line at the current `clamp(28px, 3.8vw, 58px)` size; reverting the
+  font-size ceiling past ~60px or re-introducing a `max-width` in `ch`
+  will send it back into a 2-line wrap and push bullet 3 off-frame.
+- The faint sage diagonal rule behind the list is a `::before` on
+  `.ladder-list` using `--accent-luke` at ~35% opacity, drawn via
+  `linear-gradient(116deg, …)`. `isolation: isolate` on the ul keeps
+  `z-index: -1` confined to the ladder's stacking context.
+- The mobile `@media (max-width: 720px)` block is layout-only
+  (white-space: normal + tighter indents). Don't re-add a font-size
+  override there — the base clamp's 28px floor already handles small
+  viewports.
+
 ## Files to keep updated together
 
 When changing structure, update these together:
@@ -115,10 +155,10 @@ The NARST Slides source was ported into `index.html` today. The following items 
 - **LW7 visual — "a gif"**: source says "Visual: A gif". No animated asset supplied; placeholder in place. Decide which GIF to embed (Google acquisition-era visual? CUNY-investment chart?).
 - **LW3 visual — "Array of images of key books (or maybe slideshow?)"**: source is explicitly uncertain. Placeholder in place. Decide whether to pull book covers for Critical University Studies / Critical Ed Tech / DH titles.
 - **LW4 visual — "Screenshots of key texts"**: similarly unspecified; placeholder in place.
-- **LW2, LW6, LW8, LH11, LH12, LH13, SA1, SA2, SA3, SA5, SA9, SA10 visuals — "tbd"**: source marks these as `Visual: tbd` or equivalent. Placeholders in place.
-- **LH2 / LH5 citations**: Long & Magerko, 2020; Almatrafi et al., 2024; Lave & Wenger, 1991; Haraway, 1988 all render inline. Full entries should be added to Laurie's references slide.
-- **LH10 quote attribution**: the long testimonial is rendered with `<cite>Spencer Hill, City College · CALI faculty reflection</cite>`. Source did not formally attribute the quote; inference drawn from SLIDE 10 being Spencer Hill's course. Confirm before presenting.
-- **LH11 typo "Pedagogiocal"**: corrected to "Pedagogical". Flag for Laurie's awareness.
+- **LW2, LW6, LW8, LH9, LH11, SA1, SA2, SA3, SA5, SA9, SA10 visuals — "tbd"**: source marks these as `Visual: tbd` or equivalent. Placeholders in place. (All LH numbers here reference the current post-renumber deck, not the original port.)
+- **LH3 citations** (Summer Institute): Lave & Wenger, 1991; Haraway, 1988; Harding, 1993 render inline in the Goals bullet. References slides no longer exist — confirm in-talk attribution norms with Laurie.
+- **LH8 quote attribution** (Statistical Methods): the long testimonial is rendered with `<cite>Spencer Hill, City College · CALI faculty reflection</cite>`. Source did not formally attribute the quote; inference drawn from LH8 being the Spencer Hill course. Confirm before presenting.
+- **LH11 Haraway inline cite** (Collective World-building): the long Haraway 1988 quote renders with `<cite>Haraway, 1988</cite>` alongside the hooks and Barad citations. Confirm attribution formatting with Laurie.
 - **SA2 citation — "That paper on in defense of humanities, arts, and social sciences …"**: rendered on SA2 as a visible TBD-citation bullet. The actual citation is still unknown.
 - **SA5 (Themes) — "MAYBE I DONT need this anymore"**: source note suggests Şule may want to cut this transition slide. Retained for completeness; flag for Şule's decision.
 - **SA6 / SA7 / SA8 / SA11 block-quote attributions**: all quotes are attributed to "CALI faculty reflection" or the specific persona cited in the source (CALI 2.0 Adjunct faculty, CS; Preservice Elementary Teacher). Verify attributions with Şule.

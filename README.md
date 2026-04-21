@@ -4,10 +4,10 @@ NARST 2026 presentation deck for the Critical AI Literacy Institute related pape
 
 ## Session
 
-**Community, Transparency, and Tinkering for Just Futures: Lessons Learned from the Critical AI Literacy Institute**
+**Community, Transparency & Tinkering for Just Futures: Lessons Learned from the Critical AI Literacy Institute (CALI)**
 
 - Tuesday, April 21, 2026
-- 16:15 - 17:45
+- 16:15 – 17:45
 - Jefferson B (L4)
 - Track Strand 12: Technology for Teaching, Learning, and Research
 - Presentation type: Related Paper Set
@@ -17,33 +17,37 @@ NARST 2026 presentation deck for the Critical AI Literacy Institute related pape
 - Luke Waltzer
 - Laurie Hurson
 - Zach Muhlbauer
-- Sule Aksoy
+- Şule Aksoy
 
 ## Current deck status
 
-The deck currently uses a 46-slide scaffolded structure:
+The deck runs as a 46-slide single-page HTML presentation:
 
 - 1 title slide
 - 4 paper-title section dividers (one per presenter)
-- content slides per presenter (Luke 8, Laurie 11, Zach 10, Sule 12)
-- 46 slides total
+- content slides per presenter (Luke 8, Laurie 11, Zach 10, Şule 12)
+- **no references slides** — citations live in the paper, not on the deck (removed 2026-04-20)
 
-Current content policy:
+Content policy:
 
 - real title, presenter names, section titles, and event metadata are in place
 - most body content remains placeholder text pending talk-specific revision
-- recycled workshop screenshots have been removed from the main deck flow
-- slide visuals now use restrained one-off contextual diagrams
-- Leaflet maps are used for title framing and the dedicated campus slide
-- p5.js remains in use for small presenter-specific side sketches
+- slide visuals use restrained, presenter-specific imagery in `images/`
+- p5.js drives the title-slide domain-warp background canvas
+- frappe-charts is loaded via CDN for future data figures
+- Leaflet map on LW5 was retired 2026-04-20 in favor of a static `images/cuny.png`
+- NARST header badge and TLC footer badge are clickable: NARST → conference page; TLC → tlc.commons.gc.cuny.edu
 
 ## Files
 
 - `index.html` — canonical slide deck
-- `src/styles.css` — deck styling
-- `src/slides.js` — slide engine and navigation
+- `src/styles.css` — deck styling (typography tokens, layouts, presenter accents)
+- `src/slides.js` — slide engine, keyboard + scrubber navigation, lightbox
+- `images/`, `images-2/` — slide assets (lowercase-hyphenated canonical copies; originals per-presenter)
+- `vendor/fonts/` — self-hosted Newsreader / IBM Plex woff2 bundles (file:// runs offline)
 - `OUTLINE.md` — full slide map
-- `CLAUDE.md` — repo working notes for future edits
+- `CHANGELOG.md` — dated record of deck changes
+- `CLAUDE.md` — repo working notes and contracts for future edits
 
 ## Local preview
 
@@ -51,6 +55,8 @@ Current content policy:
 open index.html
 ```
 
+The deck runs entirely from `file://` — no build step, no network.
+
 ## GitHub Pages
 
-This repository is intended to deploy from GitHub Pages using the `main` branch once `milwrite/cali-narst` exists.
+Deploys from the `main` branch of `milwrite/cali-narst`.

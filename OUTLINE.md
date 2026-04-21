@@ -103,6 +103,7 @@ Every presenter also gets a paper-title section divider. References slides were 
 - **LH2 cut** (2026-04-20): "Defining AI Literacy" dropped; remaining Laurie slides renumbered. Defining-literacy content absorbed into the Overview + The Critical AI Literacy Institute slides.
 - **ZM4 cut** (2026-04-20): "Historical OCR prototype" dropped; remaining Zach slides renumbered. Zach's section now runs 10 content slides.
 - **SA split** (2026-04-20): the Conclusion slide was split into SA11 (Frame #4) and SA12 (Frame #5) so each NASEM equity frame gets its own beat.
-- **Carousels do not autoforward**: image and quote carousels (LW4, LH7) advance only via presenter input.
+- **Carousels do not autoforward**: image and quote carousels (LW4 quote, LH6 image) advance only via presenter input.
+- **NARST + TLC logos linked** (2026-04-20): the NARST header badge links to the 2026 conference page; the TLC footer badge links to `tlc.commons.gc.cuny.edu`. Both sized identically and pinned to `x=18px` so they align vertically down the left edge of the deck.
 
 See `CHANGELOG.md` for the full record of what was moved, renamed, and dropped.
