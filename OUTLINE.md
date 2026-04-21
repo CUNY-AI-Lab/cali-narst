@@ -7,13 +7,13 @@ NARST 2026 CALI deck. Structure matches the authoritative SLIDES.md source in `t
 Per-presenter reset numbering:
 
 - **LW** — Luke Waltzer · 8 content slides (LW1–LW8)
-- **LH** — Laurie Hurson · 10 content slides (LH1–LH10)
-- **ZM** — Zach Muhlbauer · 10 content slides (ZM1–ZM10)
+- **LH** — Laurie Hurson · 11 content slides (LH1–LH11)
+- **ZM** — Zach Muhlbauer · 9 content slides (ZM1–ZM9)
 - **SA** — Şule Aksoy · 11 content slides (SA1–SA11)
 
 Every presenter also gets a paper-title section divider. References slides were removed 2026-04-20.
 
-**Total: 47 slides (46 core + closing)**
+**Total: 46 slides (title + 4 paper-title dividers + 8 Luke + 11 Laurie + 9 Zach + 11 Şule + references + closing)**
 
 | Deck # | Slide ID | Title |
 |---|---|---|
@@ -60,16 +60,15 @@ Every presenter also gets a paper-title section divider. References slides were 
 | Deck # | Slide ID | Title |
 |---|---|---|
 | 22 | Zach · Paper Title | Tinkering as Critical AI Literacy: Teaching AI Infrastructure through Breakdown and Reconfiguration |
-| 23 | ZM1 | Tinkering as Critical AI Literacy |
+| 23 | ZM1 | Tinkering as Critical AI Literacy (absorbs bricolage framing) |
 | 24 | ZM2 | Designing for Tinkerability |
-| 25 | ZM3 | Tinkering as Bricolage |
-| 26 | ZM4 | Infrastructure and Instructional Design |
-| 27 | ZM5 | Teaching Infrastructure through Breakdown |
-| 28 | ZM6 | Hyperparameters as Instructional Controls |
-| 29 | ZM7 | AmigAI: Breakdown and Reconfiguration |
-| 30 | ZM8 | AmigAI: Tinkering with System Prompts |
-| 31 | ZM9 | The CUNY AI Lab Sandbox |
-| 32 | ZM10 | Cohort 2 in the Sandbox |
+| 25 | ZM3 | Infrastructure and Instructional Design |
+| 26 | ZM4 | Teaching Infrastructure through Breakdown |
+| 27 | ZM5 | Hyperparameters as Instructional Controls |
+| 28 | ZM6 | AmigAI: Breakdown and Reconfiguration |
+| 29 | ZM7 | AmigAI: Tinkering with System Prompts |
+| 30 | ZM8 | The CUNY AI Lab Sandbox |
+| 31 | ZM9 | Cohort 2 in the Sandbox |
 
 ---
 
@@ -77,18 +76,18 @@ Every presenter also gets a paper-title section divider. References slides were 
 
 | Deck # | Slide ID | Title |
 |---|---|---|
-| 33 | Şule · Paper Title | Beyond the Black Box: Resisting AI Inevitability Rhetoric and Implications for Science Education |
-| 34 | SA1 | AI inevitability rhetoric as a knowledge claim deserving scientific scrutiny |
-| 35 | SA2 | Conceptual Background |
-| 36 | SA3 | CALI as evidence |
-| 37 | SA4 | Data analysis |
-| 38 | SA5 | Theme #1 — Critique of Techno-determinism |
-| 39 | SA6 | Theme #2 — Threat to Agency |
-| 40 | SA7 | Theme #3 — Material Implications |
-| 41 | SA8 | Lessons Learned from CALI |
-| 42 | SA9 | Implications for Science Education |
-| 43 | SA10 | Conclusion — Frame #4 |
-| 44 | SA11 | Conclusion — Frame #5 |
+| 32 | Şule · Paper Title | Beyond the Black Box: Resisting AI Inevitability Rhetoric and Implications for Science Education |
+| 33 | SA1 | AI inevitability rhetoric as a knowledge claim deserving scientific scrutiny |
+| 34 | SA2 | Conceptual Background |
+| 35 | SA3 | CALI as evidence |
+| 36 | SA4 | Data analysis |
+| 37 | SA5 | Theme #1 — Critique of Techno-determinism |
+| 38 | SA6 | Theme #2 — Threat to Agency |
+| 39 | SA7 | Theme #3 — Material Implications |
+| 40 | SA8 | Lessons Learned from CALI |
+| 41 | SA9 | Implications for Science Education |
+| 42 | SA10 | Conclusion — Frame #4 |
+| 43 | SA11 | Conclusion — Frame #5 |
 
 ---
 
@@ -100,7 +99,8 @@ Every presenter also gets a paper-title section divider. References slides were 
 - **References slides removed** (2026-04-20): citations live in the paper, not on the deck.
 - **LH2 "Defining AI Literacy" cut** (2026-04-20): earlier cut; content absorbed into Overview + CALI Institute.
 - **LH2 "Critical AI Literacy Institute" cut** (2026-04-20, Laurie request): second Laurie cut; remaining LH3–LH11 renumbered LH2–LH10, putting Laurie at 10 content slides.
-- **ZM4 cut** (2026-04-20): "Historical OCR prototype" dropped; remaining Zach slides renumbered. Zach's section now runs 10 content slides.
+- **ZM4 cut** (2026-04-20): "Historical OCR prototype" dropped; remaining Zach slides renumbered. Zach's section ran 10 content slides.
+- **ZM3 cut** (2026-04-21): "Tinkering as Bricolage" dropped; four bricolage bullets (recombination, shifting ends, faculty-as-bricoleurs, assembled parts → local tools) absorbed into ZM1 "Tinkering as Critical AI Literacy" under a 2/3 text · 1/3 viz layout. ZM1 retains its Langton's Ant canvas. Zach's section now runs 9 content slides; remaining ZM labels renumbered (old ZM4 → new ZM3, and so on through ZM10 → ZM9). Internal `data-slide` ids and viz script names were left in place to minimize risk day-of; only the visible ZM label numerals shifted.
 - **SA split** (2026-04-20): the Conclusion slide was split into SA11 (Frame #4) and SA12 (Frame #5) so each NASEM equity frame gets its own beat.
 - **Carousels do not autoforward**: image and quote carousels (LW4 quote, LH5 image) advance only via presenter input.
 - **NARST + TLC logos linked** (2026-04-20): the NARST header badge links to the 2026 conference page; the TLC footer badge links to `tlc.commons.gc.cuny.edu`. Both sized identically and pinned to `x=18px` so they align vertically down the left edge of the deck.

@@ -336,15 +336,16 @@ Right Panel (Visual):
 
 * Interactive visualization
 
-**SLIDE 1 — Tinkering as Critical AI Literacy**
+**SLIDE 1 — Tinkering as Critical AI Literacy (Louridas, 1999\)**
 
-- A reflexive act of technical experimentation with a tool  
-- A low-stakes way of exposing faculty to generative AI  
-- Surfaces how models perform when tailored to classroom practice
+- Design proceeds through recombination, not invention from scratch  
+- Ends shift as available materials reveal new constraints and possibilities  
+- Faculty work this way with models, prompts, datasets, and course materials  
+- Tinkering turns those assembled parts into local, course-specific tools
 
-Visual:
+Visual: Langton's Ant — simple rules, immediate feedback, open-ended experimentation (text 2/3 · viz 1/3)
 
-Notes:
+Notes: Absorbs bricolage content from cut SLIDE 3 (2026-04-21). Framed by the Critical AI Literacy title; Louridas serves as the theoretical anchor for bricolage-as-method.
 
 **SLIDE 2 — Designing for Tinkerability (Resnick & Rosenbaum, 2013\)**
 
@@ -357,16 +358,18 @@ Visual:
 
 Notes:
 
-**SLIDE 3 — Tinkering as Bricolage (Petrich, Wilkinson, Bevan, 2013 · Louridas, 1999\)**
+**~~SLIDE 3 — Tinkering as Bricolage (Petrich, Wilkinson, Bevan, 2013 · Louridas, 1999\)~~**
 
-- Exploratorium Tinkering Studio — learners adjust angles and materials through failure and success  
-- Four dimensions: engagement · intentionality · innovation · solidarity  
-- Louridas: the bricoleur "makes do with what's at hand," improvising rather than inventing new tools  
-- Faculty working with AI combine existing models, datasets, and prompts for local needs
+*~~Cut 2026-04-21; content merged into SLIDE 1 ("Tinkering as Critical AI Literacy"). Four bullets carried forward: recombination over invention; ends shifting with materials; faculty working with models/prompts/datasets; assembled parts becoming local, course-specific tools.~~*
 
-Visual:
+- ~~Exploratorium Tinkering Studio — learners adjust angles and materials through failure and success~~  
+- ~~Four dimensions: engagement · intentionality · innovation · solidarity~~  
+- ~~Louridas: the bricoleur "makes do with what's at hand," improvising rather than inventing new tools~~  
+- ~~Faculty working with AI combine existing models, datasets, and prompts for local needs~~
 
-Notes:
+~~Visual:~~
+
+~~Notes:~~
 
 **~~SLIDE 4 — Historical OCR prototype~~**
 
