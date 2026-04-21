@@ -40,7 +40,7 @@ Right Panel (Visual):
 
 **Visual:**    
 
-- **tlc.gif**
+- [x] ~~**tlc.gif**~~
 
 **Notes:**
 
@@ -57,7 +57,7 @@ Right Panel (Visual):
 
 **Visual:** 
 
-- **cali.png**
+- [ ] **cali.png**
 
 **Notes: Two steps… Origins, then Elements with the four sub bullets**
 
@@ -156,10 +156,6 @@ Left Panel:
 * CALI Curricular Lead & Assistant Director of Open Education  
 * The Teaching and Learning Center, CUNY Graduate Center
 
-Right Panel (Visual): 
-
-* Interactive visualization
-
 ---
 
 **SLIDE 1 — Overview**
@@ -170,9 +166,7 @@ Left Panel:
 * Faculty Interventions  
 * Fostering Critical AI Literacy as Collective World-Building
 
-**Right Panel (Visual):** 
-
-* **Interactive visualization**
+**Right Panel (Visual): Interactive visualization**
 
 **Notes: No steps**
 
@@ -302,7 +296,7 @@ Right Panel
 **SLIDE 10 — Critical AI Literacy & Student Agency**
 
 * Reflect on value of labor, friction in learning process   
-* Widen lens of analysis, future is not determined (Cottom)  
+* Widen lens of analysis, future is not determined (Cottom, 2026\)  
 * Students can refuse, ask questions, decide if/how tools are used  
 * Give students control over the tools that they use 
 
@@ -440,14 +434,15 @@ Notes:
 
 *chat.ailab.gc.cuny.edu*
 
-- Self-hosted Open WebUI — open-weight models from small local to frontier, single interface  
-- Compare models side-by-side, write prompts, adjust parameters, export transcripts  
-- Share preset AI configs as an OER — design decisions visible for collective scrutiny  
-- Privacy by design · transparency · environmental accountability · criticality
+- Self-hosted instance of Open WebUI  
+- Open-weight language models from small to large in a single interface  
+- Only model providers with zero data retention and training turned off  
+- Compare models side-by-side, write system prompts, adjust parameters, export transcripts  
+- Model cards with preset system prompt tied to knowledge base, agentic skills, tool calling
 
-Visual:
+Visual: Anatomy of OI interface
 
-Notes:
+Notes: 
 
 **SLIDE 10 — Cohort 2 in the Sandbox**
 
@@ -457,20 +452,7 @@ Notes:
 - Interdisciplinary Math Connections (Precalculus)  
 - Research Writing Scaffold (Sociology)
 
-Visual:
-
-Notes:
-
-**SLIDE 11 — Lessons Learned by Doing**
-
-- 1\. Tinkering as critical and methodological knowing  
-- 2\. Start small; leverage A/B testing to name what matters  
-- 3\. Process as scaffolded progression and quality assurance  
-- 4\. Accrued gains of open practices and community infrastructure
-
-*The pathway ratchets. Knowledge accumulates. Judgment thickens. Questions improve. Agency grows.*
-
-Visual:
+Visual: Flowchart → from tinkering in the Sandbox to targeted, reusable AI tools for teaching
 
 Notes:
 
