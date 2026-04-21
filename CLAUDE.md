@@ -5,7 +5,7 @@
 This repository contains the NARST 2026 CALI presentation deck.
 
 Current repository target:
-- GitHub repo: `milwrite/cali-narst`
+- GitHub repo: `CUNY-AI-Lab/cali-narst`
 - Deployment target: GitHub Pages from `main`
 
 ## Current deck rules

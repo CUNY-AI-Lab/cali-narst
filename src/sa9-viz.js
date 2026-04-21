@@ -1,13 +1,14 @@
 'use strict';
 (function () {
-  var slide = document.querySelector('section[data-slide="sule-9"]');
+  var slide = document.querySelector('section[data-slide="sule-10"]');
   if (!slide) return;
   var figure = slide.querySelector('figure.stage');
   if (!figure) return;
   figure.removeAttribute('aria-hidden');
   figure.style.position = figure.style.position || 'relative';
+
   var canvas = document.createElement('canvas');
-  canvas.id = 'sa9-canvas';
+  canvas.id = 'sa10-canvas';
   canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;display:block;cursor:crosshair;';
   figure.appendChild(canvas);
 
@@ -17,120 +18,85 @@
 
   var ctx, W, H, dpr, raf, frame = 0, running = false;
 
-  // Embedding points in 2D projection of a higher-dim space.
-  // Stored as fractional coords; each has an implicit high-dim identity
-  // encoded in "embed" (8D vector) used to compute neighbor distances.
-  var points = [];
-  var POINT_COUNT = 160;
+  // Data-center clusters (fx,fy in 0..1 of canvas viewport). Positions
+  // approximate major hyperscale concentrations when mapped onto a
+  // Mercator-ish grid occupying the canvas.
+  var DC = [
+    { fx: 0.18, fy: 0.38 }, // NA west
+    { fx: 0.28, fy: 0.40 }, // NA central
+    { fx: 0.34, fy: 0.42 }, // NA east
+    { fx: 0.48, fy: 0.36 }, // Dublin
+    { fx: 0.52, fy: 0.38 }, // Frankfurt
+    { fx: 0.56, fy: 0.40 }, // Amsterdam
+    { fx: 0.50, fy: 0.32 }, // London/Manchester
+    { fx: 0.74, fy: 0.48 }, // Mumbai
+    { fx: 0.82, fy: 0.40 }, // Singapore/Tokyo
+    { fx: 0.84, fy: 0.36 }, // Tokyo
+    { fx: 0.78, fy: 0.44 }, // Hong Kong
+    { fx: 0.88, fy: 0.55 }, // Sydney
+    { fx: 0.22, fy: 0.45 }, // SFO
+    { fx: 0.30, fy: 0.36 }  // NYC metro
+  ];
 
-  // 5 hotspots the magnifier tours — each a specific point index chosen
-  // to expose a distinct topology: dense cluster, sparse outlier, bridge, etc.
-  var hotspots = [];
-  var tourIdx = 0;
-  var tourT = 0;
-  var TOUR_HOLD = 120;    // frames paused on a hotspot
-  var TOUR_TRAVEL = 90;   // frames to travel between hotspots
-  var tourPhase = 'hold'; // 'hold' | 'travel'
-  var fromLens = { x: 0, y: 0 };
-  var toLens = { x: 0, y: 0 };
+  // Extractive / mineral sites (cobalt, rare earths, lithium belts)
+  var EX = [
+    { fx: 0.52, fy: 0.68 }, // DRC cobalt
+    { fx: 0.56, fy: 0.72 }, // Zambia copperbelt
+    { fx: 0.15, fy: 0.70 }, // Chile lithium
+    { fx: 0.18, fy: 0.76 }, // Bolivia salar
+    { fx: 0.82, fy: 0.78 }, // Australia
+    { fx: 0.68, fy: 0.38 }, // Kazakhstan
+    { fx: 0.78, fy: 0.50 }, // Myanmar / Indonesia nickel
+    { fx: 0.80, fy: 0.55 }, // Indonesia
+    { fx: 0.24, fy: 0.60 }, // Mexico
+    { fx: 0.70, fy: 0.55 }, // India rare earths
+    { fx: 0.60, fy: 0.58 }, // Tanzania
+    { fx: 0.50, fy: 0.80 }  // South Africa
+  ];
 
-  var lens = { x: 0, y: 0, r: 110, cursorOverride: 0 /* frames remaining */ };
+  // Generation stacks (hydro / thermal / nuclear)
+  var GEN = [
+    { fx: 0.20, fy: 0.50 },
+    { fx: 0.32, fy: 0.48 },
+    { fx: 0.46, fy: 0.42 },
+    { fx: 0.58, fy: 0.45 },
+    { fx: 0.72, fy: 0.52 },
+    { fx: 0.84, fy: 0.48 },
+    { fx: 0.28, fy: 0.55 },
+    { fx: 0.50, fy: 0.50 }
+  ];
 
-  function seed() {
-    points = [];
-    // Four cluster centers + scattered outliers
-    var clusters = [
-      { fx: 0.25, fy: 0.32, n: 40, sig: 0.06, sigDim: 0.25 },
-      { fx: 0.70, fy: 0.28, n: 35, sig: 0.07, sigDim: 0.35 },
-      { fx: 0.55, fy: 0.70, n: 45, sig: 0.05, sigDim: 0.20 },
-      { fx: 0.82, fy: 0.75, n: 25, sig: 0.08, sigDim: 0.40 }
-    ];
-    function gauss() { // box-muller
-      var u = 1 - Math.random(), v = 1 - Math.random();
-      return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
-    }
-    for (var c = 0; c < clusters.length; c++) {
-      var cl = clusters[c];
-      var centerEmbed = [];
-      for (var d = 0; d < 8; d++) centerEmbed.push(gauss());
-      for (var i = 0; i < cl.n; i++) {
-        var embed = [];
-        for (var dd = 0; dd < 8; dd++) embed.push(centerEmbed[dd] + gauss() * cl.sigDim);
-        points.push({
-          fx:    cl.fx + gauss() * cl.sig,
-          fy:    cl.fy + gauss() * cl.sig,
-          embed: embed,
-          cluster: c,
-          r: 1.0 + Math.random() * 0.5,
-          intensity: 0.3 + Math.random() * 0.5
-        });
+  // Water / cooling stacks
+  var WATER = [
+    { fx: 0.15, fy: 0.55 },
+    { fx: 0.30, fy: 0.46 },
+    { fx: 0.52, fy: 0.48 },
+    { fx: 0.76, fy: 0.55 },
+    { fx: 0.86, fy: 0.52 }
+  ];
+
+  // Precomputed dependency pairings: for each DC, pick 2-3 nearest
+  // extractive sites, 1-2 generation stacks, 1-2 water stacks.
+  var deps = [];
+
+  function buildDeps() {
+    deps = DC.map(function (dc) {
+      function nearest(list, k) {
+        return list.slice().sort(function (a, b) {
+          return dist2(a, dc) - dist2(b, dc);
+        }).slice(0, k);
       }
-    }
-    // Outliers
-    for (var o = 0; o < POINT_COUNT - points.length; o++) {
-      var oe = [];
-      for (var de = 0; de < 8; de++) oe.push(gauss() * 1.8);
-      points.push({
-        fx: 0.1 + Math.random() * 0.8,
-        fy: 0.1 + Math.random() * 0.8,
-        embed: oe,
-        cluster: -1,
-        r: 0.8 + Math.random() * 0.4,
-        intensity: 0.18 + Math.random() * 0.22
-      });
-    }
-    // Hotspots: pick one representative point per topology
-    hotspots = [];
-    // Dense pocket → random point in cluster 2 (largest)
-    hotspots.push(pickFromCluster(2));
-    // Cluster boundary → cluster 0
-    hotspots.push(pickFromCluster(0, true));
-    // Bridge (between 1 and 3): pick an outlier midway
-    hotspots.push(pickBridge(1, 3));
-    // Sparse outlier
-    hotspots.push(pickOutlier());
-    // Another dense cluster center
-    hotspots.push(pickFromCluster(1));
-  }
-
-  function pickFromCluster(cIdx, atBoundary) {
-    var members = points.filter(function (p) { return p.cluster === cIdx; });
-    if (!members.length) return points[0];
-    if (atBoundary) {
-      members.sort(function (a, b) {
-        var cx = 0, cy = 0;
-        for (var k = 0; k < members.length; k++) { cx += members[k].fx; cy += members[k].fy; }
-        cx /= members.length; cy /= members.length;
-        var da = (a.fx - cx) * (a.fx - cx) + (a.fy - cy) * (a.fy - cy);
-        var db = (b.fx - cx) * (b.fx - cx) + (b.fy - cy) * (b.fy - cy);
-        return db - da; // farther first → boundary
-      });
-    }
-    return members[0];
-  }
-  function pickBridge(a, b) {
-    var outliers = points.filter(function (p) { return p.cluster === -1; });
-    var ca = centroid(a), cb = centroid(b);
-    if (!outliers.length) return points[0];
-    outliers.sort(function (p1, p2) {
-      var d1 = Math.abs((p1.fx - (ca.x + cb.x) / 2)) + Math.abs((p1.fy - (ca.y + cb.y) / 2));
-      var d2 = Math.abs((p2.fx - (ca.x + cb.x) / 2)) + Math.abs((p2.fy - (ca.y + cb.y) / 2));
-      return d1 - d2;
+      return {
+        ex:    nearest(EX, 3),
+        gen:   nearest(GEN, 2),
+        water: nearest(WATER, 2)
+      };
     });
-    return outliers[0];
   }
-  function pickOutlier() {
-    var outliers = points.filter(function (p) { return p.cluster === -1; });
-    if (!outliers.length) return points[0];
-    return outliers[(Math.random() * outliers.length) | 0];
-  }
-  function centroid(cIdx) {
-    var x = 0, y = 0, n = 0;
-    for (var i = 0; i < points.length; i++) {
-      if (points[i].cluster === cIdx) { x += points[i].fx; y += points[i].fy; n++; }
-    }
-    return { x: x / n, y: y / n };
-  }
+  function dist2(a, b) { var dx = a.fx - b.fx, dy = a.fy - b.fy; return dx * dx + dy * dy; }
+
+  var pointer = { x: -9999, y: -9999, over: false, idleFor: 0 };
+  var scanDot = { t: 0 }; // auto-scan progress 0..1
 
   function reset() {
     dpr = window.devicePixelRatio || 1;
@@ -141,207 +107,193 @@
     canvas.height = Math.round(H * dpr);
     ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
-    lens.r = Math.min(W, H) * 0.16;
-    if (lens.r < 80) lens.r = 80;
-    seed();
-    lens.x = hotspots[0].fx * W;
-    lens.y = hotspots[0].fy * H;
-    fromLens.x = toLens.x = lens.x;
-    fromLens.y = toLens.y = lens.y;
-    tourPhase = 'hold';
-    tourT = 0;
-    tourIdx = 0;
+    buildDeps();
     return true;
   }
 
-  function stepTour() {
-    if (lens.cursorOverride > 0) {
-      lens.cursorOverride -= 1;
-      return;
-    }
-    tourT += 1;
-    if (tourPhase === 'hold') {
-      if (tourT >= TOUR_HOLD) {
-        tourPhase = 'travel';
-        tourT = 0;
-        tourIdx = (tourIdx + 1) % hotspots.length;
-        fromLens.x = lens.x;
-        fromLens.y = lens.y;
-        toLens.x = hotspots[tourIdx].fx * W;
-        toLens.y = hotspots[tourIdx].fy * H;
-      }
-    } else {
-      // ease-in-out cubic
-      var p = tourT / TOUR_TRAVEL;
-      if (p >= 1) {
-        lens.x = toLens.x;
-        lens.y = toLens.y;
-        tourPhase = 'hold';
-        tourT = 0;
-      } else {
-        var e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
-        lens.x = fromLens.x + (toLens.x - fromLens.x) * e;
-        lens.y = fromLens.y + (toLens.y - fromLens.y) * e;
-      }
-    }
-  }
-
-  function distHighDim(p1, p2) {
-    // cosine distance
-    var dot = 0, n1 = 0, n2 = 0;
-    for (var i = 0; i < p1.embed.length; i++) {
-      dot += p1.embed[i] * p2.embed[i];
-      n1 += p1.embed[i] * p1.embed[i];
-      n2 += p2.embed[i] * p2.embed[i];
-    }
-    var denom = Math.sqrt(n1) * Math.sqrt(n2);
-    if (denom === 0) return 1;
-    return 1 - (dot / denom); // 0 identical → ~2 opposite
-  }
-
-  function findFocal() {
-    // Nearest point to lens center (in screen space)
-    var best = null, bestD = Infinity;
-    for (var i = 0; i < points.length; i++) {
-      var dx = points[i].fx * W - lens.x;
-      var dy = points[i].fy * H - lens.y;
-      var d2 = dx * dx + dy * dy;
-      if (d2 < bestD) { bestD = d2; best = points[i]; }
-    }
-    return best;
-  }
-
-  function drawBackground() {
-    ctx.fillStyle = BG;
-    ctx.fillRect(0, 0, W, H);
-    // Faint background dot-field: every point rendered small & low contrast
-    for (var i = 0; i < points.length; i++) {
-      var p = points[i];
-      ctx.fillStyle = 'rgba(' + FG + ',' + p.intensity * 0.35 + ')';
-      ctx.beginPath();
-      ctx.arc(p.fx * W, p.fy * H, p.r * 1.1, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  function drawLens() {
-    var focal = findFocal();
-    if (!focal) return;
-
-    // Compute k nearest neighbors in high-dim
-    var k = 6;
-    var neigh = points
-      .filter(function (p) { return p !== focal; })
-      .map(function (p) { return { p: p, d: distHighDim(focal, p) }; })
-      .sort(function (a, b) { return a.d - b.d; })
-      .slice(0, k);
-
-    // Clip to lens circle
+  function drawGrid() {
     ctx.save();
-    ctx.beginPath();
-    ctx.arc(lens.x, lens.y, lens.r, 0, Math.PI * 2);
-    ctx.clip();
-
-    // Dark wash inside lens
-    ctx.fillStyle = 'rgba(8,11,16,0.72)';
-    ctx.fillRect(lens.x - lens.r, lens.y - lens.r, lens.r * 2, lens.r * 2);
-
-    // Faint backdrop: inherited dot-field dimmed further
-    for (var i = 0; i < points.length; i++) {
-      var p = points[i];
-      var dx = p.fx * W - lens.x;
-      var dy = p.fy * H - lens.y;
-      if (dx * dx + dy * dy > lens.r * lens.r) continue;
-      ctx.fillStyle = 'rgba(' + FG + ',' + p.intensity * 0.25 + ')';
-      ctx.beginPath();
-      ctx.arc(p.fx * W, p.fy * H, p.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    // Draw neighbor spokes
-    var fx = focal.fx * W, fy = focal.fy * H;
-    var maxD = neigh[k - 1].d || 1;
-    for (var j = 0; j < neigh.length; j++) {
-      var n = neigh[j];
-      // Orient spoke at a stable angle derived from p.embed[0], p.embed[1]
-      var ang = Math.atan2(n.p.embed[1], n.p.embed[0]) + j * 0.02;
-      var spokeLen = lens.r * 0.85 * (n.d / maxD);
-      var nx = fx + Math.cos(ang) * spokeLen;
-      var ny = fy + Math.sin(ang) * spokeLen;
-
-      // Spoke line
-      ctx.strokeStyle = 'rgba(' + SR + ',' + (0.45 + (1 - n.d / maxD) * 0.35) + ')';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(fx, fy);
-      ctx.lineTo(nx, ny);
-      ctx.stroke();
-
-      // Tick marks along the spoke (quarters)
-      var tickCount = 4;
-      for (var tk = 1; tk < tickCount; tk++) {
-        var tx = fx + Math.cos(ang) * (spokeLen * tk / tickCount);
-        var ty = fy + Math.sin(ang) * (spokeLen * tk / tickCount);
-        var perpX = -Math.sin(ang), perpY = Math.cos(ang);
-        ctx.beginPath();
-        ctx.moveTo(tx + perpX * 3, ty + perpY * 3);
-        ctx.lineTo(tx - perpX * 3, ty - perpY * 3);
-        ctx.stroke();
-      }
-
-      // Neighbor point (hairline ring)
-      ctx.strokeStyle = 'rgba(' + FG + ',0.7)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.arc(nx, ny, 3, 0, Math.PI * 2);
-      ctx.stroke();
-      // Tiny index tick at end
-      ctx.fillStyle = 'rgba(' + SR + ',0.85)';
-      ctx.beginPath();
-      ctx.arc(nx, ny, 1.2, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    // Focal point (solid filled)
-    ctx.fillStyle = 'rgba(' + SR + ',0.95)';
-    ctx.beginPath();
-    ctx.arc(fx, fy, 4.5, 0, Math.PI * 2);
-    ctx.fill();
-    // Halo
-    ctx.strokeStyle = 'rgba(' + SR + ',0.45)';
+    ctx.strokeStyle = 'rgba(' + FG + ',0.06)';
     ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.arc(fx, fy, 8, 0, Math.PI * 2);
-    ctx.stroke();
-
+    // meridians (8)
+    for (var i = 1; i < 10; i++) {
+      var x = (i / 10) * W;
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+    }
+    // parallels (6)
+    for (var j = 1; j < 8; j++) {
+      var y = (j / 8) * H;
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+    }
+    // equator slightly darker
+    ctx.strokeStyle = 'rgba(' + FG + ',0.12)';
+    ctx.beginPath(); ctx.moveTo(0, H * 0.5); ctx.lineTo(W, H * 0.5); ctx.stroke();
     ctx.restore();
+  }
 
-    // Lens ring
-    ctx.strokeStyle = 'rgba(' + SR + ',0.9)';
-    ctx.lineWidth = 2;
-    ctx.beginPath();
-    ctx.arc(lens.x, lens.y, lens.r, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.strokeStyle = 'rgba(' + SR + ',0.3)';
+  function drawExSites() {
+    ctx.save();
+    for (var i = 0; i < EX.length; i++) {
+      var p = EX[i];
+      ctx.strokeStyle = 'rgba(' + SR + ',0.45)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(p.fx * W, p.fy * H, 2.2, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawGenSites() {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(' + FG + ',0.42)';
     ctx.lineWidth = 1;
+    for (var i = 0; i < GEN.length; i++) {
+      var p = GEN[i];
+      var x = p.fx * W, y = p.fy * H;
+      // square glyph
+      ctx.strokeRect(x - 2.5, y - 2.5, 5, 5);
+    }
+    ctx.restore();
+  }
+
+  function drawWaterSites() {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(143,213,195,0.42)'; // --accent-bright
+    ctx.lineWidth = 1;
+    for (var i = 0; i < WATER.length; i++) {
+      var p = WATER[i];
+      var x = p.fx * W, y = p.fy * H;
+      // tilde-like water glyph: small wave
+      ctx.beginPath();
+      ctx.moveTo(x - 4, y);
+      ctx.quadraticCurveTo(x - 2, y - 3, x, y);
+      ctx.quadraticCurveTo(x + 2, y + 3, x + 4, y);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawDC() {
+    for (var i = 0; i < DC.length; i++) {
+      var p = DC[i];
+      var x = p.fx * W, y = p.fy * H;
+      // pulse
+      var pulse = 0.5 + 0.5 * Math.sin(frame * 0.06 + i * 0.9);
+      // halo
+      var grd = ctx.createRadialGradient(x, y, 0, x, y, 18);
+      grd.addColorStop(0, 'rgba(' + SR + ',' + (0.12 + pulse * 0.18) + ')');
+      grd.addColorStop(1, 'rgba(' + SR + ',0)');
+      ctx.fillStyle = grd;
+      ctx.beginPath();
+      ctx.arc(x, y, 18, 0, Math.PI * 2);
+      ctx.fill();
+      // core dot
+      ctx.fillStyle = 'rgba(' + SR + ',' + (0.65 + pulse * 0.3) + ')';
+      ctx.beginPath();
+      ctx.arc(x, y, 3.2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function drawDashSegment(x1, y1, x2, y2, color, dashOffset) {
+    ctx.save();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 4]);
+    ctx.lineDashOffset = dashOffset;
     ctx.beginPath();
-    ctx.arc(lens.x, lens.y, lens.r - 5, 0, Math.PI * 2);
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
     ctx.stroke();
-    // handle stub
-    var ang2 = Math.PI * 0.25;
-    ctx.beginPath();
-    ctx.moveTo(lens.x + Math.cos(ang2) * lens.r, lens.y + Math.sin(ang2) * lens.r);
-    ctx.lineTo(lens.x + Math.cos(ang2) * (lens.r + 22), lens.y + Math.sin(ang2) * (lens.r + 22));
-    ctx.strokeStyle = 'rgba(' + SR + ',0.6)';
-    ctx.lineWidth = 3;
-    ctx.stroke();
+    ctx.restore();
+  }
+
+  function revealAt(rx, ry, radius) {
+    var dashOffset = -frame * 0.6;
+    for (var i = 0; i < DC.length; i++) {
+      var p = DC[i];
+      var x = p.fx * W, y = p.fy * H;
+      var dx = x - rx, dy = y - ry;
+      var d2 = dx * dx + dy * dy;
+      if (d2 > radius * radius) continue;
+      // Strength proportional to proximity
+      var prox = 1 - Math.sqrt(d2) / radius;
+      var d = deps[i];
+      // Bright ring around revealed DC
+      ctx.strokeStyle = 'rgba(' + SR + ',' + (0.4 + prox * 0.5) + ')';
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.arc(x, y, 7, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Extractive lines — sule purple
+      for (var k = 0; k < d.ex.length; k++) {
+        var e = d.ex[k];
+        drawDashSegment(x, y, e.fx * W, e.fy * H,
+          'rgba(' + SR + ',' + (0.35 + prox * 0.45) + ')', dashOffset);
+      }
+      // Power lines — neutral white
+      for (var g = 0; g < d.gen.length; g++) {
+        var ge = d.gen[g];
+        drawDashSegment(x, y, ge.fx * W, ge.fy * H,
+          'rgba(' + FG + ',' + (0.28 + prox * 0.4) + ')', dashOffset + 2);
+      }
+      // Water lines — accent-bright
+      for (var w = 0; w < d.water.length; w++) {
+        var we = d.water[w];
+        drawDashSegment(x, y, we.fx * W, we.fy * H,
+          'rgba(143,213,195,' + (0.3 + prox * 0.45) + ')', dashOffset + 4);
+      }
+    }
   }
 
   function draw() {
     if (!ctx || !W || !H) return;
-    stepTour();
-    drawBackground();
-    drawLens();
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = BG;
+    ctx.fillRect(0, 0, W, H);
+
+    drawGrid();
+
+    // Pointer idle accounting
+    pointer.idleFor = pointer.over ? 0 : pointer.idleFor + 1;
+
+    // Auto-scan path: a slow Lissajous across the map
+    scanDot.t += 0.003;
+    var sx = W * (0.5 + Math.cos(scanDot.t) * 0.42);
+    var sy = H * (0.45 + Math.sin(scanDot.t * 1.3) * 0.28);
+
+    var radius = Math.min(W, H) * 0.22;
+
+    // Reveal under pointer (if inside canvas), else under auto-scan
+    var rx, ry;
+    if (pointer.over) { rx = pointer.x; ry = pointer.y; }
+    else if (pointer.idleFor > 120) { rx = sx; ry = sy; }
+
+    if (rx !== undefined) revealAt(rx, ry, radius);
+
+    // Sites always visible
+    drawExSites();
+    drawGenSites();
+    drawWaterSites();
+
+    // Data centers on top
+    drawDC();
+
+    // Auto-scan dot glyph (so the motion is legible)
+    if (!pointer.over && pointer.idleFor > 120) {
+      ctx.strokeStyle = 'rgba(' + FG + ',0.35)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(sx, sy, 4, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.strokeStyle = 'rgba(' + FG + ',0.15)';
+      ctx.beginPath();
+      ctx.arc(sx, sy, 12, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
     frame++;
   }
 
@@ -358,10 +310,11 @@
 
   canvas.addEventListener('pointermove', function (e) {
     var r = canvas.getBoundingClientRect();
-    lens.x = e.clientX - r.left;
-    lens.y = e.clientY - r.top;
-    lens.cursorOverride = 180; // ~3 seconds at 60fps
+    pointer.x = e.clientX - r.left;
+    pointer.y = e.clientY - r.top;
+    pointer.over = true;
   });
+  canvas.addEventListener('pointerleave', function () { pointer.over = false; });
 
   canvas.__deckResize = function () {
     var was = running; stop(); if (was) start();
