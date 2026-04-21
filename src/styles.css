@@ -1607,10 +1607,24 @@ section.slide[data-slide="laurie-11"].slide-testimonial.dense-quotes .quote-stac
   margin-top: 0.25em;
 }
 section.slide[data-slide="laurie-11"].slide-testimonial.dense-quotes .parallel-points {
-  margin-top: 0.4em !important;
+  margin-top: 0.5em !important;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3em 0;
 }
 section.slide[data-slide="laurie-11"].slide-testimonial.dense-quotes .parallel-points li {
-  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: baseline;
+  margin-bottom: 0;
+}
+section.slide[data-slide="laurie-11"].slide-testimonial.dense-quotes .parallel-points li:not(:last-child)::after {
+  content: "|";
+  margin: 0 0.75em;
+  opacity: 0.38;
+  font-weight: 300;
 }
 
 /* ZM8 — Tinkering with System Prompts: Frappe grouped-bar chart.
