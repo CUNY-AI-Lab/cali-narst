@@ -15,7 +15,7 @@ Second Laurie pass driven by reviewing the deck slide-by-slide. One slide cut, t
 - **LH4 Research and Information in the Digital Age** — two-col grid shifted from `1fr 1fr` to `1.4fr 1fr` so the Approach bullets on the left get more breathing room. Syllabus column remains legible with a minor font tweak.
 - **LH7 Statistical Methods in Earth and Atmospheric Sciences** — bumped Spencer Hill quote from `--fs-quote-tight` to `clamp(20px, 1.85vw, 28px)`, cite size slightly up for legibility.
 - **LH9 Critical AI Literacy & Student Agency** — cropped `narst-image.jpg` to 50% of the right-panel stage width, centered, leaving substantial whitespace around the image.
-- **LH10 Critical AI Literacy, Agency, & Collective World-building** — added `narst-image.jpg` to the right panel; overrode the base `.slide-testimonial { .stage display:none }` rule so this one testimonial slide shows a stage (flex-basis split 58% content / 42% stage). Quote + bullet sizes trimmed to keep 3 quotes + 4 bullets + image in frame.
+- **LH10 Critical AI Literacy, Agency, & Collective World-building** — kept as pure testimonial per SLIDES.md SLIDE 11 (no visual). Quote font bumped from `--fs-quote-dense` to `--fs-quote-tight`; bullet font from `--fs-body-compact` to `--fs-body` for readability.
 - **Uniform Laurie bump** — all list items in `section.slide[data-slide^="laurie-"]` now render at `clamp(25px, 2.35vw, 38px)` / line-height 1.4 for presentation readability.
 
 ### Files touched
