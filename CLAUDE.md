@@ -22,11 +22,11 @@ Current repository target:
 The deck should follow this structure:
 
 - 1 title slide
-- 4 section-divider slides, one for each presenter
-- content slides per presenter (currently: Luke 8, Laurie 13, Zach 8, Sule 11; Zach cut ZM5 and ZM8 on 2026-04-20)
-- 1 references slide for each presenter
+- 4 section-divider (paper-title) slides, one for each presenter
+- content slides per presenter (currently: Luke 8, Laurie 11, Zach 10, Sule 12)
+- references slides removed 2026-04-20
 
-That yields 49 total slides.
+That yields 46 total slides. (LH2 "Defining AI Literacy" and ZM4 "Historical OCR" cut on 2026-04-20 to match SLIDES.md.)
 
 ## Presenters and talk blocks
 
@@ -58,41 +58,31 @@ But keep these real:
 
 ## Local-asset contract (added 2026-04-20)
 
-The deck runs entirely from `file://` with no network. Three things make
+The deck runs entirely from `file://` with no network. Two things make
 that work; do not undo them without replacing the local asset path:
 
-- `vendor/leaflet/leaflet.{js,css}` and `vendor/leaflet/images/` — pinned to
-  Leaflet 1.9.4. `index.html:9-12` references local paths, no SRI.
 - `vendor/fonts/fonts.css` + 27 `vendor/fonts/*.woff2` — Newsreader,
   IBM Plex Sans, IBM Plex Mono. Generated from a Google Fonts response
   with all `https://fonts.gstatic.com/...` URLs rewritten to bare
   filenames.
-- `vendor/tiles/{dark_nolabels,dark_only_labels}/{z}/{x}/{y}.png` — 914
-  CartoDB raster tiles for zooms 9-13 over the NYC bbox. Re-fetch with
-  `python3 scripts/fetch-tiles.py` after editing `BBOX` or `ZOOMS`.
+- `images/*` — every slide visual (gif, png, jpg) is copied locally.
+  Source files live in `images-2/{Presenter}/`; canonical deck refs
+  use the lowercase-hyphenated copies in `images/`.
 
-The `L.tileLayer` calls in `index.html` use `minZoom: 9, maxZoom: 13`
-matching the cache. Bumping the map's actual zoom range past 13 will
-silently 404 against the local cache; either expand the cache or stay in
-range.
+`vendor/leaflet/` and `vendor/tiles/` are retained on disk but no longer
+referenced by the deck — Leaflet was removed 2026-04-20 (see below). They
+can be deleted to reclaim ~7 MB if nobody plans to revive the map.
 
-## Leaflet lifecycle contract (added 2026-04-20)
+## Leaflet removal (2026-04-20)
 
-`createMap()` in `index.html` initializes the LW5 map with a deterministic
-visibility/resize lifecycle. Do not reintroduce the staggered-setTimeout
-refit pattern (`[60, 220, 600, 1400].forEach(setTimeout)`) — it was
-replaced by:
-
-- `IntersectionObserver` on the map's parent `section.slide` → calls
-  `map.__deckRefit()` when the slide becomes visible.
-- `ResizeObserver` on `#cuny-map` → rAF-debounced
-  `invalidateSize() + __deckRefit()` whenever the container resizes.
-- `map.on('tileerror', …)` → adds `.tiles-unavailable` to the container,
-  styled in `src/styles.css` to paint a muted gradient + "MAP TILES
-  OFFLINE" eyebrow as a graceful fallback.
-
-`src/slides.js` still calls `invalidateSize + __deckRefit` on slide
-navigation as a belt-and-suspenders safety. Keep both.
+LW5 ("The CUNY Context") used a vendored Leaflet map (offline tiles +
+campus circles + IntersectionObserver/ResizeObserver lifecycle). It was
+replaced with a static `images/cuny.png` per the SLIDES.md visual spec.
+The Leaflet `<link>`/`<script>` imports and the inline `createMap()` /
+`__cunyBoroughReveal` JS block were removed from `index.html`.
+Map-related CSS hooks (`.tiles-unavailable`, `.map-mount`, `.campus-*`)
+remain in `src/styles.css` but no longer have any DOM target — safe to
+clean up in a future pass.
 
 ## Typography token contract (added 2026-04-20)
 
@@ -139,6 +129,6 @@ The NARST Slides source was ported into `index.html` today. The following items 
 - **Şule display name**: section divider, labels, and aria-labels use "Şule" (with ş, `&Scedil;`). If the public-facing spelling is "Sule", run a find-and-replace in `index.html`.
 - **Title-slide date**: source said "April 22nd, 2024"; retained the NARST-program date "April 21, 2026" (confirmed with user). Eyebrow reads "NARST 2026 · April 21". Adjust if the room block actually spans both days.
 - **`images/mixed-methods-2.jpg`**: copied but not yet placed on any slide. Candidate for LH3 or LH4 as alternate mixed-methods visual; decide with Laurie.
-- **References slides**: all four presenters' references slides remain placeholder-only per user's "fill them tomorrow" direction.
+- **References slides**: removed 2026-04-20 per Z's direction. Citations live in the paper, not on the deck.
 
 See `CHANGELOG.md` for the full record of what was moved, renamed, and dropped.

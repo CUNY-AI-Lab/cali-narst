@@ -337,14 +337,9 @@ document.addEventListener('click', function(e) {
 if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
 
 function startGalleryTimer(gallery) {
-  if (gallery._timer || document.hidden) return;
-  var items = gallery.querySelectorAll('.gallery-item');
-  var interval = parseInt(gallery.dataset.interval || '6000', 10);
-  gallery._timer = setInterval(function() {
-    var cur = gallery.querySelector('.gallery-item.active');
-    var curIdx = Array.from(items).indexOf(cur);
-    showGalleryItem(gallery, (curIdx + 1) % items.length);
-  }, interval);
+  // Image carousels never autoforward. Advance happens only via user
+  // input (keys, scrubber, or a .frag with data-gallery-idx).
+  return;
 }
 
 document.addEventListener('visibilitychange', function() {

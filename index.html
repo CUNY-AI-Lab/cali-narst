@@ -7,9 +7,7 @@
   <title>NARST CALI Presentation, April 21, 2026</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="vendor/fonts/fonts.css" />
-  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
-  <link rel="stylesheet" href="src/styles.css?v=20260420b" />
-  <script src="vendor/leaflet/leaflet.js"></script>
+  <link rel="stylesheet" href="src/styles.css?v=20260420g" />
 </head>
 <body>
 <div id="image-lightbox" class="lightbox" aria-hidden="true">
@@ -22,7 +20,9 @@
 <a href="#slide-content" class="skip-link">Skip to slide content</a>
 <div id="slide-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 <header role="banner">
-  <img src="images/narst-logo.png" alt="NARST 2026" class="header-logo" width="889" height="252">
+  <a href="https://narst.org/conferences/2026-annual-conference" target="_blank" rel="noopener" class="header-logo-link" aria-label="NARST 2026 Annual Conference">
+    <img src="images/narst-logo.png" alt="NARST 2026 — A global organization for improving science education through research" class="header-logo" width="889" height="252">
+  </a>
   <div class="bar"><div class="kbd" id="kbdSwipe">Swipe</div></div>
   <a href="https://cuny.is/cali-narst" target="_blank" rel="noopener" class="header-deck-link">cuny.is/cali-narst</a>
 </header>
@@ -60,9 +60,11 @@
         <li class="frag">Open education and educational technology</li>
       </ul>
     </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
+    <figure class="stage figure-stage">
+      <img src="images/tlc.gif" alt="Teaching and Learning Center visual">
+    </figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="luke-2" aria-label="Luke Waltzer: About CALI">
+  <section class="slide placeholder-slide odd-layout lw2" data-slide="luke-2" aria-label="Luke Waltzer: About CALI">
     <div class="content">
       <div class="label">Luke Waltzer · LW2</div>
       <h1>About the Critical AI Literacy Institute (CALI)</h1>
@@ -87,12 +89,14 @@
       <div class="label">Luke Waltzer · LW3</div>
       <h1>Grounding Scholarship</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Critical University Studies</li>
-        <li class="frag">Critical Ed Tech and Infrastructure Studies</li>
-        <li class="frag">DH, Science Education, Educational Development</li>
+        <li>Critical University Studies</li>
+        <li>Critical Ed Tech and Infrastructure Studies</li>
+        <li>DH, Science Education, Educational Development</li>
       </ul>
     </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
+    <figure class="stage figure-stage">
+      <img src="images/books.gif" alt="Grounding scholarship — key texts">
+    </figure>
   </section>
   <section class="slide placeholder-slide even-layout" data-slide="luke-4" aria-label="Luke Waltzer: Defining Critical AI Literacy">
     <div class="content">
@@ -104,7 +108,7 @@
       </ul>
     </div>
     <figure class="stage figure-stage">
-      <div class="stage-gallery quote-carousel" data-fragSync="1" aria-live="polite">
+      <div class="stage-gallery quote-carousel" data-frag-sync="1" aria-live="polite">
         <div class="gallery-item active">
           <blockquote>
             <p>&ldquo;Critical Artificial Intelligence Literacies (CAILs) is the collection of ways of thinking about and relating to so-called artificial intelligence (AI) that rejects dominant frames presented by the technology industry, by naive computationalism, and by dehumanising ideologies. Instead, CAILs centre human cognition and uphold the integrity of academic research and education.&rdquo;</p>
@@ -121,7 +125,7 @@
       </div>
     </figure>
   </section>
-  <section class="slide slide-map" data-slide="luke-5" aria-label="Luke Waltzer: The CUNY Context (CUNY campus map)">
+  <section class="slide placeholder-slide odd-layout" data-slide="luke-5" aria-label="Luke Waltzer: The CUNY Context">
     <div class="content">
       <div class="label">Luke Waltzer · LW5</div>
       <h1>The CUNY Context</h1>
@@ -132,15 +136,15 @@
         <li class="frag">Vulnerable population</li>
       </ul>
     </div>
-    <figure class="stage figure-stage map-stage">
-      <div id="cuny-map" class="map-mount" aria-label="Map plotting the CUNY system with CALI 1–2 participating campuses highlighted."></div>
+    <figure class="stage figure-stage">
+      <img src="images/cuny.png" alt="Map of CUNY campuses across the five boroughs">
     </figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="luke-6" aria-label="Luke Waltzer: Our Goals">
+  <section class="slide placeholder-slide crowded ladder-slide" data-slide="luke-6" aria-label="Luke Waltzer: Our Goals">
     <div class="content">
       <div class="label">Luke Waltzer · LW6</div>
       <h1>Our Goals</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
+      <ul class="ladder-list" style="margin-top: 0.8em;">
         <li class="frag">Reasoned Adoption &harr; Informed Refusal</li>
         <li class="frag">Communities of Practice</li>
         <li class="frag">Research, Tinker, Advocate</li>
@@ -157,7 +161,9 @@
         <li class="frag">Second grant: Empire AI Initiative</li>
       </ul>
     </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
+    <figure class="stage figure-stage">
+      <img src="images/gorg.png" alt="Google / Empire AI Initiative funding context">
+    </figure>
   </section>
   <section class="slide placeholder-slide even-layout" data-slide="luke-8" aria-label="Luke Waltzer: CALI's Strategy">
     <div class="content">
@@ -170,16 +176,9 @@
         <li class="frag">Joy</li>
       </ul>
     </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
-  </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="luke-references" aria-label="Luke Waltzer references">
-    <div class="content">
-      <div class="label">Luke Waltzer · References</div>
-      <h1>References</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
-      </ul>
-    </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
+    <figure class="stage figure-stage">
+      <img src="images/institute.jpg" alt="CALI Institute gathering">
+    </figure>
   </section>
   <section class="slide slide-break" data-slide="break-laurie" data-variant="paper-title" aria-label="Laurie Hurson paper title">
     <div class="content" data-numeral="02">
@@ -194,154 +193,130 @@
       <div class="label">Laurie Hurson · LH1</div>
       <h1>Overview</h1>
       <ul class="parallel-points outline-list" style="margin-top: 1em;">
-        <li class="frag">AI Literacy</li>
-        <li class="frag">CALI Curriculum</li>
-        <li class="frag">Faculty Interventions</li>
-        <li class="frag">Fostering Critical AI Literacy &amp; Collective World-Building</li>
+        <li>CALI Curriculum</li>
+        <li>Faculty Interventions</li>
+        <li>Fostering Critical AI Literacy as Collective World-Building</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide slide-testimonial" data-slide="laurie-2" aria-label="Laurie Hurson: Defining AI Literacy">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-2" aria-label="Laurie Hurson: The Critical AI Literacy Institute">
     <div class="content">
       <div class="label">Laurie Hurson · LH2</div>
-      <h1>Defining AI Literacy</h1>
-      <div class="quote-stack">
-        <blockquote class="frag">
-          &ldquo;A set of competencies that enables individuals to critically evaluate AI technologies&rdquo;
-          <cite>Long and Magerko, 2020</cite>
-        </blockquote>
-        <blockquote class="frag">
-          Wide variation&hellip; may be best &ldquo;defined depending on the purpose, target population, domain, and field of study.&rdquo;
-          <cite>Almatrafi et al., 2024</cite>
-        </blockquote>
-      </div>
-      <ul class="parallel-points arrow-bullets" style="margin-top: 1.1em;">
-        <li class="frag">Opportunities for refusal, exploration, critical inquiry, fostering agency</li>
-        <li class="frag">Context-dependent, disciplinary definitions</li>
-      </ul>
-    </div>
-    <figure class="stage figure-stage">
-      <img src="images/cali-website-home.png" alt="CALI website home page screenshot">
-    </figure>
-  </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-3" aria-label="Laurie Hurson: The Critical AI Literacy Institute">
-    <div class="content">
-      <div class="label">Laurie Hurson · LH3</div>
       <h1>The Critical AI Literacy Institute</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Faculty Development Program</li>
-        <li class="frag">Disciplinary Questions</li>
-        <li class="frag">Critical Stance</li>
-        <li class="frag">Reflective, collaborative, critical inquiry</li>
+        <li>Faculty Development Program</li>
+        <li>Disciplinary Questions</li>
+        <li>Develop Critical Stance / Criticality (Sano-Franchini, 2026)</li>
+        <li>Reflective, collaborative, critical inquiry</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
       <img src="images/faculty-questions.png" alt="Faculty questions from CALI spring meetings">
     </figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-4" aria-label="Laurie Hurson: Summer Institute">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-3" aria-label="Laurie Hurson: Summer Institute">
     <div class="content">
-      <div class="label">Laurie Hurson · LH4</div>
+      <div class="label">Laurie Hurson · LH3</div>
       <h1>Summer Institute</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag"><strong>Focus:</strong> Teaching with, about, against AI</li>
-        <li class="frag"><strong>Methods:</strong> Drawing/mapping, disciplinary working groups, affinity discussions, tinkering</li>
-        <li class="frag"><strong>Goals:</strong> Develop interventions; foster a community of practice; model critical inquiry (Lave &amp; Wenger, 1991; Haraway, 1988; Harding, 1993)</li>
+        <li><strong>Focus:</strong> Teaching with, about, against AI</li>
+        <li><strong>Methods:</strong> Drawing/mapping, disciplinary working groups, affinity discussions, tinkering</li>
+        <li><strong>Goals:</strong> Develop interventions; foster a community of practice; model critical inquiry (Lave &amp; Wenger, 1991; Haraway, 1988; Harding, 1993)</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
       <img src="images/community-of-practice.jpg" alt="Community of Practice gathering">
     </figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-5" aria-label="Laurie Hurson: Faculty Interventions">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-4" aria-label="Laurie Hurson: Faculty Interventions">
     <div class="content">
-      <div class="label">Laurie Hurson · LH5</div>
+      <div class="label">Laurie Hurson · LH4</div>
       <h1>Faculty Interventions</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Research and Information in the Digital Age &mdash; Sarah Cohn, City College</li>
-        <li class="frag">Integrated Reading and Composition &mdash; Krystyna Michael, Hostos Community College</li>
-        <li class="frag">Introduction to History and Literature &mdash; Martha Nadell, Brooklyn College</li>
-        <li class="frag">Statistical Methods in Earth and Atmospheric Sciences &mdash; Spencer Hill, City College</li>
+        <li>Research and Information in the Digital Age &mdash; Sarah Cohn, City College</li>
+        <li>Integrated Reading and Composition &mdash; Krystyna Michael, Hostos Community College</li>
+        <li>Introduction to History and Literature &mdash; Martha Nadell, Brooklyn College</li>
+        <li>Statistical Methods in Earth and Atmospheric Sciences &mdash; Spencer Hill, City College</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
       <img src="images/faculty-interventions.png" alt="Faculty interventions overview">
     </figure>
   </section>
-  <section class="slide slide-two-col-text" data-slide="laurie-6" aria-label="Laurie Hurson: Research and Information in the Digital Age">
+  <section class="slide slide-two-col-text" data-slide="laurie-5" aria-label="Laurie Hurson: Research and Information in the Digital Age">
     <div class="content">
-      <div class="label">Laurie Hurson · LH6</div>
+      <div class="label">Laurie Hurson · LH5</div>
       <h1>Research and Information in the Digital Age</h1>
       <div class="two-col-inner">
         <div class="col">
           <h3>Approach</h3>
           <ul>
-            <li class="frag">8-class module</li>
-            <li class="frag">GenAI output assessment and model comparison</li>
-            <li class="frag">In-class survey, discussions, group work, reflective writing</li>
+            <li>8-class module</li>
+            <li>GenAI output assessment and model comparison</li>
+            <li>In-class survey, discussions, group work, reflective writing</li>
           </ul>
         </div>
         <div class="col">
           <h3>Syllabus</h3>
           <ol class="syllabus-list">
-            <li class="frag">Introduction to LLMs</li>
-            <li class="frag">Evaluating LLM output</li>
-            <li class="frag">Labor, environment, &amp; ethics</li>
-            <li class="frag">Plagiarism, cheating, &amp; academic integrity</li>
-            <li class="frag">Cognition</li>
-            <li class="frag">Creativity</li>
-            <li class="frag">Alternative models &amp; resistance</li>
-            <li class="frag">Futures</li>
+            <li>Introduction to LLMs</li>
+            <li>Evaluating LLM output</li>
+            <li>Labor, environment, &amp; ethics</li>
+            <li>Plagiarism, cheating, &amp; academic integrity</li>
+            <li>Cognition</li>
+            <li>Creativity</li>
+            <li>Alternative models &amp; resistance</li>
+            <li>Futures</li>
           </ol>
         </div>
       </div>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-7" aria-label="Laurie Hurson: Integrated Reading and Composition">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-6" aria-label="Laurie Hurson: Integrated Reading and Composition">
     <div class="content">
-      <div class="label">Laurie Hurson · LH7</div>
+      <div class="label">Laurie Hurson · LH6</div>
       <h1>Integrated Reading and Composition</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Creativity and labor</li>
-        <li class="frag">Student Expertise</li>
-        <li class="frag">Reflection on value of writing</li>
+        <li>Creativity and labor</li>
+        <li>Student Expertise</li>
+        <li>Reflection on value of writing</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
-      <div class="stage-gallery" data-fragSync="1">
+      <div class="stage-gallery">
         <div class="gallery-item active"><img src="images/km-1.png" alt="Krystyna Michael classroom artifact 1"></div>
         <div class="gallery-item"><img src="images/km-5.png" alt="Krystyna Michael classroom artifact 5"></div>
         <div class="gallery-dots" aria-label="Gallery navigation"></div>
       </div>
     </figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-8" aria-label="Laurie Hurson: Introduction to History and Literature">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-7" aria-label="Laurie Hurson: Introduction to History and Literature">
     <div class="content">
-      <div class="label">Laurie Hurson · LH8</div>
+      <div class="label">Laurie Hurson · LH7</div>
       <h1>Introduction to History and Literature</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Readings on genAI and how it works</li>
-        <li class="frag">Collaborative AI class policy</li>
-        <li class="frag">Custom bots / model for brainstorming, genre writing</li>
+        <li>Readings on genAI and how it works</li>
+        <li>Collaborative AI class policy</li>
+        <li>Custom bots / model for brainstorming, genre writing</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
       <img src="images/md-brainstormer.png" alt="Martha Nadell's brainstormer custom bot interface">
     </figure>
   </section>
-  <section class="slide slide-testimonial tall" data-slide="laurie-9" aria-label="Laurie Hurson: Statistical Methods in Earth and Atmospheric Sciences">
+  <section class="slide slide-testimonial tall" data-slide="laurie-8" aria-label="Laurie Hurson: Statistical Methods in Earth and Atmospheric Sciences">
     <div class="content">
-      <div class="label">Laurie Hurson · LH9</div>
+      <div class="label">Laurie Hurson · LH8</div>
       <h1>Statistical Methods in Earth and Atmospheric Sciences</h1>
       <ul class="parallel-points" style="margin-top: 0.7em;">
-        <li class="frag">&ldquo;What are all the ways that genAI influences my learning?&rdquo;</li>
-        <li class="frag">Discussion of genAI usage and student learning</li>
-        <li class="frag">&ldquo;A/B&rdquo; test and Claude Code</li>
+        <li>&ldquo;What are all the ways that genAI influences my learning?&rdquo;</li>
+        <li>Discussion of genAI usage and student learning</li>
+        <li>&ldquo;A/B&rdquo; test and Claude Code</li>
       </ul>
       <div class="quote-stack">
-        <blockquote class="frag">
+        <blockquote>
           <p>&ldquo;Participating in CALI strongly influenced my pedagogy as regards genAI. I entered the program as something of an AI &lsquo;booster,&rsquo; fairly convinced that the tools&rsquo; challenges regarding cheating and supplanting critical thinking would in short order be solved&hellip; I came to a much more nuanced stance&hellip; through CALI I came to find that AI presents enormous risks to student learning&mdash;alongside its potential upsides&mdash;to the extent that it feels like one of the single greatest challenges facing higher education in coming years: how do we create norms, tools, and whatever else we need for AI to become predominantly a tool for accelerating student learning rather than a crutch that supplants it?&rdquo;</p>
           <cite>Spencer Hill, City College &middot; CALI faculty reflection</cite>
         </blockquote>
@@ -349,76 +324,70 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="laurie-10" aria-label="Laurie Hurson: Interventions for Teaching Critical AI Literacy">
+  <section class="slide placeholder-slide even-layout" data-slide="laurie-9" aria-label="Laurie Hurson: Interventions for Teaching Critical AI Literacy">
     <div class="content">
-      <div class="label">Laurie Hurson · LH10</div>
+      <div class="label">Laurie Hurson · LH9</div>
       <h1>Interventions for Teaching Critical AI Literacy</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Frame AI as sociotechnical system (tech, social, cultural, political, economic, ecological)</li>
-        <li class="frag">In addition to skills, consider values, power, futures</li>
-        <li class="frag">Allow for refusal and/or adoption of GenAI tools</li>
-        <li class="frag">Leverage community and collaboration</li>
-        <li class="frag">Explore knowledge production practices</li>
+        <li>Frame AI as sociotechnical system (cultural, political, economic, material, ecological)</li>
+        <li>In addition to skills, consider values, power, futures</li>
+        <li>Allow for refusal and/or adoption of GenAI tools</li>
+        <li>Leverage community and collaboration</li>
+        <li>Explore knowledge production practices</li>
       </ul>
     </div>
     <figure class="stage figure-stage">
       <img src="images/mixed-methods-2.jpg" alt="Mixed methods diagram">
     </figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-11" aria-label="Laurie Hurson: Critical AI Literacy includes Fostering Student Agency">
+  <section class="slide placeholder-slide odd-layout" data-slide="laurie-10" aria-label="Laurie Hurson: Critical AI Literacy and Student Agency">
     <div class="content">
-      <div class="label">Laurie Hurson · LH11</div>
-      <h1>Critical AI Literacy includes Fostering Student Agency</h1>
+      <div class="label">Laurie Hurson · LH10</div>
+      <h1>Critical AI Literacy &amp; Student Agency</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Reflect on value of labor, friction in learning process</li>
-        <li class="frag">Widen lens of analysis, future is not determined (Cottom)</li>
-        <li class="frag">Students can refuse, ask questions, decide if/how tools are used</li>
-        <li class="frag">Give students control over the tools that they use</li>
+        <li>Reflect on value of labor, friction in learning process</li>
+        <li>Widen lens of analysis, future is not determined (Cottom)</li>
+        <li>Students can refuse, ask questions, decide if/how tools are used</li>
+        <li>Give students control over the tools that they use</li>
       </ul>
     </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
+    <figure class="stage figure-stage">
+      <img src="images/narst-image.jpg" alt="NARST conference visual">
+    </figure>
   </section>
-  <section class="slide slide-testimonial" data-slide="laurie-12" aria-label="Laurie Hurson: Critical AI Literacy, Agency, and Collective World-building">
+  <section class="slide slide-testimonial dense-quotes" data-slide="laurie-11" aria-label="Laurie Hurson: Critical AI Literacy, Agency, and Collective World-building">
     <div class="content">
-      <div class="label">Laurie Hurson · LH12</div>
+      <div class="label">Laurie Hurson · LH11</div>
       <h1>Critical AI Literacy, Agency, &amp; Collective World-building</h1>
       <div class="quote-stack">
-        <blockquote class="frag">
+        <blockquote>
           <p><em>&ldquo;The classroom remains the most radical space of possibility in the academy.&rdquo;</em></p>
           <cite>hooks, 1994</cite>
         </blockquote>
-        <blockquote class="frag">
+        <blockquote>
           <p><em>Onto-epistemology &mdash; &ldquo;knowing is a material practice of engagement as part of the world in its differential becoming.&rdquo;</em></p>
           <cite>Barad, 2007</cite>
         </blockquote>
-        <blockquote class="frag">
-          <p><em>&ldquo;There is good reason to believe vision is better from below the brilliant space platforms of the powerful&hellip; &lsquo;subjugated&rsquo; standpoints are preferred because they seem to promise more adequate, sustained, objective transforming accounts of the world.&rdquo;</em></p>
+        <blockquote>
+          <p><em>&ldquo;There is good reason to believe vision is better from below the brilliant space platforms of the powerful&hellip; &lsquo;subjugated&rsquo; standpoints are preferred because they seem to promise more adequate, sustained, objective, transforming accounts of the world.&rdquo;</em></p>
           <cite>Haraway, 1988</cite>
         </blockquote>
       </div>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Resist inevitability narratives</li>
-        <li class="frag">Think across scale and contexts</li>
-        <li class="frag">Interrogate systems of power</li>
-        <li class="frag">Build solidarity, resistance to respond to these tools</li>
+        <li>Resist inevitability narratives</li>
+        <li>Examine across scale and contexts</li>
+        <li>Interrogate systems of power</li>
+        <li>Build solidarity, resistance</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="laurie-references" aria-label="Laurie Hurson references">
-    <div class="content">
-      <div class="label">Laurie Hurson · References</div>
-      <h1>References</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
-      </ul>
-    </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
-  </section>
-  <section class="slide slide-break" data-slide="break-zach" aria-label="Zach Muhlbauer section">
+  <section class="slide slide-break" data-slide="break-zach" data-variant="paper-title" aria-label="Zach Muhlbauer paper title">
     <div class="content" data-numeral="03">
       <div class="break-tag" data-panelist-num="03">Zach Muhlbauer</div>
-      <h1>Tinkering</h1>
-      <p class="break-note">Eleven slides &mdash; one references slide</p>
+      <h1>Tinkering as Critical AI Literacy: Teaching AI Infrastructure through Breakdown and Reconfiguration</h1>
+      <p class="presenter-role">CALI R&amp;D Lead</p>
+      <p class="affiliation">The Teaching and Learning Center, CUNY Graduate Center</p>
     </div>
   </section>
   <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-1" aria-label="Zach Muhlbauer slide 1: Tinkering as Critical AI Literacy">
@@ -447,10 +416,10 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-3" aria-label="Zach Muhlbauer slide 3: Tinkering Studio and Bricolage">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-3" aria-label="Zach Muhlbauer slide 3: Tinkering as Bricolage">
     <div class="content">
       <div class="label">Zach Muhlbauer &middot; ZM3</div>
-      <h1>Tinkering Studio &amp; Bricolage</h1>
+      <h1>Tinkering as Bricolage</h1>
       <h2>Petrich, Wilkinson, Bevan, 2013 &middot; Louridas, 1999</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">Exploratorium Tinkering Studio &mdash; learners adjust angles and materials through failure and success</li>
@@ -461,36 +430,21 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-4" aria-label="Zach Muhlbauer slide 4: Historical OCR prototype">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-4" aria-label="Zach Muhlbauer slide 4: Teaching Infrastructure through Breakdown and Reconfiguration">
     <div class="content">
       <div class="label">Zach Muhlbauer &middot; ZM4</div>
-      <h1>Historical OCR prototype</h1>
-      <h2>Archival work with a vision-language model</h2>
+      <h1>Teaching Infrastructure through Breakdown and Reconfiguration</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Built on Mistral&rsquo;s vision-language model</li>
-        <li class="frag">Selective integration; interpretive labor stays with the historian</li>
-        <li class="frag">&ldquo;Where would this break? Which documents couldn&rsquo;t it handle?&rdquo;</li>
+        <li class="frag">Where does the large language model end and its user interfaces begin?</li>
+        <li class="frag">Consumer chat platforms obfuscate the difference (and its contingency)</li>
+        <li class="frag">Star: infrastructure becomes visible on breakdown</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-5" aria-label="Zach Muhlbauer slide 5: Teaching Infrastructure through Breakdown and Reconfiguration">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-5" aria-label="Zach Muhlbauer slide 5: Configurability and instability">
     <div class="content">
       <div class="label">Zach Muhlbauer &middot; ZM5</div>
-      <h1>Teaching Infrastructure through Breakdown and Reconfiguration</h1>
-      <h2>Model vs. interface layer</h2>
-      <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">Foundation model vs. the <strong>harness</strong> around it &mdash; prompts, tool calls, UI</li>
-        <li class="frag">Consumer platforms obscure the difference</li>
-        <li class="frag">Star: infrastructure becomes visible on breakdown</li>
-        <li class="frag"><strong>An unstable model is an available one.</strong></li>
-      </ul>
-    </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
-  </section>
-  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-6" aria-label="Zach Muhlbauer slide 6: Configurability and instability">
-    <div class="content">
-      <div class="label">Zach Muhlbauer &middot; ZM6</div>
       <h1>Configurability and instability</h1>
       <h2>Hyperparameters as exercise controls</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
@@ -507,9 +461,9 @@
            ZM5 (two-layer claim) into ZM7 (AmigAI glitch-as-infrastructural-monster). -->
     </figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-7" aria-label="Zach Muhlbauer slide 7: AmigAI when the model flattens dialect">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-6" aria-label="Zach Muhlbauer slide 6: AmigAI when the model flattens dialect">
     <div class="content">
-      <div class="label">Zach Muhlbauer &middot; ZM7</div>
+      <div class="label">Zach Muhlbauer &middot; ZM6</div>
       <h1>AmigAI</h1>
       <h2>When the model flattens dialect</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
@@ -522,11 +476,11 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-8" aria-label="Zach Muhlbauer slide 8: Infrastructure and instructional design">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-7" aria-label="Zach Muhlbauer slide 7: Infrastructure and instructional design">
     <div class="content">
-      <div class="label">Zach Muhlbauer &middot; ZM8</div>
+      <div class="label">Zach Muhlbauer &middot; ZM7</div>
       <h1>Infrastructure and instructional design</h1>
-      <h2>Technical lead on CALI&rsquo;s R&amp;D track</h2>
+      <h2>Technical lead on CALI&rsquo;s T(h)inkering track</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
         <li class="frag">1. Identifying <strong>pedagogical challenges</strong> faculty face in their classes</li>
         <li class="frag">2. Translating disciplinary methods into <strong>technical control over AI tools</strong></li>
@@ -536,9 +490,9 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-9" aria-label="Zach Muhlbauer slide 9: The CUNY AI Lab Sandbox">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-8" aria-label="Zach Muhlbauer slide 8: The CUNY AI Lab Sandbox">
     <div class="content">
-      <div class="label">Zach Muhlbauer &middot; ZM9</div>
+      <div class="label">Zach Muhlbauer &middot; ZM8</div>
       <h1>The CUNY AI Lab Sandbox</h1>
       <h2>chat.ailab.gc.cuny.edu</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
@@ -550,9 +504,9 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-10" aria-label="Zach Muhlbauer slide 10: Cohort 2 in the Sandbox">
+  <section class="slide placeholder-slide even-layout" data-slide="zach-talk-9" aria-label="Zach Muhlbauer slide 9: Cohort 2 in the Sandbox">
     <div class="content">
-      <div class="label">Zach Muhlbauer &middot; ZM10</div>
+      <div class="label">Zach Muhlbauer &middot; ZM9</div>
       <h1>Cohort 2 in the Sandbox</h1>
       <h2>Five disciplinary projects</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
@@ -565,9 +519,9 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-11" aria-label="Zach Muhlbauer slide 11: Lessons Learned by Doing">
+  <section class="slide placeholder-slide odd-layout" data-slide="zach-talk-10" aria-label="Zach Muhlbauer slide 10: Lessons Learned by Doing">
     <div class="content">
-      <div class="label">Zach Muhlbauer &middot; ZM11</div>
+      <div class="label">Zach Muhlbauer &middot; ZM10</div>
       <h1>Lessons Learned by Doing</h1>
       <h2>Faculty agency through a ratcheting tinkering pathway</h2>
       <ul class="parallel-points" style="margin-top: 1em;">
@@ -576,15 +530,6 @@
         <li class="frag">3. Process as <strong>scaffolded progression</strong> and <strong>quality assurance</strong></li>
         <li class="frag">4. Accrued gains of <strong>open practices</strong> and <strong>community infrastructure</strong></li>
         <li class="frag"><em>The pathway ratchets. Knowledge accumulates. Judgment thickens. Questions improve. Agency grows.</em></li>
-      </ul>
-    </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
-  </section>
-  <section class="slide placeholder-slide even-layout" data-slide="zach-references" aria-label="Zach Muhlbauer references">
-    <div class="content">
-      <div class="label">Zach Muhlbauer · References</div>
-      <h1>References</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -602,10 +547,9 @@
       <div class="label">&Scedil;ule Aksoy · SA1</div>
       <h1>AI inevitability rhetoric as a knowledge claim deserving scientific scrutiny</h1>
       <ul class="parallel-points" style="margin-top: 1em;">
-        <li class="frag">AI as a colonial project</li>
-        <li class="frag">Limited critique and interdisciplinary approaches in science education</li>
-        <li class="frag">Diminishing teacher and learner agency to Silicon Valley&rsquo;s algorithmic imaginaries</li>
-        <li class="frag">Reorienting our focus to understand the materiality and sociopolitical structures shaping genAI in education</li>
+        <li class="frag">AI as a colonial project; imperial practices of domination of people, land, culture, education, and politics (Hao, 2025)</li>
+        <li class="frag">AI as an embodied and material technology (Crawford, 2021)</li>
+        <li class="frag">AI as an automated deployment of violence; genocide-epistemicide-ecocide (Ricaurte, 2019)</li>
       </ul>
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
@@ -779,29 +723,22 @@
     </div>
     <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
   </section>
-  <section class="slide placeholder-slide odd-layout" data-slide="sule-references" aria-label="Sule Aksoy references">
-    <div class="content">
-      <div class="label">&Scedil;ule Aksoy · References</div>
-      <h1>References</h1>
-      <ul class="parallel-points" style="margin-top: 1em;">
-      </ul>
-    </div>
-    <figure class="stage figure-stage diagram-stage" aria-hidden="true"></figure>
-  </section>
 </main>
 <footer class="sticky-footer">
+  <a href="https://tlc.commons.gc.cuny.edu/" target="_blank" rel="noopener" class="footer-logo-link" aria-label="CUNY Graduate Center Teaching and Learning Center">
+    <img src="images/TLC-Logo-v4-No-GC-white.png" alt="Teaching and Learning Center, CUNY Graduate Center" class="footer-logo">
+  </a>
   <div class="footer-slider">
-    <img src="images/TLC-Logo-v4-No-GC-white.png" alt="Teaching and Learning Center logo" class="footer-logo">
     <button class="footer-arrow" id="btn-prev" aria-label="Previous slide">&#8592;</button>
     <div class="slider-track">
-      <input type="range" id="slide-scrubber" min="1" max="52" value="1" aria-label="Navigate to slide">
+      <input type="range" id="slide-scrubber" min="1" max="46" value="1" aria-label="Navigate to slide">
       <div class="slider-progress"></div>
       <div class="slider-thumb"></div>
     </div>
     <button class="footer-arrow" id="btn-next" aria-label="Next slide">&#8594;</button>
     <button class="footer-arrow" id="btn-fullscreen" aria-label="Toggle fullscreen" title="Toggle fullscreen (F)">&#9974;</button>
     <div class="footer-meta">
-      <span id="slider-counter">1 / 52</span>
+      <span id="slider-counter">1 / 46</span>
       <span class="kbd">Space</span>
       <a href="https://cuny.is/cali-narst" target="_blank" rel="noopener" class="footer-deck-link">cuny.is/cali-narst</a>
     </div>
@@ -810,239 +747,7 @@
 <script src="src/slides.js"></script>
 <script>
 (function () {
-  // All CUNY campuses across five boroughs. `participating: true` = CALI 1–2 cohort campus (colored + labelled).
-  // Counts reflect CALI 1–2 entries (only meaningful when participating=true).
-  var campuses = [
-    // Staten Island
-    {name:'CSI',          full:'College of Staten Island',              lat:40.601,  lng:-74.1485, count:3, dir:'right',  borough:'staten-island', participating:true},
-    // Manhattan
-    {name:'BMCC',         full:'Borough of Manhattan Community College', lat:40.7181, lng:-74.0127, count:2, dir:'left',   borough:'manhattan',     participating:true},
-    {name:'Baruch',       full:'Baruch College',                        lat:40.7408, lng:-73.9832, count:2, dir:'right',  borough:'manhattan',     participating:true},
-    {name:'CCNY',         full:'The City College of New York',          lat:40.82,   lng:-73.9493, count:2, dir:'left',   borough:'manhattan',     participating:true},
-    {name:'Hunter',       full:'Hunter College',                        lat:40.7686, lng:-73.9646, count:0, dir:'right',  borough:'manhattan',     participating:false},
-    {name:'John Jay',     full:'John Jay College of Criminal Justice',  lat:40.7703, lng:-73.9884, count:0, dir:'left',   borough:'manhattan',     participating:false},
-    {name:'GC',           full:'CUNY Graduate Center',                  lat:40.7485, lng:-73.9842, count:0, dir:'right',  borough:'manhattan',     participating:false},
-    // Bronx
-    {name:'Hostos',       full:'Hostos Community College',              lat:40.8173, lng:-73.9263, count:1, dir:'right',  borough:'bronx',         participating:true},
-    {name:'Lehman',       full:'Lehman College',                        lat:40.8736, lng:-73.8945, count:2, dir:'top',    borough:'bronx',         participating:true},
-    {name:'Bronx CC',     full:'Bronx Community College',               lat:40.8560, lng:-73.9134, count:0, dir:'left',   borough:'bronx',         participating:false},
-    // Queens
-    {name:'LaGuardia',    full:'LaGuardia Community College',           lat:40.7448, lng:-73.9357, count:2, dir:'top',    borough:'queens',        participating:true},
-    {name:'Queens',       full:'Queens College',                        lat:40.7363, lng:-73.821,  count:1, dir:'bottom', borough:'queens',        participating:true},
-    {name:'QCC',          full:'Queensborough Community College',       lat:40.7553, lng:-73.757,  count:2, dir:'right',  borough:'queens',        participating:true},
-    {name:'York',         full:'York College',                          lat:40.7029, lng:-73.7957, count:1, dir:'right',  borough:'queens',        participating:true},
-    // Brooklyn
-    {name:'Brooklyn',     full:'Brooklyn College',                      lat:40.6319, lng:-73.9521, count:4, dir:'right',  borough:'brooklyn',      participating:true},
-    {name:'Kingsborough', full:'Kingsborough Community College',        lat:40.5784, lng:-73.9348, count:1, dir:'bottom', borough:'brooklyn',      participating:true},
-    {name:'Medgar Evers', full:'Medgar Evers College',                  lat:40.6665, lng:-73.9576, count:1, dir:'right',  borough:'brooklyn',      participating:true},
-    {name:'New York City Tech', full:'New York City College of Technology', lat:40.6945, lng:-73.9862, count:0, dir:'left', borough:'brooklyn', participating:false}
-  ];
-  function el(tag, cls, txt) {
-    var n = document.createElement(tag);
-    if (cls) n.className = cls;
-    if (txt !== undefined) n.textContent = txt;
-    return n;
-  }
-  function buildPopup(c) {
-    var wrap = el('div', 'campus-popup');
-    wrap.appendChild(el('div', 'campus-popup-name', c.name));
-    var meta = el('div', 'campus-popup-meta');
-    meta.appendChild(el('span', 'campus-popup-count', String(c.count)));
-    meta.appendChild(el('span', 'campus-popup-label', 'CALI 1\u20132 entr' + (c.count === 1 ? 'y' : 'ies')));
-    wrap.appendChild(meta);
-    return wrap;
-  }
-  function buildLegend(campusList, totalEntries, maxCount) {
-    var div = L.DomUtil.create('div', 'campus-legend');
-    div.appendChild(el('div', 'campus-legend-title', 'CALI 1\u20132 cohort'));
-    var stats = el('div', 'campus-legend-stats');
-    [['campuses', campusList.length], ['entries', totalEntries]].forEach(function (pair) {
-      var cell = el('div');
-      cell.appendChild(el('span', 'num', String(pair[1])));
-      cell.appendChild(el('span', 'lbl', pair[0]));
-      stats.appendChild(cell);
-    });
-    div.appendChild(stats);
-    var scale = el('div', 'campus-legend-scale');
-    [1, 2, 3, 4].forEach(function (n) { scale.appendChild(el('span', 'dot s' + n)); });
-    scale.appendChild(el('span', 'lbl', '1 \u2192 ' + maxCount + ' entries'));
-    div.appendChild(scale);
-    return div;
-  }
-  function buildCompactLegend(participatingCount, totalEntries, allCount) {
-    var div = L.DomUtil.create('div', 'campus-legend compact');
-    div.appendChild(el('div', 'campus-legend-title', 'CUNY system'));
-    var stats = el('div', 'campus-legend-stats');
-    [[participatingCount, 'CALI'], [allCount, 'CUNY'], [totalEntries, 'entries']].forEach(function (pair) {
-      var cell = el('div');
-      cell.appendChild(el('span', 'num', String(pair[0])));
-      cell.appendChild(el('span', 'lbl', pair[1]));
-      stats.appendChild(cell);
-    });
-    div.appendChild(stats);
-    var key = el('div', 'campus-legend-key');
-    var row1 = el('div', 'row');
-    row1.appendChild(el('span', 'swatch participating'));
-    row1.appendChild(el('span', 'lbl', 'CALI 1\u20132 cohort'));
-    key.appendChild(row1);
-    var row2 = el('div', 'row');
-    row2.appendChild(el('span', 'swatch non-participating'));
-    row2.appendChild(el('span', 'lbl', 'Other CUNY campus'));
-    key.appendChild(row2);
-    div.appendChild(key);
-    return div;
-  }
-  function createMap(targetId, opts) {
-    var elNode = document.getElementById(targetId);
-    if (!elNode || elNode.dataset.init || !window.L) return;
-    elNode.dataset.init = '1';
-    var variant = opts.variant || 'default';
-    var map = L.map(elNode, {
-      zoomControl: !!opts.zoomControl,
-      attributionControl: true,
-      scrollWheelZoom: false
-    });
-    (window.__deckLeafletMaps || (window.__deckLeafletMaps = [])).push(map);
-    L.tileLayer('vendor/tiles/dark_nolabels/{z}/{x}/{y}.png', {
-      minZoom: 9,
-      maxZoom: 13,
-      opacity: opts.dim ? 0.55 : 0.92,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    }).addTo(map);
-    L.tileLayer('vendor/tiles/dark_only_labels/{z}/{x}/{y}.png', {
-      minZoom: 9,
-      maxZoom: 13,
-      opacity: opts.dim ? 0.18 : 0.28,
-      pane: 'tilePane'
-    }).addTo(map);
-    var deckBounds = [[40.545, -74.18], [40.89, -73.78]];
-    map.__deckBounds = deckBounds;
-    map.setView([40.71, -73.98], 11, { animate: false });
-    map.__deckRefit = function () {
-      var sz = map.getSize();
-      if (sz.x < 50 || sz.y < 50) return;
-      map.invalidateSize(false);
-      map.fitBounds(deckBounds, { padding: [6, 6], animate: false });
-    };
-    map.whenReady(function () { map.__deckRefit(); });
-    map.on('load', map.__deckRefit);
-    map.on('tileerror', function () { elNode.classList.add('tiles-unavailable'); });
-
-    // Deterministic refit: respond to slide visibility and container resize
-    // instead of blind timeouts. Fallback setTimeout kept for UAs lacking observers.
-    var parentSlide = elNode.closest('section.slide');
-    if (parentSlide && 'IntersectionObserver' in window) {
-      var slideIO = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.4) map.__deckRefit();
-        });
-      }, { threshold: [0.4, 0.9] });
-      slideIO.observe(parentSlide);
-    } else {
-      setTimeout(map.__deckRefit, 220);
-    }
-    if ('ResizeObserver' in window) {
-      var resizeRaf = 0;
-      var sizeRO = new ResizeObserver(function () {
-        if (resizeRaf) return;
-        resizeRaf = requestAnimationFrame(function () {
-          resizeRaf = 0;
-          map.invalidateSize(false);
-          map.__deckRefit();
-        });
-      });
-      sizeRO.observe(elNode);
-    }
-
-    var participatingList = campuses.filter(function(c) { return c.participating; });
-    var totalEntries = participatingList.reduce(function(s, c) { return s + c.count; }, 0);
-    var maxCount = participatingList.reduce(function(m, c) { return Math.max(m, c.count); }, 0);
-
-    var dirOffsets = { right: [10, 0], left: [-10, 0], top: [0, -10], bottom: [0, 12] };
-    var labelsByBorough = {};
-    campuses.forEach(function(c) {
-      var isPart = !!c.participating;
-      var rOuter = isPart ? (10 + c.count * 2.6) : 7;
-      var rInner = isPart ? (3.5 + c.count * 0.9) : 3;
-      var halo = isPart
-        ? (opts.dim ? 'rgba(217,180,140,0.12)' : 'rgba(229,179,106,0.22)')
-        : 'rgba(160,172,188,0.14)';
-      var dotFill = isPart
-        ? (opts.dim ? '#d9b48c' : '#e5b36a')
-        : '#6b7480';
-      L.circleMarker([c.lat, c.lng], {
-        radius: rOuter,
-        weight: 0,
-        color: halo,
-        fillColor: halo,
-        fillOpacity: 1,
-        interactive: false
-      }).addTo(map);
-      var dot = L.circleMarker([c.lat, c.lng], {
-        radius: rInner,
-        weight: 1.4,
-        color: opts.dim ? 'rgba(12,14,20,0.75)' : 'rgba(12,14,20,0.92)',
-        fillColor: dotFill,
-        fillOpacity: isPart ? (opts.dim ? 0.65 : 0.97) : 0.72
-      }).addTo(map);
-      if (isPart) dot.bindPopup(buildPopup(c), { className: 'campus-popup-wrap', closeButton: false, offset: [0, -2] });
-      if (!opts.dim && isPart) {
-        var d = c.dir || 'right';
-        var tooltipCls = 'campus-label-permanent';
-        if (variant === 'borough-steps') tooltipCls += ' hidden-until-reveal';
-        var tip = dot.bindTooltip(c.name, {
-          permanent: true,
-          direction: d,
-          offset: dirOffsets[d] || [10, 0],
-          opacity: 1,
-          className: tooltipCls
-        });
-        if (variant === 'borough-steps' && c.borough) {
-          (labelsByBorough[c.borough] = labelsByBorough[c.borough] || []).push(dot);
-        }
-      }
-    });
-
-    if (variant === 'borough-steps') {
-      map.__cunyLabelsByBorough = labelsByBorough;
-    }
-
-    if (opts.dim) {
-      L.rectangle([[40.53, -74.28], [40.93, -73.68]], { color: 'rgba(199,215,234,0.18)', weight: 1, fill: false, interactive: false }).addTo(map);
-      map.dragging.disable(); map.doubleClickZoom.disable(); map.boxZoom.disable(); map.keyboard.disable(); if (map.tap) map.tap.disable();
-    }
-
-    if (opts.legend) {
-      var legend = L.control({ position: 'bottomleft' });
-      legend.onAdd = function () {
-        var node = variant === 'borough-steps'
-          ? buildCompactLegend(participatingList.length, totalEntries, campuses.length)
-          : buildLegend(participatingList, totalEntries, maxCount);
-        L.DomEvent.disableClickPropagation(node);
-        return node;
-      };
-      legend.addTo(map);
-    }
-
-    return map;
-  }
-
-  // Expose borough-reveal helper so slides.js can drive it via fragment data-attributes.
-  window.__cunyBoroughReveal = function(borough, show) {
-    var maps = window.__deckLeafletMaps || [];
-    maps.forEach(function(map) {
-      var by = map && map.__cunyLabelsByBorough;
-      if (!by || !by[borough]) return;
-      by[borough].forEach(function(marker) {
-        var tip = marker.getTooltip && marker.getTooltip();
-        if (!tip) return;
-        var el = tip.getElement && tip.getElement();
-        if (!el) return;
-        el.classList.toggle('revealed', !!show);
-      });
-    });
-  };
-
+  // Leaflet map removed 2026-04-20; LW5 uses static images/cuny.png. Only the title-canvas WebGL remains.
   function initTitleDomainwarp() {
     var canvas = document.getElementById('title-domainwarp');
     if (!canvas || canvas.dataset.init) return;
@@ -1129,10 +834,7 @@
     canvas.__deckResize = resize;
     if (canvas.getBoundingClientRect().width > 1) startLoop();
   }
-  window.addEventListener('load', function () {
-    initTitleDomainwarp();
-    createMap('cuny-map', { zoomControl: true, dim: false, legend: true });
-  });
+  window.addEventListener('load', initTitleDomainwarp);
 })();
 </script>
 </body>

@@ -1,19 +1,5 @@
 # NARST Slides
 
-## Preface
-
-**Sule: before we start the individual presentations, we can address these (many mentioned in the reviews)**
-
-**CUNY Context** public, social and economic mobility. institutions 25 instititions across boroughs, TLC foundational principles
-
-**Design** 
-
-- Theoretical and conceptual underpinnings (maybe share a link to zotero)  
-- PAR, mixed method, visual  
-- reflection on google funding 
-
-**CALI Interdisciplinary Leadership Collective** Historian, digital humanist, an environmental psychologist and science educator
-
 ---
 
 # SLIDES.md
@@ -25,7 +11,7 @@ Left Panel:
 * CUNY Graduate Center, New York City, NY, USA  
 * Luke Waltzer, Laurie Hurson, Zach Muhlbauer, and Sule Aksoy  
 * April 22nd, 2024  
-* TLC Logo
+* TLC Logo (Footer for all slides)
 
 Background Visual: [Domain Warping](https://creative-clawing.com/artifacts/domainwarp.html)
 
@@ -52,11 +38,11 @@ Right Panel (Visual):
 * Research and advocacy  
 * Open education and educational technology
 
-Visual:    
+**Visual:**    
 
-- tlc.gif
+- **tlc.gif**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -69,11 +55,11 @@ Notes:
   * Research & Development  
   * Advocacy
 
-Visual: 
+**Visual:** 
 
-- CALI screenshot (use same one Laurie gave)
+- **cali.png**
 
-Notes: Two steps… Origins, then Elements with the four sub bullets
+**Notes: Two steps… Origins, then Elements with the four sub bullets**
 
 ---
 
@@ -83,9 +69,9 @@ Notes: Two steps… Origins, then Elements with the four sub bullets
 * Critical Ed Tech and Infrastructure Studies  
 * DH, Science Education, Educational Development
 
-Visual: books.gif
+**Visual: books.gif**
 
-Notes: no steps
+**Notes: no steps**
 
 ---
 
@@ -106,10 +92,10 @@ Quote 2:
 
 Tadimalla, Cary, Hull, et al, “Comprehensive AI Literacy: The Case for Centering Human Agency”
 
-Notes: 
+**Notes:** 
 
-- On page load, Critical AI Literacy on the left, quote 1 on the right   
-- Step 2, Comprehensive AI Literacy on the left, quote 2 on the right
+- **On page load, Critical AI Literacy on the left, quote 1 on the right**   
+- **Step 2, Comprehensive AI Literacy on the left, quote 2 on the right**
 
 ---
 
@@ -120,9 +106,9 @@ Notes:
 * Emphasis on career-connected learning  
 * Vulnerable population
 
-Visual: cuny.jpg
+**Visual: cuny.jpg**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -143,9 +129,9 @@ Notes: One frame \-- arrayed across diagonally
 * 3 years/1m  
 * Second grant: Empire AI Initiative
 
-Visual: gorg.png
+**Visual: gorg.png**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -156,9 +142,9 @@ Notes:
 * Ground interventions in critical inquiry  
 * Joy
 
-Visual:  tbd
+**Visual:  tbd**
 
-# Notes: Institute.jpg
+# **Notes: Institute.jpg**
 
 ## Laurie
 
@@ -180,60 +166,46 @@ Right Panel (Visual):
 
 Left Panel:
 
-* AI Literacy  
 * CALI Curriculum  
 * Faculty Interventions  
-* Fostering Critical AI Literacy & Collective World-Building
+* Fostering Critical AI Literacy as Collective World-Building
 
-Right Panel (Visual): 
+**Right Panel (Visual):** 
 
-* Interactive visualization
+* **Interactive visualization**
 
-Notes: No steps
-
----
-
-**SLIDE 2 — Defining AI Literacy**
-
-* “A set of competencies that enables individuals to critically evaluate AI technologies” (Long and Magerko, 2020\)   
-* Wide variation AI literacy conceptualization…may be best "defined depending on the purpose, target population, domain, and field of study" (Almatrafi et al., 2024\)  
-* → Opportunities for refusal, exploration, critical inquiry, fostering agency   
-* → Context-dependent, disciplinary definitions
-
-Visual: CALI Website home.png
-
-Notes: No steps
+**Notes: No steps**
 
 ---
 
-**SLIDE 3 — The Critical AI Literacy Institute**
+**SLIDE 2 — The Critical AI Literacy Institute**
 
 * Faculty Development Program  
 * Disciplinary Questions  
-* Critical Stance  
+* Develop Critical Stance / Criticality (Sano-Franchini, 2026\)  
 * Reflective, collaborative, critical inquiry 
 
-Visual: Faculty Questions.png
+**Visual: Faculty Questions.png**
 
-Notes: No steps
+**Notes: No steps**
 
 \- disciplinary divergence but shared concerns about cognitive processes, epistemic closure, attending to questions of equity, political contexts;  awareness that community, transparency, and openness are necessary and desired
 
 ---
 
-**SLIDE 4 — Summer Institute** 
+**SLIDE 3 — Summer Institute** 
 
 * **Focus**: Teaching with, about, against AI  
 * **Methods:** Drawing/mapping, disciplinary working groups, affinity discussions, tinkering   
 * **Goals:**  Develop interventions; foster a community of practice; model critical inquiry (Lave & Wenger, 1991; Haraway, 1988; Harding, 1993\) 
 
-Visual: Community of Practice.jpeg
+**Visual: Community of Practice.jpeg**
 
-Notes: No steps
+**Notes: No steps**
 
 ---
 
-**SLIDE 5 — Faculty Interventions**
+**SLIDE 4 — Faculty Interventions**
 
 * Research and Information in the Digital Age | Sarah Cohn, City College
 
@@ -243,13 +215,13 @@ Notes: No steps
 
 * Statistical Methods in Earth and Atmospheric Sciences | Spencer Hill, City College 
 
-Visual: Faculty Interventions.jpeg
+**Visual: Faculty Interventions.jpeg**
 
-Notes: No steps
+**Notes: No steps**
 
 ---
 
-**SLIDE 6 — Research and Information in the Digital Age**
+**SLIDE 5 — Research and Information in the Digital Age**
 
 Left Panel
 
@@ -268,11 +240,11 @@ Right Panel
 7\. Alternative models & resistance  
 8\. Futures
 
-Notes: No steps
+**Notes: No steps**
 
 ---
 
-**SLIDE 7 —  Integrated Reading and Composition**
+**SLIDE 6 —  Integrated Reading and Composition**
 
 * Creativity and labor  
 * Student Expertise  
@@ -284,244 +256,217 @@ Notes: No steps
 
 ---
 
-**SLIDE 8 — Introduction to History and Literature**
+**SLIDE 7 — Introduction to History and Literature**
 
 * Readings on genAI and how it works  
 * Collaborative AI class policy  
 * Custom bots/model for brainstorming, genre writing
 
-Visual: MD brainstormer.png
+**Visual: MD brainstormer.png**
 
-Notes: No steps
+**Notes: No steps**
 
 ---
 
-**SLIDE 9 — Statistical Methods in Earth and Atmospheric Sciences** 
+**SLIDE 8 — Statistical Methods in Earth and Atmospheric Sciences** 
 
 *Left Panel*
 
 * “What are all the ways that genAI influences my learning?”  
 * Discussion of genAI usage and student learning  
-* “A/B” test and Claude Code 
+* A/B test and Claude Code 
 
 Right Panel
 
 *“I entered the program as something of an AI ‘booster,’…I came to a much more nuanced stance…through CALI I came to find that AI presents enormous risks to student learning—alongside its potential upsides—to the extent that it feels like one of the single greatest challenges facing higher education in coming years: **how do we create norms, tools, and whatever else we need for AI to become predominantly a tool for accelerating student learning***  
 ***rather than a crutch that supplants it?”***
 
-Notes: No steps
+**Notes: No steps**
 
 ---
 
-**SLIDE 10 — Interventions for Teaching Critical AI Literacy**
+**SLIDE 9 — Interventions for Teaching Critical AI Literacy**
 
-* Frame AI sociotechnical system (tech, social, cultural, political, economic, ecological)  
+* Frame AI sociotechnical system (cultural, political, economic, material, ecological)  
 * In addition to skills, consider values, power, futures   
 * Allow for refusal and/or adoption GenAI tools  
 * Leverage community and collaboration   
 * Explore knowledge production practices
 
-Visual: Mixed Methods.jpeg
+**Visual: Mixed Methods.jpeg**
 
-Notes: No steps
+**Notes: No steps**
 
 ---
 
-**SLIDE 11 — Critical AI Literacy includes Fostering Student Agency**
+**SLIDE 10 — Critical AI Literacy & Student Agency**
 
 * Reflect on value of labor, friction in learning process   
 * Widen lens of analysis, future is not determined (Cottom)  
 * Students can refuse, ask questions, decide if/how tools are used  
 * Give students control over the tools that they use 
 
-Notes: No steps
+**Visual: narst image.jpeg**
+
+**Notes: No steps**
 
 ---
 
-**SLIDE 12 — Critical AI Literacy, Agency, & Collective World-building**
+**SLIDE 11 — Critical AI Literacy, Agency, & Collective World-building**
 
 *“The classroom remains the most radical space of possibility in the academy.” (hooks, 1994\)* 
 
 *Onto-epistemology \--“knowing is a material practice of engagement as part of the world in its differential becoming” (Barad, 2007\)*
 
-*“There is good reason to believe vision is better from below the brilliant space platforms of the powerful…’subjugated’ standpoints are preferred because they seem to promise more adequate, sustained, objective transforming accounts of the world.” (Haraway, 1988\)*
-
-Notes: No steps
+*“There is good reason to believe vision is better from below the brilliant space platforms of the powerful…’subjugated’ standpoints are preferred because they seem to promise more adequate, sustained, objective, transforming accounts of the world.” (Haraway, 1988\)*
 
 * Resist inevitability narratives    
-* Think across scale and contexts   
+* Examine across scale and contexts   
 * Interrogate systems of power   
-* Build solidarity, resistance to respond to these tools
+* Build solidarity, resistance 
+
+**Notes: No steps**
 
 ---
 
 ## Zach
 
-**TITLE SLIDE — Tinkering**
+**TITLE SLIDE — Tinkering as Critical AI Literacy: Teaching AI Infrastructure through Breakdown and Reconfiguration**
 
 Left Panel:
 
-* Zach Muhlbauer
-* CALI R&D Lead, The Teaching and Learning Center, CUNY Graduate Center
+* Zach Muhlbauer  
+* CALI R\&D Lead, The Teaching and Learning Center, CUNY Graduate Center
 
 Right Panel (Visual):
 
 * Interactive visualization
 
----
-
 **SLIDE 1 — Tinkering as Critical AI Literacy**
 
-* A reflexive act of technical experimentation with a tool
-* A low-stakes way of exposing faculty to generative AI
-* Surfaces how models perform when tailored to classroom practice
+- A reflexive act of technical experimentation with a tool  
+- A low-stakes way of exposing faculty to generative AI  
+- Surfaces how models perform when tailored to classroom practice
 
 Visual:
 
 Notes:
 
----
+**SLIDE 2 — Designing for Tinkerability (Resnick & Rosenbaum, 2013\)**
 
-**SLIDE 2 — Designing for Tinkerability** (Resnick & Rosenbaum, 2013)
-
-* **Immediate feedback** — users see the effects of their actions instantly
-* **Fluid experimentation** — rapid modification of prototypes
-* **Open exploration** — materials combine in many ways; diverse pathways
-* Tinkering as "a playful, exploratory, iterative style of engaging with a project … in which the *bricoleur* improvises with available materials"
+- Immediate feedback — users see the effects of their actions instantly  
+- Fluid experimentation — rapid modification of prototypes  
+- Open exploration — materials combine in many ways; diverse pathways  
+- Tinkering as "a playful, exploratory, iterative style of engaging with a project … in which the bricoleur improvises with available materials"
 
 Visual:
 
 Notes:
 
----
+**SLIDE 3 — Tinkering as Bricolage (Petrich, Wilkinson, Bevan, 2013 · Louridas, 1999\)**
 
-**SLIDE 3 — Tinkering Studio & Bricolage** (Petrich, Wilkinson, Bevan, 2013 · Louridas, 1999)
-
-* Exploratorium Tinkering Studio — learners adjust angles and materials through failure and success
-* Four dimensions: **engagement · intentionality · innovation · solidarity**
-* Louridas: the bricoleur "makes do with what's at hand," improvising rather than inventing new tools
-* Faculty working with AI combine existing models, datasets, and prompts for local needs
+- Exploratorium Tinkering Studio — learners adjust angles and materials through failure and success  
+- Four dimensions: engagement · intentionality · innovation · solidarity  
+- Louridas: the bricoleur "makes do with what's at hand," improvising rather than inventing new tools  
+- Faculty working with AI combine existing models, datasets, and prompts for local needs
 
 Visual:
 
 Notes:
 
----
+**~~SLIDE 4 — Historical OCR prototype~~**
 
-**SLIDE 4 — Historical OCR prototype**
+*~~Archival work with a vision-language model~~*
 
-*Archival work with a vision-language model*
+- ~~Built on Mistral's vision-language model~~  
+- ~~Selective integration; interpretive labor stays with the historian~~  
+- ~~"Where would this break? Which documents couldn't it handle?"~~
 
-* Built on Mistral's vision-language model
-* Selective integration; interpretive labor stays with the historian
-* "Where would this break? Which documents couldn't it handle?"
+~~Visual:~~
 
-Visual:
+~~Notes:~~
 
-Notes:
+**SLIDE 5 — Teaching Infrastructure through breakdown and Reconfiguration**
 
----
+- Where does the large language model end and its user interfaces begin?  
+- Consumer chat platforms obfuscate the difference (and its contingency)  
+- Star: infrastructure becomes visible on breakdown
 
-**SLIDE 5 — Teaching Infrastructure through Breakdown and Reconfiguration**
-
-*Model vs. interface layer*
-
-* Foundation model vs. the **harness** around it — prompts, tool calls, UI
-* Consumer platforms obscure the difference
-* Star: infrastructure becomes visible on breakdown
-* **An unstable model is an available one.**
-
-Visual:
+Visual: Visual differentiation of AI model and the interface that mediates it
 
 Notes:
-
----
 
 **SLIDE 6 — Configurability and instability**
 
 *Hyperparameters as exercise controls*
 
-* **Temperature**: predictable ↔ varied
-* **Top-p**: narrow ↔ wide word pool
-* Align with classroom goals, or push toward drift
-* At **temperature 2.0** the model breaks down — output drifts into repeated tokens, dialect bleed-through, fragments of the underlying training data
+- Temperature: predictable ↔ varied  
+- Top-p: narrow ↔ wide word pool  
+- Align with classroom goals, or push toward drift  
+- At temperature 2.0 the model breaks down — output drifts into repeated tokens, dialect bleed-through, fragments of the underlying training data
 
 Visual: model output at temperature 2.0 (breakdown surfacing training-data residue)
 
 Notes: bridges ZM5 (two-layer claim) into ZM7 (AmigAI glitch-as-infrastructural-monster).
 
----
-
 **SLIDE 7 — AmigAI**
 
 *When the model flattens dialect*
 
-* Cross-campus Spanish collaboration — heritage and non-native classes at **Baruch** and **Hunter**
-* Flattening of **low-resource dialects of Spanish** into a standardized register; reproducing essentialized Latin American identities
-* *"This has an agenda"* — a student in one SPAN 204 instance at Hunter
-* **Glitch-as-infrastructural-monster** (Johnson et al.): the model resolves into decisions about training data, evaluation benchmarks, which markets mattered
-* Structural, not incidental — pretraining data, design pipelines, corpus curation and training objectives
+- Cross-campus Spanish collaboration — heritage and non-native classes at Baruch and Hunter  
+- Flattening of low-resource dialects of Spanish into a standardized register; reproducing essentialized Latin American identities  
+- "This has an agenda" — a student in one SPAN 204 instance at Hunter  
+- Glitch-as-infrastructural-monster (Johnson et al.): the model resolves into decisions about training data, evaluation benchmarks, which markets mattered  
+- Structural, not incidental — pretraining data, design pipelines, corpus curation and training objectives
 
 Visual:
 
 Notes:
-
----
 
 **SLIDE 8 — Infrastructure and instructional design**
 
-*Technical lead on CALI's R&D track*
+*Technical lead on CALI's T(h)inkering track*
 
-1. Identifying **pedagogical challenges** faculty face in their classes
-2. Translating disciplinary methods into **technical control over AI tools**
-3. Prototyping **domain-specific AI tools** for classroom application
-4. Pilots: **Spanish** (Hunter, Baruch) · **English, History, First-Year Writing** (CCNY)
+- 1\. Identifying pedagogical challenges faculty face in their classes  
+- 2\. Translating disciplinary methods into technical control over AI tools  
+- 3\. Prototyping domain-specific AI tools for classroom application  
+- 4\. Pilots: Spanish (Hunter, Baruch) · English, History, First-Year Writing (CCNY)
 
 Visual:
 
 Notes:
-
----
 
 **SLIDE 9 — The CUNY AI Lab Sandbox**
 
 *chat.ailab.gc.cuny.edu*
 
-* Self-hosted **Open WebUI** — open-weight models from small local to frontier, single interface
-* Compare models side-by-side, write prompts, adjust parameters, export transcripts
-* Share preset AI configs as an OER — design decisions visible for collective scrutiny
-* Privacy by design · transparency · environmental accountability · criticality
+- Self-hosted Open WebUI — open-weight models from small local to frontier, single interface  
+- Compare models side-by-side, write prompts, adjust parameters, export transcripts  
+- Share preset AI configs as an OER — design decisions visible for collective scrutiny  
+- Privacy by design · transparency · environmental accountability · criticality
 
 Visual:
 
 Notes:
-
----
 
 **SLIDE 10 — Cohort 2 in the Sandbox**
 
-*Five disciplinary projects*
-
-* **Concept Mapping** (Interdisciplinary)
-* **Laboratory Workflows** (Physics)
-* **Deep Listening** (Ethnomusicology)
-* **Interdisciplinary Math Connections** (Precalculus)
-* **Research Writing Scaffold** (Sociology)
+- Concept Mapping (Interdisciplinary)  
+- Laboratory Workflows (Physics)  
+- Deep Listening (Ethnomusicology)  
+- Interdisciplinary Math Connections (Precalculus)  
+- Research Writing Scaffold (Sociology)
 
 Visual:
 
 Notes:
 
----
-
 **SLIDE 11 — Lessons Learned by Doing**
 
-*Faculty agency through a ratcheting tinkering pathway*
-
-1. **Tinkering** as critical and methodological knowing
-2. Start small; leverage **A/B testing** to name what matters
-3. Process as **scaffolded progression** and **quality assurance**
-4. Accrued gains of **open practices** and **community infrastructure**
+- 1\. Tinkering as critical and methodological knowing  
+- 2\. Start small; leverage A/B testing to name what matters  
+- 3\. Process as scaffolded progression and quality assurance  
+- 4\. Accrued gains of open practices and community infrastructure
 
 *The pathway ratchets. Knowledge accumulates. Judgment thickens. Questions improve. Agency grows.*
 
@@ -529,11 +474,11 @@ Visual:
 
 Notes:
 
----
+## 
 
 ## Sule
 
-**TITLE SLIDE:** Beyond the Black Box: Resisting AI Inevitabiluty Rhetoric and Implications for Science Education
+**TITLE SLIDE:** Beyond the Black Box: Resisting AI Inevitability Rhetoric and Implications for Science Education
 
 Left Panel:
 
@@ -541,19 +486,19 @@ Left Panel:
 * Assistant Professor of Science Education, SUNY Brockport  
 * CALI Research & Evaluation, CUNY Graduate Center
 
-Right Panel (Visual): 
+**Right Panel (Visual):** 
 
-* Interactive visualization
+* **Interactive visualization**
 
 **SLIDE 1 —** AI inevitability rhetoric as a knowledge claim deserving scientific scrutiny 
 
 * AI as a colonial project; imperial practices of domination of people, land, culture, education, and politics (Hao, 2025\)  
-* AI as an embodied and metrical technology (Crawford, 2021\)  
+* AI as an embodied and material technology (Crawford, 2021\)  
 * AI as an automated deployment of violence; genocide-epistemicide-ecocide (Ricaurte, 2019\)
 
-Visual: dark interactive visualization
+**Visual: dark interactive visualization**
 
-Notes: revisiting previous talks. Exercising teachers’ critical noticing and interpretive power. 
+**Notes: revisiting previous talks. Exercising teachers’ critical noticing and interpretive power.** 
 
 ---
 
@@ -563,9 +508,9 @@ Notes: revisiting previous talks. Exercising teachers’ critical noticing and i
 * Call for critical transdisciplinary, transnational, and ecological (TTE) approach to science and science education (i.e., Phillip et al., 2025; Morales-Doyle, 2023\)  
 * Critical consciousness and social justice in science education (i.e., Freire, 2000; Morales-Doyle, 2019; Bang et al., 2012\)
 
-Visual: a hopeful joyful image here?
+**Visual: a hopeful joyful image here?**
 
-Notes: Diminishing teacher and learner agency to Silicon Valley’s algorithmic imaginaries. Reorienting our focus to understand the materiality and sociopolitical structures shaping genAI in education.
+**Notes: Diminishing teacher and learner agency to Silicon Valley’s algorithmic imaginaries. Reorienting our focus to understand the materiality and sociopolitical structures shaping genAI in education.**
 
 ---
 
@@ -575,9 +520,9 @@ Notes: Diminishing teacher and learner agency to Silicon Valley’s algorithmic 
 * Written reflections from online meetings focusing on knowledge production, agency, and pedagogy  
 * A qualitative case study
 
-Visual:
+**Visual:**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -588,9 +533,9 @@ Notes:
 * Comparing initial codes, categorizing emerging themes, memo writing  
 * Sharing the synthesis with faculty to reflect on
 
-Visual: process, timeline looking diagram
+**Visual: process, timeline looking diagram**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -600,11 +545,11 @@ Notes:
 *    
 *  
 
-Visual:
+**Visual:**
 
-Notes: this is a transition slide. I will share quotes from faculty written reflections, lessons learned from CALI so far (reflecting on what the team shared) and implications for science education.
+**Notes:** 
 
-the themes are not clear cut, interconnected, 
+Note to self: this is a transition slide. I will share quotes from faculty written reflections, lessons learned from CALI so far (reflecting on what the team shared) and implications for science education; the themes are not clear cut, interconnected.
 
 ---
 
@@ -613,9 +558,9 @@ the themes are not clear cut, interconnected,
 * *“… presenting it as inevitable leads to pressure of a sort, to use it, to not critically interrogate it, to accept it as neutral or unbiased and not reflective of those who create it and the society it reflects.” (English)*  
 * *“Not incorporating AI into my courses, …feels to me irresponsible, even while recognizing other legitimate concerns one may have about the whole generative AI enterprise. How to do this effectively given the many binding constraints … seems to me the billion-dollar questions. What are the incremental things one can do?…” (Earth Science)*
 
-Visual:
+**Visual:**
 
-Notes: mention the disservice to students comment
+**Notes: mention the disservice to students comment**
 
 ---
 
@@ -624,9 +569,9 @@ Notes: mention the disservice to students comment
 * *“… I agree that the interests behind genAI are clearly sending us the message that if it’s not unavoidable now, it will be soon. Get on board or get left behind.” (Library Sciences)*  
 * *“I’m interested in pushing back on the narrative of AI inevitability – that there is only one outcome for this technology…I’m not sure what institutional support in counteracting this narrative might look like, but it feels dishearthing that the broad institutional response has been inevitable.” (Library Sciences)*
 
-Visual:
+**Visual:**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -635,9 +580,9 @@ Notes:
 * *“I do not want to lose sight of the damage that LLMs and big tech is doing at the human and planetary levels. So, while I want to teach students how to be thoughtful, ethical critics, I don’t know where I stand in terms of encouraging them to be ‘users’.” (English)*  
 * *“It’s important for students to reflect on the black box problem of AI and generative/predictive writing: what datasets were used to train these models? How do they reflect implicit and explicit biases, problems, discrimination, etc? If we can’t know these answers, how might we detect them from the texts these tools produce?” (Composition)* 
 
-Visual:
+**Visual:**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -652,9 +597,9 @@ Notes:
 * Şule – repositioning faculty critique as a pedagogical resource (tension but productive)  
   * Empirical grounding, epistemic practices not discipline specific
 
-Visual:
+**Visual:**
 
-Notes:
+**Notes:**
 
 ---
 
@@ -665,9 +610,11 @@ Notes:
 * Interdisciplinary thinking  
 * Pedagogy: SSI-based instruction
 
-Visual:
+**Visual:**
 
-Notes: 
+**Notes:** 
+
+Note to self:
 
 AI \= masked authority \+ algorithmic monoculture threatening the pluralist turn in science education, limiting ideas of possibility (sci ed has been moving away from a singular, authoritative account of knowledge toward framewotks that value diversity in knowledge production (centering indigenous ways of knowing, community/place-based inquiry, lived experiences of historically marginalized groups). Exporting the expertise to companies from teachers and students.
 
@@ -686,11 +633,13 @@ SSI pedagogy – AI as a socioscientific issue (controversial…) who benefits, 
 * Frame \#4 \- Learning & Using STEM to Promote Justice (NASEM Equity in K-12 STEM Education, 2025\)  
 * *“The danger I see with gen AI right now is just how far we are abstracted away from understanding the scale of planetary computation. Someone writing or coding or communicating in the so-called “cloud” \- as we are literally doing right now \- does not need to envision the massive network of industrial processes, labor and power relationships, mineral extractions, deals between massive companies, etc. that continually weave the web that is the Internet. Gen AI only further scales this development, especially if students (or any of us) continue to lean on the tools. I worry that we are learning not to look at this massive infrastructure, at the materiality of the cloud.” (Computer Science)*
 
-Visual:
+**Visual:**
 
-Notes: positioning STEM as a sociopolitical endeavor, STEM fields operating as instruments in larger agendas of nationalism, colonialism and cultural genocide.
+**Notes:** 
 
-solutions: engaging youth in participatory action, engaging in activism, examining intersections of sociopolitical and ethical commitments and STEM practices
+Note to self: positioning STEM as a sociopolitical endeavor, STEM fields operating as instruments in larger agendas of nationalism, colonialism and cultural genocide.
+
+* solutions: engaging youth in participatory action, engaging in activism, examining intersections of sociopolitical and ethical commitments and STEM practices
 
  
 
@@ -701,7 +650,11 @@ solutions: engaging youth in participatory action, engaging in activism, examini
 * Frame \#5 \- Envisioning Sustainable Futures Through STEM (NASEM Equity in K-12 STEM Education, 2025\)  
 * *“this shift does make me feel that I can be more assertive by questioning my colleagues, professors, and future students when I see frivolous use of AI. Honest discussion about use of AI is especially important since my entire program and career path centers around reducing harm to marginalized communities. It is very difficult to be excited about new technology when I know my own students in an underserved urban area will be impacted most by its negative impacts.” (Preservice Teacher)*
 
-Notes*:* emotionally squished” students. internal conflict my students were talking; trying to balance professors' (or SBTEs') enthusiasm for AI with the consistent discussions we have around reducing the amount of harm done to marginalized communities? Overall, it feels uncomfortable to have that internal conflict and feel like no one is talking about how the growth of AI will negatively impact marginalized communities most.
+**Visuals:**
+
+**Notes*:*** 
+
+Note to self: emotionally squished” students. internal conflict my students were talking; trying to balance professors' (or SBTEs') enthusiasm for AI with the consistent discussions we have around reducing the amount of harm done to marginalized communities? Overall, it feels uncomfortable to have that internal conflict and feel like no one is talking about how the growth of AI will negatively impact marginalized communities most.
 
 solution: siloed disciplinary learning inhibits multidisciplinary thinking needed; transdisciplinary co-design
 

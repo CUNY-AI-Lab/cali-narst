@@ -21,14 +21,12 @@ NARST 2026 presentation deck for the Critical AI Literacy Institute related pape
 
 ## Current deck status
 
-The deck currently uses a 50-slide scaffolded structure:
+The deck currently uses a 48-slide scaffolded structure:
 
 - 1 title slide with muted Leaflet campus map background
-- 1 dedicated CALI 1–2 campus map slide
 - 4 section dividers
-- 10 content slides per presenter
-- 1 references slide per presenter
-- 50 slides total
+- content slides per presenter (Luke 8, Laurie 13, Zach 11, Sule 11)
+- 48 slides total
 
 Current content policy:
 
