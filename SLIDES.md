@@ -380,19 +380,18 @@ Notes:
 
 ~~Notes:~~
 
-**SLIDE 5 — Teaching Infrastructure through breakdown and Reconfiguration**
+**SLIDE 5 — Teaching Infrastructure through Breakdown**
 
-- Where does the large language model end and its user interfaces begin?  
+- Where does the AI model end and the user interface begin?  
 - Consumer chat platforms obfuscate the difference (and its contingency)  
-- Star: infrastructure becomes visible on breakdown
+- Susan Leigh Star: infrastructure becomes visible on breakdown
 
 Visual: Visual differentiation of AI model and the interface that mediates it
 
 Notes:
 
-**SLIDE 6 — Configurability and instability**
+**SLIDE 6 — Hyperparameters as Instructional Controls**
 
-*Hyperparameters as exercise controls*
 
 - Temperature: predictable ↔ varied  
 - Top-p: narrow ↔ wide word pool  
@@ -403,13 +402,11 @@ Visual: model output at temperature 2.0 (breakdown surfacing training-data resid
 
 Notes: bridges ZM5 (two-layer claim) into ZM7 (AmigAI glitch-as-infrastructural-monster).
 
-**SLIDE 7 — AmigAI**
-
-*When the model flattens dialect*
+**SLIDE 7 — AmigAI: Breakdown and Reconfiguration**
 
 - Cross-campus Spanish collaboration — heritage and non-native classes at Baruch and Hunter  
 - Flattening of low-resource dialects of Spanish into a standardized register; reproducing essentialized Latin American identities  
-- "This has an agenda" — a student in one SPAN 204 instance at Hunter  
+- One student reports, "This has an agenda"  
 - Glitch-as-infrastructural-monster (Johnson et al.): the model resolves into decisions about training data, evaluation benchmarks, which markets mattered  
 - Structural, not incidental — pretraining data, design pipelines, corpus curation and training objectives
 
@@ -417,7 +414,18 @@ Visual:
 
 Notes:
 
-**SLIDE 8 — Infrastructure and instructional design**
+**SLIDE 8 — AmigAI: Tinkering with System Prompts**
+
+- Prompt rewrites tracked through the changelog  
+- Settings shift with pedagogical goals  
+- Faculty test, compare, revise, repeat  
+- Prompting becomes instructional design
+
+Visual:
+
+Notes:
+
+**SLIDE 9 — Infrastructure and Instructional Design**
 
 *Technical lead on CALI's T(h)inkering track*
 
@@ -430,7 +438,7 @@ Visual:
 
 Notes:
 
-**SLIDE 9 — The CUNY AI Lab Sandbox**
+**SLIDE 10 — The CUNY AI Lab Sandbox**
 
 *chat.ailab.gc.cuny.edu*
 
@@ -444,7 +452,7 @@ Visual: Anatomy of OI interface
 
 Notes: 
 
-**SLIDE 10 — Cohort 2 in the Sandbox**
+**SLIDE 11 — Cohort 2 in the Sandbox**
 
 - Concept Mapping (Interdisciplinary)  
 - Laboratory Workflows (Physics)  

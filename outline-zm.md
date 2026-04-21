@@ -67,11 +67,11 @@ Eleven slides — one references slide
 
 ---
 
-## 32. ZM5 — Teaching Infrastructure through Breakdown and Reconfiguration
+## 32. ZM5 — Teaching Infrastructure through Breakdown
 
 **Zach Muhlbauer · ZM5**
 
-# Teaching Infrastructure through Breakdown and Reconfiguration
+# Teaching Infrastructure through Breakdown
 ## *Model vs. interface layer*
 
 - Foundation model vs. the **harness** around it — prompts, tool calls, UI
@@ -97,12 +97,12 @@ Eleven slides — one references slide
 
 ---
 
-## 34. ZM7 — AmigAI
+## 34. ZM7 — AmigAI: Tinkering toward Breakdown
 
 **Zach Muhlbauer · ZM7**
 
 # AmigAI
-## *When the model flattens dialect*
+## *Tinkering toward Breakdown*
 
 - Cross-campus Spanish collaboration — heritage and non-native classes at **Baruch** and **Hunter**
 - Flattening of **low-resource dialects of Spanish** into a standardized register; reproducing essentialized Latin American identities

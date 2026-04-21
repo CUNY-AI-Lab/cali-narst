@@ -13,7 +13,7 @@ Per-presenter reset numbering:
 
 Every presenter also gets a paper-title section divider. References slides were removed 2026-04-20.
 
-**Total: 45 slides**
+**Total: 46 slides**
 
 | Deck # | Slide ID | Title |
 |---|---|---|
@@ -63,13 +63,13 @@ Every presenter also gets a paper-title section divider. References slides were 
 | 23 | ZM1 | Tinkering as Critical AI Literacy |
 | 24 | ZM2 | Designing for Tinkerability |
 | 25 | ZM3 | Tinkering as Bricolage |
-| 26 | ZM4 | Teaching Infrastructure through Breakdown and Reconfiguration |
-| 27 | ZM5 | Configurability and instability |
-| 28 | ZM6 | AmigAI |
-| 29 | ZM7 | Infrastructure and instructional design |
-| 30 | ZM8 | The CUNY AI Lab Sandbox |
-| 31 | ZM9 | Cohort 2 in the Sandbox |
-| 32 | ZM10 | Lessons Learned by Doing |
+| 26 | ZM4 | Teaching Infrastructure through Breakdown |
+| 27 | ZM5 | Hyperparameters as Instructional Controls |
+| 28 | ZM6 | AmigAI: Breakdown and Reconfiguration |
+| 29 | ZM7 | AmigAI: Tinkering with System Prompts |
+| 30 | ZM8 | Infrastructure and Instructional Design |
+| 31 | ZM9 | The CUNY AI Lab Sandbox |
+| 32 | ZM10 | Cohort 2 in the Sandbox |
 
 ---
 
