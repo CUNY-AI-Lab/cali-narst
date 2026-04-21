@@ -1171,6 +1171,19 @@ section.slide[data-slide^="laurie-"]:not(.dense-quotes) .content .outline-list l
   margin-bottom: 10px;
 }
 
+/* LH2 — Summer Institute: wider text column (2/3) + narrower image (1/3).
+   Overrides the default odd-layout 50/50 split for this slide only. */
+@media (min-width: 720px) {
+  section.slide[data-slide="laurie-2"].placeholder-slide.odd-layout .content {
+    flex: 0 1 66.666%;
+    max-width: 66.666%;
+  }
+  section.slide[data-slide="laurie-2"].placeholder-slide.odd-layout .stage {
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+  }
+}
+
 /* LH4 — Research and Information: give left column more room */
 section.slide[data-slide="laurie-4"] .two-col-inner {
   grid-template-columns: 1.4fr 1fr;
