@@ -841,6 +841,12 @@ body.overview section.slide.slide-title .title-card h1 {
 }
 body.overview section.slide .content h2,
 body.overview section.slide .content ul,
+body.overview section.slide .content p,
+body.overview section.slide .content blockquote,
+body.overview section.slide .content cite,
+body.overview section.slide .content .quote-stack,
+body.overview section.slide .content figure,
+body.overview section.slide .content figcaption,
 body.overview section.slide .content .card,
 body.overview section.slide .content .break-note,
 body.overview section.slide .panelists,
