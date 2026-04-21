@@ -1,13 +1,13 @@
 'use strict';
 (function () {
-  var slide = document.querySelector('section[data-slide="sule-9"]');
+  var slide = document.querySelector('section[data-slide="sule-8"]');
   if (!slide) return;
   var figure = slide.querySelector('figure.stage');
   if (!figure) return;
   figure.removeAttribute('aria-hidden');
   figure.style.position = figure.style.position || 'relative';
   var canvas = document.createElement('canvas');
-  canvas.id = 'sa9-canvas';
+  canvas.id = 'sa8-canvas';
   canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;display:block;cursor:crosshair;';
   figure.appendChild(canvas);
 

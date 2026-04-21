@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## 2026-04-21 · References slide → autoforwarding carousel (29 citations, 5 pages)
+
+- **References slide rebuilt as a 5-page carousel.** The flat `.reference-list` under `.slide-references` was replaced with a `.stage-gallery.references-carousel` holding five `.gallery-item` pages of ~6 alphabetical entries each. Citations now span Bang (2012) through Watters (2021) per Şule's updated source list, including Bender & Hanna, Brier & Fabricant, Futch & Fine, Glitch as Infrastructural Monster, Gold & Klein, Morales-Doyle, Newfield, Sano-Franchini, Suarez et al., and Watters — replacing stub entries like "Avraamidou, L. (2024)." that were placeholders.
+- **Autoforward opt-in mechanism added to `startGalleryTimer`.** The function now honors `data-autoforward="<ms>"` on any `.stage-gallery`; without it, the prior no-op behavior is preserved. `fragSync` continues to win (so LW4 quote carousel stays manual even if a future edit adds `data-autoforward` to it). The references carousel is the first and only consumer, set to 10000 ms/page (~50 s full cycle across 5 pages).
+- **Reference type scaled up** from `--fs-quote-dense` (15–21px) to `--fs-body` (22–32px) with `line-height: 1.34` and `margin-bottom: 0.55em`, via a new `.slide-references .stage-gallery.references-carousel .reference-list li` override. Carousel `min-height` raised from 62vh → 70vh to absorb the taller pages.
+- **Visibility-change compatibility**: the existing handler already clears `_timer` on tab-hide and calls `startGalleryTimer` on tab-show. Because the references carousel has no `fragSync` flag, the handler restarts its timer correctly after tab resume.
+- **CSS**: new `.slide-references .stage-gallery.references-carousel` block adds grid layout + min-height, overrides the default flex-center on `.gallery-item` (so each page lays out as a block), and repositions dots near the bottom. Existing `.slide-references .reference-list` typography rules still govern inside each page.
+- **Docs**: `OUTLINE.md` carousel note updated from "do not autoforward" → "autoforward is opt-in", documenting the references carousel's 7s cadence. `styles.css?v` cache-buster bumped `f → g`.
+
+## 2026-04-21 · SA8 "Lessons Learned from CALI" cut + SA4 list rewrite + sule-gif on Frame #5
+
+- **SA8 "Lessons Learned from CALI" removed.** The cross-presenter synthesis card (four accent-bordered tiles for Luke / Laurie / Zach / Şule) was dropped per Şule's updated source. The slide's grid-card styles (`section.slide[data-slide="sule-8"] .content .frag > p/ul > li`) were also removed from `src/styles.css`. SA9–SA11 renumbered to SA8–SA10; Şule's section now runs 10 content slides (SA1–SA10).
+- **SA4 "Data analysis" rewritten** as a clean ordered list of five steps (Initial coding / Comparing initial codes / Categorizing emerging themes / Memo writing / Sharing the synthesis with the faculty to reflect on). The opening "Grounded theory approach" bullet and the two compound bullets were dropped per source; `ul` → `ol` to carry the sequence. Larger type applied — see below.
+- **SA1 / SA2 / SA4 / SA8 font size upgraded** from `--fs-body-compact` (18–26px) to `--fs-body` (22–32px) with `line-height: 1.38` on each slide's `.parallel-points li`. Source notes on all four slides asked for "bigger font"; the upgrade runs through a single scoped selector block in `src/styles.css` so the sule-wide `--fs-body-compact` default still governs the rest.
+- **Sule GIF integrated on SA10 (Frame #5).** `images/sule-gif.gif` now lives in a visible `figure.stage figure-stage` on the final conclusion slide as a visual bookend, mirroring Luke's `images/tlc.gif` pattern on LW1. A `section.slide[data-slide="sule-10"].slide-testimonial .stage img { width/height 100%, object-fit: cover }` rule ensures it fills the 45% right rail; the rule that previously only overrode `.slide-testimonial .stage { display: none }` for `sule-10` now applies to both `sule-9` (sa9-viz) and `sule-10` (gif).
+- **SA10 cite** — `CALI faculty reflection · Preservice Teacher` → `Preservice Elementary Teacher` per Şule's note that the quote comes from her student teacher, not the CALI faculty cohort.
+- **Viz script renames** to keep filename → slide-id parity: `src/sa9-viz.js` (magnifier → "Implications") → `src/sa8-viz.js`; `src/sa10-viz.js` (cloud-peel → Frame #4) → `src/sa9-viz.js`. Internal `querySelector('section[data-slide="sule-9"]')` / `sule-10` strings and `canvas.id` values updated to match.
+- **Scrubber + counter** dropped `max=45 → 44` and `1/45 → 1/44`.
+- **Docs**: `CLAUDE.md` (Şule 11 → 10, references 44 → 43, closing 45 → 44, total 45 → 44), `OUTLINE.md` (SA table trimmed, total 44, testimonial list updated SA11 → SA10, SA8-cut note added), `README.md` (deck total 46 → 44, Zach 9 → 8, Şule 11 → 10).
+
 ## 2026-04-21 · Laurie content diffs + LH11 quote scale-up
 
 - **LH2 bullet 4** — "Reflective, collaborative, critical inquiry" → "Reflective, collaborative, interdisciplinary" per updated SLIDES.md.

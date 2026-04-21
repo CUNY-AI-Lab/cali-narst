@@ -837,11 +837,16 @@ body.overview section.slide[data-slide="break-sule"]   { border-top: 2px solid v
 @media (min-width: 720px) {
   .slide-testimonial .content { flex: 1 1 100%; max-width: none; }
   .slide-testimonial .stage { display: none; }
-  /* SA10 carries a right-rail viz (sa10-viz.js). Override the testimonial full-width
-     rule so the content yields a 45% rail to figure.stage and the canvas doesn't
-     render behind the content's backdrop-filter. */
+  /* SA9 (Frame #4, sa9-viz.js) and SA10 (Frame #5, sule-gif.gif) each carry a
+     right-rail visual. Override the testimonial full-width rule so content
+     yields a 45% rail to figure.stage. */
+  section.slide[data-slide="sule-9"].slide-testimonial .content,
   section.slide[data-slide="sule-10"].slide-testimonial .content { flex: 0 1 55%; max-width: 55%; }
+  section.slide[data-slide="sule-9"].slide-testimonial .stage,
   section.slide[data-slide="sule-10"].slide-testimonial .stage { display: flex; flex: 1 1 45%; position: relative; }
+  section.slide[data-slide="sule-10"].slide-testimonial .stage img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: block;
+  }
 }
 .quote-stack { display: flex; flex-direction: column; gap: 0.9em; margin-top: 1.1em; }
 .quote-stack blockquote {
@@ -922,6 +927,40 @@ body.overview section.slide[data-slide="break-sule"]   { border-top: 2px solid v
 }
 @media (max-width: 900px) {
   .slide-references .reference-list { column-count: 1; }
+}
+
+/* References carousel — paginated alphabetical reference list, autoforwards
+   every 10s via data-autoforward. Lives inside .slide-references .content
+   (.stage is display:none on .slide-two-col-text). Each .gallery-item is a
+   two-column balanced page; dots pin to the bottom of the carousel. All
+   typography flows through the existing .slide-references .reference-list
+   rules above so spacing stays consistent across pages. */
+.slide-references .stage-gallery.references-carousel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  min-height: 70vh;
+  margin-top: 0.4em;
+  padding-bottom: 32px;
+}
+.slide-references .stage-gallery.references-carousel .gallery-item {
+  display: block;
+  align-items: initial;
+  justify-content: initial;
+  padding: 0;
+  overflow: hidden;
+}
+.slide-references .stage-gallery.references-carousel .reference-list {
+  margin-top: 0;
+}
+.slide-references .stage-gallery.references-carousel .reference-list li {
+  font-size: var(--fs-body);
+  line-height: 1.34;
+  margin: 0 0 0.55em;
+}
+.slide-references .stage-gallery.references-carousel .gallery-dots {
+  bottom: 4px;
 }
 
 /* Closing slide — echoes the title card over the Domain Warping canvas. 2-col
@@ -1423,10 +1462,12 @@ section.slide[data-slide^="laurie-"]:not(.dense-quotes) .content .outline-list l
 /* ------------------------------------------------------------------ */
 /* Zach + Şule body normalization (2026-04-21, ZM+SA focus)          */
 /* Mirrors the Laurie block for zach-talk-* and sule-* so ZM1–ZM10  */
-/* and SA1–SA4 / SA8 / SA9 bullets resolve to --fs-body-compact      */
-/* regardless of the auto-dense classifier. Testimonials SA5/6/7/10/ */
-/* 11 carry .dense-quotes and are handled by the existing            */
-/* .slide-testimonial.dense-quotes rules above.                      */
+/* and SA1–SA4 / SA8 bullets resolve to --fs-body-compact regardless */
+/* of the auto-dense classifier. Testimonials SA5/6/7/9/10 carry     */
+/* .dense-quotes and are handled by the existing                     */
+/* .slide-testimonial.dense-quotes rules above. The SA1/2/4/8        */
+/* "bigger font" override below re-upgrades those four slides to     */
+/* --fs-body per the presenter's source notes.                       */
 /* ------------------------------------------------------------------ */
 section.slide[data-slide^="zach-talk-"]:not(.dense-quotes) .content li,
 section.slide[data-slide^="zach-talk-"]:not(.dense-quotes) .content .parallel-points li,
@@ -1439,11 +1480,16 @@ section.slide[data-slide^="sule-"]:not(.dense-quotes) .content .outline-list li 
   margin-bottom: 6px;
 }
 
-/* Şule — SA8 grid cards inherit the same compact body rhythm. */
-section.slide[data-slide="sule-8"] .content .frag > p,
-section.slide[data-slide="sule-8"] .content .frag > ul > li {
-  font-size: var(--fs-body-compact);
-  line-height: 1.32;
+/* Şule — SA1/SA2/SA4/SA8 marked "bigger font please" in source notes.
+   Upgrade parallel-points bullets from --fs-body-compact back to --fs-body
+   so these slides read at the larger scale the presenter asked for. */
+section.slide[data-slide="sule-1"] .content .parallel-points li,
+section.slide[data-slide="sule-2"] .content .parallel-points li,
+section.slide[data-slide="sule-4"] .content .parallel-points li,
+section.slide[data-slide="sule-8"] .content .parallel-points li {
+  font-size: var(--fs-body);
+  line-height: 1.38;
+  margin-bottom: 10px;
 }
 
 /* LH3 — Summer Institute: wider text column (2/3) + narrower image (1/3).
@@ -1532,7 +1578,7 @@ section.slide[data-slide="laurie-11"].slide-testimonial.dense-quotes .quote-stac
   margin-top: 0.5em;
 }
 section.slide[data-slide="laurie-11"].slide-testimonial.dense-quotes .quote-stack blockquote {
-  font-size: var(--fs-quote);
+  font-size: clamp(22px, 2.05vw, 31px);
   line-height: 1.3;
   padding: 0.4em 0.8em;
 }

@@ -9,11 +9,11 @@ Per-presenter reset numbering:
 - **LW** — Luke Waltzer · 8 content slides (LW1–LW8)
 - **LH** — Laurie Hurson · 11 content slides (LH1–LH11)
 - **ZM** — Zach Muhlbauer · 8 content slides (ZM1–ZM8)
-- **SA** — Şule Aksoy · 11 content slides (SA1–SA11)
+- **SA** — Şule Aksoy · 10 content slides (SA1–SA10)
 
 Every presenter also gets a paper-title section divider. References slides were removed 2026-04-20.
 
-**Total: 45 slides (title + 4 paper-title dividers + 8 Luke + 11 Laurie + 8 Zach + 11 Şule + references + closing)**
+**Total: 44 slides (title + 4 paper-title dividers + 8 Luke + 11 Laurie + 8 Zach + 10 Şule + references + closing)**
 
 | Deck # | Slide ID | Title |
 |---|---|---|
@@ -75,18 +75,17 @@ Every presenter also gets a paper-title section divider. References slides were 
 
 | Deck # | Slide ID | Title |
 |---|---|---|
-| 32 | Şule · Paper Title | Beyond the Black Box: Resisting AI Inevitability Rhetoric and Implications for Science Education |
-| 33 | SA1 | AI inevitability rhetoric as a knowledge claim deserving scientific scrutiny |
-| 34 | SA2 | Conceptual Background |
-| 35 | SA3 | CALI as evidence |
-| 36 | SA4 | Data analysis |
-| 37 | SA5 | Theme #1 — Critique of Techno-determinism |
-| 38 | SA6 | Theme #2 — Threat to Agency |
-| 39 | SA7 | Theme #3 — Material Implications |
-| 40 | SA8 | Lessons Learned from CALI |
-| 41 | SA9 | Implications for Science Education |
-| 42 | SA10 | Conclusion — Frame #4 |
-| 43 | SA11 | Conclusion — Frame #5 |
+| 31 | Şule · Paper Title | Beyond the Black Box: Resisting AI Inevitability Rhetoric and Implications for Science Education |
+| 32 | SA1 | AI inevitability rhetoric as a knowledge claim deserving scientific scrutiny |
+| 33 | SA2 | Conceptual Background |
+| 34 | SA3 | CALI as evidence |
+| 35 | SA4 | Data analysis |
+| 36 | SA5 | Theme #1 — Critique of Techno-determinism |
+| 37 | SA6 | Theme #2 — Threat to Agency |
+| 38 | SA7 | Theme #3 — Material Implications |
+| 39 | SA8 | Implications for Science Education |
+| 40 | SA9 | Conclusion — Frame #4 |
+| 41 | SA10 | Conclusion — Frame #5 |
 
 ---
 
@@ -94,7 +93,7 @@ Every presenter also gets a paper-title section divider. References slides were 
 
 - **Leaflet map removed** (2026-04-20): LW5 now uses a static `images/cuny.png`. The previous borough-reveal lifecycle and vendored tiles were retired with the map.
 - **Paper-title section dividers**: all four presenters (Luke, Laurie, Zach, Şule) now use the `paper-title` variant carrying presenter name, role, affiliation, and full paper title.
-- **Testimonial quotes** from the source render as block quotes inside `.slide-testimonial` layouts (LH7, LH10, SA5, SA6, SA7, SA10, SA11).
+- **Testimonial quotes** from the source render as block quotes inside `.slide-testimonial` layouts (LH7, LH10, SA5, SA6, SA7, SA9, SA10).
 - **References slides removed** (2026-04-20): citations live in the paper, not on the deck.
 - **LH2 "Defining AI Literacy" cut** (2026-04-20): earlier cut; content absorbed into Overview + CALI Institute.
 - **LH2 "Critical AI Literacy Institute" cut** (2026-04-20, Laurie request): second Laurie cut; remaining LH3–LH11 renumbered LH2–LH10, putting Laurie at 10 content slides.
@@ -102,7 +101,8 @@ Every presenter also gets a paper-title section divider. References slides were 
 - **ZM3 cut** (2026-04-21): "Tinkering as Bricolage" dropped; four bricolage bullets (recombination, shifting ends, faculty-as-bricoleurs, assembled parts → local tools) absorbed into ZM1 "Tinkering as Critical AI Literacy" under a 2/3 text · 1/3 viz layout. ZM1 retains its Langton's Ant canvas. Zach's section now runs 9 content slides; remaining ZM labels renumbered (old ZM4 → new ZM3, and so on through ZM10 → ZM9). Internal `data-slide` ids and viz script names were left in place to minimize risk day-of; only the visible ZM label numerals shifted.
 - **ZM9 cut** (2026-04-21): "Cohort 2 in the Sandbox" (`data-slide="zach-talk-10"`) dropped along with its `.zm10-*` and `.specimen` CSS block. Zach's section now runs 8 content slides (ZM1–ZM8); deck total drops to 45. Scrubber `max=47 → 45` and counter `1/47 → 1/45`.
 - **SA split** (2026-04-20): the Conclusion slide was split into SA11 (Frame #4) and SA12 (Frame #5) so each NASEM equity frame gets its own beat.
-- **Carousels do not autoforward**: image and quote carousels (LW4 quote, LH5 image) advance only via presenter input.
+- **SA8 "Lessons Learned from CALI" cut** (2026-04-21, Şule request): the cross-presenter synthesis slide was dropped per the updated source. SA9–SA11 renumbered to SA8–SA10, and Şule's section now runs 10 content slides. `src/sa9-viz.js` → `src/sa8-viz.js` and `src/sa10-viz.js` → `src/sa9-viz.js` to match.
+- **Carousel autoforward is opt-in** (2026-04-21): image and quote carousels (LW4 quote, LH5 image) advance only via presenter input. The References carousel opts in via `data-autoforward="10000"` on the `.stage-gallery.references-carousel` (10 s per page; 5 alphabetical pages at `--fs-body` type). Tab-hidden pauses are handled by the existing visibilitychange handler.
 - **NARST + TLC logos linked** (2026-04-20): the NARST header badge links to the 2026 conference page; the TLC footer badge links to `tlc.commons.gc.cuny.edu`. Both sized identically and pinned to `x=18px` so they align vertically down the left edge of the deck.
 
 See `CHANGELOG.md` for the full record of what was moved, renamed, and dropped.

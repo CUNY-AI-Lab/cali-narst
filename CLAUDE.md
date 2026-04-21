@@ -23,11 +23,11 @@ The deck should follow this structure:
 
 - 1 title slide
 - 4 section-divider (paper-title) slides, one for each presenter
-- content slides per presenter (currently: Luke 8, Laurie 11, Zach 8, Şule 11)
-- 1 consolidated references slide (added 2026-04-21, position 44)
-- 1 closing slide with QR + contact info (added 2026-04-21, position 45)
+- content slides per presenter (currently: Luke 8, Laurie 11, Zach 8, Şule 10)
+- 1 consolidated references slide (added 2026-04-21, position 43)
+- 1 closing slide with QR + contact info (added 2026-04-21, position 44)
 
-That yields 45 total slides. Per-presenter references slides were removed
+That yields 44 total slides. Per-presenter references slides were removed
 2026-04-20 and replaced 2026-04-21 with a single alphabetical
 "References &amp; Further Reading" slide (`data-slide="references"`).
 The closing slide (`data-slide="closing"`) echoes the title slide's

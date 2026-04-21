@@ -337,9 +337,21 @@ document.addEventListener('click', function(e) {
 if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
 
 function startGalleryTimer(gallery) {
-  // Image carousels never autoforward. Advance happens only via user
-  // input (keys, scrubber, or a .frag with data-gallery-idx).
-  return;
+  // Image and quote carousels never autoforward — advance happens only via
+  // user input (keys, scrubber, or a .frag with data-gallery-idx).
+  // A carousel may opt in to autoforward by setting data-autoforward="<ms>"
+  // (references carousel uses this). fragSync always wins over autoforward.
+  if ('fragSync' in gallery.dataset) return;
+  var ms = parseInt(gallery.dataset.autoforward || '0', 10);
+  if (!ms) return;
+  var items = gallery.querySelectorAll('.gallery-item');
+  if (items.length < 2) return;
+  if (gallery._timer) clearInterval(gallery._timer);
+  gallery._timer = setInterval(function() {
+    var current = 0;
+    items.forEach(function(item, i) { if (item.classList.contains('active')) current = i; });
+    showGalleryItem(gallery, (current + 1) % items.length);
+  }, ms);
 }
 
 document.addEventListener('visibilitychange', function() {

@@ -1,6 +1,6 @@
 'use strict';
 (function () {
-  var slide = document.querySelector('section[data-slide="sule-10"]');
+  var slide = document.querySelector('section[data-slide="sule-9"]');
   if (!slide) return;
   var figure = slide.querySelector('figure.stage');
   if (!figure) return;
@@ -8,7 +8,7 @@
   figure.style.position = figure.style.position || 'relative';
 
   var canvas = document.createElement('canvas');
-  canvas.id = 'sa10-canvas';
+  canvas.id = 'sa9-canvas';
   canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;display:block;cursor:crosshair;';
   figure.appendChild(canvas);
 
