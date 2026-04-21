@@ -221,7 +221,7 @@ slides.forEach(function(s, i) {
   if (s.classList.contains('placeholder-slide') && title) {
     var len = (title.textContent || '').trim().length;
     if (len > 52) s.classList.add('crowded');
-    // Dense detection: 4+ bullets, OR any bullet body >80 chars, OR total bullet chars >260
+    // Dense detection: 5+ bullets, OR any bullet body >80 chars, OR total bullet chars >260
     var bullets = s.querySelectorAll('.content > ul > li, .content > ul > li > ul > li');
     var totalChars = 0;
     var longBullet = false;
@@ -230,7 +230,7 @@ slides.forEach(function(s, i) {
       totalChars += t.length;
       if (t.length > 80) longBullet = true;
     });
-    if (bullets.length >= 4 || longBullet || totalChars > 260) s.classList.add('dense');
+    if (bullets.length >= 5 || longBullet || totalChars > 260) s.classList.add('dense');
   }
   s.addEventListener('click', function() {
     if (!document.body.classList.contains('overview')) return;

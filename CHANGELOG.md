@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## 2026-04-20 · Laurie section revisions (per presenter feedback)
+
+Second Laurie pass driven by reviewing the deck slide-by-slide. One slide cut, the full section renumbered, several visual adjustments, and a uniform font bump for readability at presentation distance.
+
+### Structure
+
+- **LH2 "The Critical AI Literacy Institute" cut** at Laurie's request. Remaining LH3–LH11 renumbered LH2–LH10 (data-slide attributes `laurie-3` … `laurie-11` → `laurie-2` … `laurie-10`, visible labels + aria-labels adjusted). Laurie now runs 10 content slides.
+- **Total: 46 → 45 slides.** Scrubber `max` and counter text updated to 45.
+
+### Slide-level revisions
+
+- **LH1 Overview** — added a right-panel visual (`images/faculty-questions.png`, orphaned when LH2 was cut). The slide had an empty `diagram-stage` previously ("visualization not showing").
+- **LH4 Research and Information in the Digital Age** — two-col grid shifted from `1fr 1fr` to `1.4fr 1fr` so the Approach bullets on the left get more breathing room. Syllabus column remains legible with a minor font tweak.
+- **LH7 Statistical Methods in Earth and Atmospheric Sciences** — bumped Spencer Hill quote from `--fs-quote-tight` to `clamp(20px, 1.85vw, 28px)`, cite size slightly up for legibility.
+- **LH9 Critical AI Literacy & Student Agency** — cropped `narst-image.jpg` to 50% of the right-panel stage width, centered, leaving substantial whitespace around the image.
+- **LH10 Critical AI Literacy, Agency, & Collective World-building** — added `narst-image.jpg` to the right panel; overrode the base `.slide-testimonial { .stage display:none }` rule so this one testimonial slide shows a stage (flex-basis split 58% content / 42% stage). Quote + bullet sizes trimmed to keep 3 quotes + 4 bullets + image in frame.
+- **Uniform Laurie bump** — all list items in `section.slide[data-slide^="laurie-"]` now render at `clamp(25px, 2.35vw, 38px)` / line-height 1.4 for presentation readability.
+
+### Files touched
+
+- `index.html` — LH2 block removed; laurie-3..11 renumbered to laurie-2..10; LH1 image added; LH10 figure-stage populated with narst-image; scrubber `max="46" → "45"`; counter `1 / 46 → 1 / 45`.
+- `src/styles.css` — appended Laurie section rules; LH2 dense-quotes comment updated to reference LH10.
+- `OUTLINE.md` — Laurie table renumbered; total 46 → 45; added Laurie-2026-04-20 cut note.
+- `README.md` — Laurie count 11 → 10; total 46 → 45.
+- `CLAUDE.md` — structure counts updated; cut note reflects both LH2 removals.
+
+---
+
 ## 2026-04-20 · deck refinements (post-port)
 
 Same-day follow-up to the initial port. Reconciles the deck with the SLIDES.md source after a second read, removes dead infrastructure, and tightens a few layouts.

@@ -21,11 +21,11 @@ NARST 2026 presentation deck for the Critical AI Literacy Institute related pape
 
 ## Current deck status
 
-The deck runs as a 46-slide single-page HTML presentation:
+The deck runs as a 45-slide single-page HTML presentation:
 
 - 1 title slide
 - 4 paper-title section dividers (one per presenter)
-- content slides per presenter (Luke 8, Laurie 11, Zach 10, Şule 12)
+- content slides per presenter (Luke 8, Laurie 10, Zach 10, Şule 12)
 - **no references slides** — citations live in the paper, not on the deck (removed 2026-04-20)
 
 Content policy:
