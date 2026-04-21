@@ -159,8 +159,13 @@ section.slide.active { display: flex; }
 .arrow-bullets { list-style: none; padding-left: 0; }
 .arrow-bullets li { position: relative; padding-left: 1.6em; list-style: none; }
 .arrow-bullets li::before { content: '\2192'; position: absolute; left: 0; top: 0; color: var(--accent, rgba(138,168,199,0.85)); font-family: var(--font-mono); font-weight: 500; line-height: inherit; }
-.placeholder-slide .content { overflow: hidden; }
-.placeholder-slide .content ul { overflow: hidden; }
+.placeholder-slide .content { overflow: hidden; min-width: 0; }
+.placeholder-slide .content ul { overflow: visible; min-width: 0; }
+.placeholder-slide .content h1,
+.placeholder-slide .content h2,
+.placeholder-slide .content h3,
+.placeholder-slide .content li,
+.placeholder-slide .content p { overflow-wrap: break-word; hyphens: auto; }
 
 /* When a figure.stage is aria-hidden (no real visual), drop it and let .content fill the row. */
 section.slide > figure.stage[aria-hidden="true"] { display: none !important; }
@@ -1089,29 +1094,10 @@ body.overview section.slide[data-slide="break-sule"]   { border-top: 2px solid v
   isolation: isolate;
 }
 .placeholder-slide.ladder-slide .content ul.ladder-list::before {
-  content: "";
-  position: absolute;
-  inset: -1.5em -1.5em;
-  background: linear-gradient(116deg,
-    transparent 48.6%,
-    color-mix(in oklab, var(--accent-luke) 95%, transparent) 49.85%,
-    color-mix(in oklab, var(--accent-luke) 95%, transparent) 50.15%,
-    transparent 51.4%);
-  opacity: 0.55;
-  pointer-events: none;
-  z-index: -1;
+  content: none;
 }
 .placeholder-slide.ladder-slide .content ul.ladder-list::after {
-  content: "";
-  position: absolute;
-  inset: -1.5em -1.5em;
-  background:
-    radial-gradient(circle at 12% 18%, color-mix(in oklab, var(--accent-luke) 40%, transparent) 0 6px, transparent 7px),
-    radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--accent-luke) 55%, transparent) 0 6px, transparent 7px),
-    radial-gradient(circle at 88% 82%, color-mix(in oklab, var(--accent-luke) 40%, transparent) 0 6px, transparent 7px);
-  opacity: 0.9;
-  pointer-events: none;
-  z-index: -1;
+  content: none;
 }
 .placeholder-slide.ladder-slide .content ul.ladder-list li {
   list-style: none;
