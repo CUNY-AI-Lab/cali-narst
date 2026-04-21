@@ -24,12 +24,15 @@ The deck should follow this structure:
 - 1 title slide
 - 4 section-divider (paper-title) slides, one for each presenter
 - content slides per presenter (currently: Luke 8, Laurie 11, Zach 10, Sule 12)
-- 1 consolidated references slide at the end (added 2026-04-21)
+- 1 consolidated references slide (added 2026-04-21, position 47)
+- 1 closing slide with QR + contact info (added 2026-04-21, position 48)
 
-That yields 47 total slides. Per-presenter references slides were removed
+That yields 48 total slides. Per-presenter references slides were removed
 2026-04-20 and replaced 2026-04-21 with a single alphabetical
-"References &amp; Further Reading" slide at position 47
-(`data-slide="references"`).
+"References &amp; Further Reading" slide (`data-slide="references"`).
+The closing slide (`data-slide="closing"`) echoes the title slide's
+Domain Warping canvas as a visual bookend and carries a QR code pointing
+at `cuny.is/cali-narst` plus TLC / CALI links and presenter emails.
 
 ## Presenters and talk blocks
 

@@ -650,3 +650,22 @@ solution: siloed disciplinary learning inhibits multidisciplinary thinking neede
 
 attention to socioecological decision-making, thinking about power, historicity; children and youth as cultural and political actors in STEM and science education spaces. 
 
+---
+
+## Closing
+
+**ENDING SLIDE — Community, Transparency & Tinkering for Just Futures: Lessons Learned from the Critical AI Literacy Institute (CALI)**
+
+Left Panel:
+
+* GCTLC: http://cuny.is/teaching
+* CALI: http://cuny.is/cali
+* lwaltzer@gc.cuny.edu | lhurson@gc.cuny.edu | zmuhlbauer@gc.cuny.edu | saksoy@brockport.edu
+
+Right Panel (Visual):
+
+* QR code → https://cuny.is/cali-narst
+
+Background Visual: Domain Warping (echoes title slide)
+
+

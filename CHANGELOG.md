@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 2026-04-21 · Closing slide (QR + contact) + LW5 wording
+
+- **LW5 "The CUNY Context"** — final bullet changed "Vulnerable population" → "Minoritized population" in both `index.html` and `slides.md` per Luke's revised wording.
+- **New closing slide** (`data-slide="closing"`, position 48). Echoes the title slide: same Domain Warping WebGL canvas (via refactored `initAllDomainwarp()` that now iterates `.title-domainwarp` class instead of the single `#title-domainwarp` ID), same `.title-card` + `.title-overlay` scaffold. Content:
+  - Title + subtitle echo ("Community, Transparency & Tinkering for Just Futures" / "Lessons Learned from the Critical AI Literacy Institute (CALI)")
+  - Links block: GCTLC → `cuny.is/teaching`, CALI → `cuny.is/cali`
+  - Email row: `lwaltzer@gc.cuny.edu · lhurson@gc.cuny.edu · zmuhlbauer@gc.cuny.edu · saksoy@brockport.edu`
+  - QR code (`images/qr-cuny-is-cali-narst.png`, 740×740 pre-generated with `qrcode` / error-correct H) linking to `https://cuny.is/cali-narst`, captioned `scan · cuny.is/cali-narst`.
+- **CSS `.slide-closing`** — 2-col grid (contact block + QR). All font sizes flow through `--fs-*` tokens (`--fs-display`, `--fs-subhead`, `--fs-body-compact`, `--fs-label`, `--fs-meta`, `--fs-cite`). No new inline clamps.
+- **Scrubber + counter** bumped `47 → 48`. Cache-buster `?v=20260421d → ?v=20260421e`.
+
 ## 2026-04-21 · Consolidated references slide + font sub-clamp audit
 
 Two passes today: (1) a type-consistency audit that pulled every body-text
