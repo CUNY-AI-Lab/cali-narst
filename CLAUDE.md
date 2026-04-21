@@ -56,6 +56,52 @@ But keep these real:
 - `frappe-charts` included by CDN for future figures
 - `p5.js` included by CDN for generative or animated visual space
 
+## Local-asset contract (added 2026-04-20)
+
+The deck runs entirely from `file://` with no network. Three things make
+that work; do not undo them without replacing the local asset path:
+
+- `vendor/leaflet/leaflet.{js,css}` and `vendor/leaflet/images/` — pinned to
+  Leaflet 1.9.4. `index.html:9-12` references local paths, no SRI.
+- `vendor/fonts/fonts.css` + 27 `vendor/fonts/*.woff2` — Newsreader,
+  IBM Plex Sans, IBM Plex Mono. Generated from a Google Fonts response
+  with all `https://fonts.gstatic.com/...` URLs rewritten to bare
+  filenames.
+- `vendor/tiles/{dark_nolabels,dark_only_labels}/{z}/{x}/{y}.png` — 914
+  CartoDB raster tiles for zooms 9-13 over the NYC bbox. Re-fetch with
+  `python3 scripts/fetch-tiles.py` after editing `BBOX` or `ZOOMS`.
+
+The `L.tileLayer` calls in `index.html` use `minZoom: 9, maxZoom: 13`
+matching the cache. Bumping the map's actual zoom range past 13 will
+silently 404 against the local cache; either expand the cache or stay in
+range.
+
+## Leaflet lifecycle contract (added 2026-04-20)
+
+`createMap()` in `index.html` initializes the LW5 map with a deterministic
+visibility/resize lifecycle. Do not reintroduce the staggered-setTimeout
+refit pattern (`[60, 220, 600, 1400].forEach(setTimeout)`) — it was
+replaced by:
+
+- `IntersectionObserver` on the map's parent `section.slide` → calls
+  `map.__deckRefit()` when the slide becomes visible.
+- `ResizeObserver` on `#cuny-map` → rAF-debounced
+  `invalidateSize() + __deckRefit()` whenever the container resizes.
+- `map.on('tileerror', …)` → adds `.tiles-unavailable` to the container,
+  styled in `src/styles.css` to paint a muted gradient + "MAP TILES
+  OFFLINE" eyebrow as a graceful fallback.
+
+`src/slides.js` still calls `invalidateSize + __deckRefit` on slide
+navigation as a belt-and-suspenders safety. Keep both.
+
+## Typography token contract (added 2026-04-20)
+
+Type sizes live as `--fs-*` custom properties at `:root` in
+`src/styles.css`. Selectors reference the tokens; media queries toggle
+*layout only*, not size. Do not add `font-size: <px>` overrides inside
+`@media (max-width: …)` blocks — clamp() floors handle small viewports.
+See `AUDIT-cali-hardening.md` for the full token list and rationale.
+
 ## Files to keep updated together
 
 When changing structure, update these together:
